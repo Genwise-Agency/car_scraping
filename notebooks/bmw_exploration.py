@@ -15,8 +15,10 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-url = "https://www.bmw.be/fr-be/sl/stocklocator_uc/results?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%252C%2522i5_G61E%2522%252C%2522i5_G60E%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D"
+#url = "https://www.bmw.be/fr-be/sl/stocklocator_uc/results?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%252C%2522i5_G61E%2522%252C%2522i5_G60E%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D"
 
+# avec toit ouvrant
+#url="https://www.bmw.be/fr-be/sl/stocklocator_uc/results?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%252C%2522i5_G61E%2522%252C%2522i5_G60E%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D"
 
 def parse_price(price_str):
     """Convert price string like '59 950,00 €' to float like 59950.0"""
@@ -199,8 +201,10 @@ with sync_playwright() as p:
         try:
             model_name = page.locator('h1#stock-locator__details-heading-1').inner_text()
             car_data['model_name'] = model_name.strip()
+            logger.info(f"      → model_name: {car_data['model_name']}")
         except Exception as e:
             car_data['model_name'] = None
+            logger.warning(f"      → model_name: Not found ({str(e)})")
 
         # Car ID
         try:
@@ -208,8 +212,10 @@ with sync_playwright() as p:
             car_id_text = car_id_element.inner_text()
             car_id_raw = car_id_text.replace('CAR-ID', '').strip()
             car_data['car_id'] = parse_car_id(car_id_raw)
+            logger.info(f"      → car_id: {car_data['car_id']} (raw: {car_id_raw})")
         except Exception as e:
             car_data['car_id'] = None
+            logger.warning(f"      → car_id: Not found ({str(e)})")
 
         # Price
         try:
@@ -217,17 +223,20 @@ with sync_playwright() as p:
             price_text = price_element.inner_text().strip()
             car_data['price_raw'] = price_text
             car_data['price'] = parse_price(price_text)
+            logger.info(f"      → price: {car_data['price']} (raw: {car_data['price_raw']})")
         except Exception as e:
             car_data['price_raw'] = None
             car_data['price'] = None
+            logger.warning(f"      → price: Not found ({str(e)})")
 
         # Link
         car_data['link'] = link
+        logger.info(f"      → link: {link}")
 
         # Kilometers
         try:
             # Wait for the kilometers key-fact to be visible
-            mileage_key_fact = page.locator('div.key-fact[title="Kilomètres"]')
+            mileage_key_fact = page.locator('#stock-locator__key-facts-section div.key-fact[title="Kilomètres"]')
             mileage_key_fact.wait_for(state='visible', timeout=5000)
             # Get the value from the nested div
             mileage_value = mileage_key_fact.locator('div.value-disclaimer div.value.caption').inner_text().strip()
@@ -236,26 +245,30 @@ with sync_playwright() as p:
                 mileage_value = mileage_key_fact.locator('div.value.caption').inner_text().strip()
             car_data['kilometers_raw'] = mileage_value
             car_data['kilometers'] = parse_kilometers(mileage_value)
+            logger.info(f"      → kilometers: {car_data['kilometers']} (raw: {car_data['kilometers_raw']})")
         except Exception as e:
             car_data['kilometers_raw'] = None
             car_data['kilometers'] = None
+            logger.warning(f"      → kilometers: Not found ({str(e)})")
 
         # Registration date
         try:
-            registration_key_fact = page.locator('div.key-fact[title="Date d\'immatriculation"]')
+            registration_key_fact = page.locator('#stock-locator__key-facts-section div.key-fact[title="Date d\'immatriculation"]')
             registration_key_fact.wait_for(state='visible', timeout=5000)
             registration_value = registration_key_fact.locator('div.value-disclaimer div.value.caption').inner_text().strip()
             if not registration_value:
                 registration_value = registration_key_fact.locator('div.value.caption').inner_text().strip()
             car_data['registration_date_raw'] = registration_value
             car_data['registration_date'] = parse_registration_date(registration_value)
+            logger.info(f"      → registration_date: {car_data['registration_date']} (raw: {car_data['registration_date_raw']})")
         except Exception as e:
             car_data['registration_date_raw'] = None
             car_data['registration_date'] = None
+            logger.warning(f"      → registration_date: Not found ({str(e)})")
 
         # Horse power
         try:
-            power_key_fact = page.locator('div.key-fact[title="Power Based on Degree of Electrification"]')
+            power_key_fact = page.locator('#stock-locator__key-facts-section div.key-fact[title="Power Based on Degree of Electrification"]')
             power_key_fact.wait_for(state='visible', timeout=5000)
             power_value = power_key_fact.locator('div.value-disclaimer div.value.caption').inner_text().strip()
             if not power_value:
@@ -264,10 +277,12 @@ with sync_playwright() as p:
             kw, ps = parse_horse_power(power_value)
             car_data['horse_power_kw'] = kw
             car_data['horse_power_ps'] = ps
+            logger.info(f"      → horse_power_kw: {car_data['horse_power_kw']}, horse_power_ps: {car_data['horse_power_ps']} (raw: {car_data['horse_power_raw']})")
         except Exception as e:
             car_data['horse_power_raw'] = None
             car_data['horse_power_kw'] = None
             car_data['horse_power_ps'] = None
+            logger.warning(f"      → horse_power: Not found ({str(e)})")
 
         # Extract equipment information
         equipment_data = {}
@@ -314,8 +329,14 @@ with sync_playwright() as p:
                     continue
 
             car_data['equipments'] = json.dumps(equipment_data, ensure_ascii=False, indent=2) if equipment_data else None
+            if car_data['equipments']:
+                equipment_count = sum(len(items) for items in equipment_data.values())
+                logger.info(f"      → equipments: Found {len(equipment_data)} categories with {equipment_count} total items")
+            else:
+                logger.warning(f"      → equipments: Not found")
         except Exception as e:
             car_data['equipments'] = None
+            logger.warning(f"      → equipments: Error extracting ({str(e)})")
 
         return car_data
 
@@ -325,7 +346,8 @@ with sync_playwright() as p:
     logger.info("=" * 60)
 
     # Limit to first 10 links for testing
-    test_links = links[:10]
+    #test_links = links[:10]
+    test_links = links
     logger.info(f"Processing {len(test_links)} out of {len(links)} total links")
 
     all_cars_data = []
