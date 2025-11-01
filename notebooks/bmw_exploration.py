@@ -1,3 +1,5 @@
+import json
+import os
 import re
 from datetime import datetime
 
@@ -11,11 +13,17 @@ def parse_price(price_str):
     """Convert price string like '59 950,00 €' to float like 59950.0"""
     if not price_str:
         return None
-    # Remove currency symbol and spaces, replace comma with dot
-    cleaned = price_str.replace('€', '').replace(' ', '').replace(',', '.').strip()
     try:
+        # Remove currency symbol and all whitespace (including non-breaking spaces)
+        cleaned = price_str.replace('€', '').strip()
+        # Remove all whitespace characters (spaces, non-breaking spaces, etc.)
+        cleaned = re.sub(r'\s+', '', cleaned)
+        # Replace comma with dot for decimal separator
+        cleaned = cleaned.replace(',', '.')
+        # Remove any remaining non-numeric characters except dot and minus
+        cleaned = re.sub(r'[^\d\.\-]', '', cleaned)
         return float(cleaned)
-    except:
+    except Exception as e:
         return None
 
 
@@ -266,6 +274,54 @@ with sync_playwright() as p:
         car_data['horse_power_ps'] = None
         print(f"      ✗ Horse power: Not found")
 
+    # Extract equipment information
+    print("\n[Extracting equipment] Gathering equipment information...")
+    equipment_data = {}
+
+    try:
+        # Find the equipment section
+        equipment_section = page.locator('section#stock-locator__section-7')
+
+        # Find all accordion panels (each represents a category)
+        accordion_panels = equipment_section.locator('neo-accordion-panel')
+        panel_count = accordion_panels.count()
+
+        print(f"      Found {panel_count} equipment categories")
+
+        for i in range(panel_count):
+            panel = accordion_panels.nth(i)
+
+            # Get category name from the header
+            try:
+                header = panel.locator('.content-header')
+                category_name = header.locator('.header-label').inner_text().strip()
+
+                # Find all equipment items in this category
+                equipment_items = panel.locator('div.details-card')
+                item_count = equipment_items.count()
+
+                equipment_list = []
+                for j in range(item_count):
+                    item = equipment_items.nth(j)
+                    equipment_name = item.locator('div.headline-7.tw-mb-ng-300').inner_text().strip()
+                    if equipment_name:
+                        equipment_list.append(equipment_name)
+
+                if category_name and equipment_list:
+                    equipment_data[category_name] = equipment_list
+                    print(f"      ✓ {category_name}: {len(equipment_list)} items")
+
+            except Exception as e:
+                continue
+
+        # Store as JSON string in car_data
+        car_data['equipments'] = json.dumps(equipment_data, ensure_ascii=False, indent=2) if equipment_data else None
+        print(f"      ✓ Total categories: {len(equipment_data)}")
+
+    except Exception as e:
+        car_data['equipments'] = None
+        print(f"      ✗ Equipment: Not found or error: {str(e)}")
+
     # Create pandas DataFrame
     df = pd.DataFrame([car_data])
 
@@ -275,7 +331,7 @@ with sync_playwright() as p:
         'kilometers', 'kilometers_raw',
         'registration_date', 'registration_date_raw',
         'horse_power_kw', 'horse_power_ps', 'horse_power_raw',
-        'link'
+        'equipments', 'link'
     ]
     # Only include columns that exist
     existing_columns = [col for col in column_order if col in df.columns]
@@ -286,10 +342,18 @@ with sync_playwright() as p:
     print("EXTRACTED CAR DATA (Raw values):")
     print("=" * 60)
     for key, value in car_data.items():
-        if not key.endswith('_raw') and key not in ['price', 'kilometers', 'horse_power_kw', 'horse_power_ps', 'car_id', 'registration_date']:
+        if not key.endswith('_raw') and key not in ['price', 'kilometers', 'horse_power_kw', 'horse_power_ps', 'car_id', 'registration_date', 'equipments']:
             print(f"{key:20s}: {value}")
         elif key == 'registration_date' and value:
             print(f"{key:20s}: {value.strftime('%Y-%m-%d')} (datetime)")
+        elif key == 'equipments' and value:
+            print(f"\n{key:20s}: (JSON structure with {len(json.loads(value))} categories)")
+            # Show a preview of equipment structure
+            eq_dict = json.loads(value)
+            for cat, items in list(eq_dict.items())[:3]:  # Show first 3 categories
+                print(f"                      - {cat}: {len(items)} items")
+            if len(eq_dict) > 3:
+                print(f"                      ... and {len(eq_dict) - 3} more categories")
 
     print("\n" + "=" * 60)
     print("PANDAS DATAFRAME:")
@@ -297,6 +361,39 @@ with sync_playwright() as p:
     print(df.to_string(index=False))
     print(f"\nDataFrame shape: {df.shape}")
     print(f"DataFrame dtypes:\n{df.dtypes}")
+
+    # Export to Excel
+    print("\n" + "=" * 60)
+    print("EXPORTING TO EXCEL...")
+    print("=" * 60)
+
+    # Create results/bmw directory if it doesn't exist
+    output_dir = "results/bmw"
+    os.makedirs(output_dir, exist_ok=True)
+    print(f"      ✓ Directory created/verified: {output_dir}")
+
+    # Generate filename with timestamp
+    date_str = datetime.now().strftime("%Y-%m-%d")
+    excel_filename = f"{output_dir}/bmw_cars_{date_str}.xlsx"
+
+    # Export DataFrame to Excel
+    try:
+        # Create a copy of the dataframe for export
+        df_export = df.copy()
+
+        # Convert datetime objects to strings for Excel compatibility
+        if 'registration_date' in df_export.columns:
+            df_export['registration_date'] = df_export['registration_date'].apply(
+                lambda x: x.strftime('%Y-%m-%d') if pd.notna(x) else None
+            )
+
+        # Export to Excel
+        df_export.to_excel(excel_filename, index=False, engine='openpyxl')
+        print(f"      ✓ Excel file exported: {excel_filename}")
+        print(f"      ✓ Total rows exported: {len(df_export)}")
+    except Exception as e:
+        print(f"      ✗ Error exporting to Excel: {str(e)}")
+        print(f"      → Make sure openpyxl is installed: pip install openpyxl")
 
     input("\nPress Enter to close the browser...")
     browser.close()
