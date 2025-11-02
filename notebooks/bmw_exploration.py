@@ -35,7 +35,7 @@ EQUIPMENT_COLUMNS = [
 
 SCORES_COLUMNS = [
     'car_id', 'value_efficiency_score', 'age_usage_score',
-    'performance_range_score', 'final_score', 'valid_from', 'valid_to',
+    'performance_range_score', 'equipment_score', 'final_score', 'valid_from', 'valid_to',
     'is_latest', 'scrape_date'
 ]
 
@@ -479,6 +479,7 @@ def merge_scores_history(car_history_df, scores_history_df, scrape_date):
             value_efficiency_score = car_row.get('value_efficiency_score')
             age_usage_score = car_row.get('age_usage_score')
             performance_range_score = car_row.get('performance_range_score')
+            equipment_score = car_row.get('equipment_score')
             final_score = car_row.get('final_score')
             valid_from = car_row.get('valid_from')
             valid_to = car_row.get('valid_to')
@@ -503,12 +504,13 @@ def merge_scores_history(car_history_df, scores_history_df, scrape_date):
 
             # Only add record if at least one score exists
             if pd.notna(value_efficiency_score) or pd.notna(age_usage_score) or \
-               pd.notna(performance_range_score) or pd.notna(final_score):
+               pd.notna(performance_range_score) or pd.notna(equipment_score) or pd.notna(final_score):
                 score_record = {
                     'car_id': car_id,
                     'value_efficiency_score': value_efficiency_score if pd.notna(value_efficiency_score) else None,
                     'age_usage_score': age_usage_score if pd.notna(age_usage_score) else None,
                     'performance_range_score': performance_range_score if pd.notna(performance_range_score) else None,
+                    'equipment_score': equipment_score if pd.notna(equipment_score) else None,
                     'final_score': final_score if pd.notna(final_score) else None,
                     'valid_from': valid_from,
                     'valid_to': valid_to,
@@ -563,6 +565,7 @@ def merge_scores_history(car_history_df, scores_history_df, scrape_date):
                             'value_efficiency_score': round(row.get('value_efficiency_score', 0), 2) if pd.notna(row.get('value_efficiency_score')) else None,
                             'age_usage_score': round(row.get('age_usage_score', 0), 2) if pd.notna(row.get('age_usage_score')) else None,
                             'performance_range_score': round(row.get('performance_range_score', 0), 2) if pd.notna(row.get('performance_range_score')) else None,
+                            'equipment_score': round(row.get('equipment_score', 0), 2) if pd.notna(row.get('equipment_score')) else None,
                             'final_score': round(row.get('final_score', 0), 2) if pd.notna(row.get('final_score')) else None
                         }
 
@@ -573,6 +576,7 @@ def merge_scores_history(car_history_df, scores_history_df, scrape_date):
                             'value_efficiency_score': round(row.get('value_efficiency_score', 0), 2) if pd.notna(row.get('value_efficiency_score')) else None,
                             'age_usage_score': round(row.get('age_usage_score', 0), 2) if pd.notna(row.get('age_usage_score')) else None,
                             'performance_range_score': round(row.get('performance_range_score', 0), 2) if pd.notna(row.get('performance_range_score')) else None,
+                            'equipment_score': round(row.get('equipment_score', 0), 2) if pd.notna(row.get('equipment_score')) else None,
                             'final_score': round(row.get('final_score', 0), 2) if pd.notna(row.get('final_score')) else None
                         }
 
@@ -727,10 +731,10 @@ def export_equipment_list(equipment_history_df, output_dir):
 #url = "https://www.bmw.be/fr-be/sl/stocklocator_uc/results?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%252C%2522i5_G61E%2522%252C%2522i5_G60E%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D"
 
 # avec toit ouvrant
-#url="https://www.bmw.be/fr-be/sl/stocklocator_uc/results?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%252C%2522i5_G61E%2522%252C%2522i5_G60E%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D"
+url="https://www.bmw.be/fr-be/sl/stocklocator_uc/results?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D"
 
 # all BMW i4
-url = "https://www.bmw.be/fr-be/sl/stocklocator_uc/results?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%257D"
+#url = "https://www.bmw.be/fr-be/sl/stocklocator_uc/results?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%257D"
 
 def parse_price(price_str):
     """Convert price string like '59 950,00 €' to float like 59950.0"""
@@ -1088,7 +1092,7 @@ def calculate_performance_range_scores(df):
     return df
 
 
-def calculate_all_scores(df):
+def calculate_all_scores(df, preferences_file=None):
     """Calculate all scoring metrics and add them to the DataFrame"""
     logger.info("=" * 60)
     logger.info("CALCULATING SCORING METRICS...")
@@ -1110,7 +1114,15 @@ def calculate_all_scores(df):
     logger.info("  → Calculating performance/range scores...")
     df = calculate_performance_range_scores(df)
 
-    # Step 5: Calculate final overall score
+    # Step 5: Calculate equipment scores
+    if preferences_file:
+        logger.info("  → Calculating equipment scores...")
+        df = calculate_equipment_scores(df, preferences_file)
+    else:
+        logger.warning("  → Skipping equipment scores (no preferences file provided)")
+        df['equipment_score'] = None
+
+    # Step 6: Calculate final overall score
     logger.info("  → Calculating final overall score...")
     df = calculate_final_score(df)
 
@@ -1120,19 +1132,135 @@ def calculate_all_scores(df):
     return df
 
 
+def load_preferences(preferences_file):
+    """Load desired equipment preferences from JSON file"""
+    try:
+        with open(preferences_file, 'r', encoding='utf-8') as f:
+            preferences_data = json.load(f)
+            desired_equipment = preferences_data.get('desired_equipment', [])
+            logger.info(f"      ✓ Loaded {len(desired_equipment)} desired equipment items from preferences")
+            return set(desired_equipment)
+    except Exception as e:
+        logger.warning(f"      ✗ Error loading preferences file: {e}")
+        return set()
+
+
+def extract_all_equipment_items(equipments_json):
+    """Extract all equipment items from JSON, flattening across all categories"""
+    all_equipment = set()
+
+    if not equipments_json:
+        return all_equipment
+
+    try:
+        equipment_data = json.loads(equipments_json) if isinstance(equipments_json, str) else equipments_json
+
+        # Flatten all equipment items across all categories
+        for category, equipment_list in equipment_data.items():
+            if equipment_list:
+                for equipment_name in equipment_list:
+                    if equipment_name:
+                        all_equipment.add(str(equipment_name).strip())
+    except Exception as e:
+        logger.warning(f"      Error parsing equipment JSON: {e}")
+
+    return all_equipment
+
+
+def calculate_equipment_scores(df, preferences_file):
+    """Calculate equipment scores based on desired equipment preferences"""
+    logger.info("  → Loading equipment preferences...")
+    desired_equipment = load_preferences(preferences_file)
+
+    if not desired_equipment:
+        logger.warning("      ✗ No desired equipment found, equipment scores will be None")
+        df['equipment_score'] = None
+        return df
+
+    logger.info("  → Calculating equipment scores...")
+    df = df.copy()
+
+    equipment_scores_raw = []
+
+    for idx, row in df.iterrows():
+        try:
+            equipments_json = row.get('equipments')
+            car_equipment = extract_all_equipment_items(equipments_json)
+
+            if not car_equipment:
+                equipment_scores_raw.append(None)
+                continue
+
+            # Calculate raw score: 1 base per feature, 2 if desired feature present
+            raw_score = 0
+            matched_desired = 0
+
+            for equipment in car_equipment:
+                if equipment in desired_equipment:
+                    raw_score += 2  # Desired feature
+                    matched_desired += 1
+                else:
+                    raw_score += 1  # Base score for any feature
+
+            equipment_scores_raw.append({
+                'raw_score': raw_score,
+                'matched_desired': matched_desired,
+                'total_equipment': len(car_equipment)
+            })
+        except Exception as e:
+            logger.warning(f"      Error calculating equipment score for car {idx}: {e}")
+            equipment_scores_raw.append(None)
+
+    # Normalize to 0-100 scale
+    valid_scores = [s['raw_score'] for s in equipment_scores_raw if s is not None]
+
+    if len(valid_scores) > 0:
+        min_score = min(valid_scores)
+        max_score = max(valid_scores)
+
+        if max_score > min_score:
+            # Calculate normalized scores
+            normalized_scores = []
+            for score_data in equipment_scores_raw:
+                if score_data is None:
+                    normalized_scores.append(None)
+                else:
+                    normalized_score = 100 * (score_data['raw_score'] - min_score) / (max_score - min_score)
+                    normalized_scores.append(normalized_score)
+            df['equipment_score'] = normalized_scores
+        else:
+            # All scores are the same
+            df['equipment_score'] = 50 if len(valid_scores) > 0 else None
+    else:
+        df['equipment_score'] = None
+
+    # Log summary
+    valid_equipment_scores = df['equipment_score'].dropna()
+    if len(valid_equipment_scores) > 0:
+        logger.info(f"      ✓ Equipment scores calculated - Avg: {valid_equipment_scores.mean():.1f}, Min: {valid_equipment_scores.min():.1f}, Max: {valid_equipment_scores.max():.1f}")
+        # Count matched desired equipment
+        matched_counts = [s['matched_desired'] for s in equipment_scores_raw if s is not None]
+        if matched_counts:
+            logger.info(f"      ✓ Desired equipment matches - Avg: {sum(matched_counts)/len(matched_counts):.1f}/{len(desired_equipment)}")
+
+    return df
+
+
 def calculate_final_score(df):
     """Calculate final overall score combining all category scores"""
     df = df.copy()
 
-    # Overall score (weighted average: 35% value, 35% age/usage, 30% performance)
+    # Overall score (weighted average: 25% value, 25% age/usage, 25% performance, 25% equipment)
     df['final_score'] = df.apply(
         lambda row: pd.Series([
-            row['value_efficiency_score'] * 0.35 if pd.notna(row['value_efficiency_score']) else None,
-            row['age_usage_score'] * 0.35 if pd.notna(row['age_usage_score']) else None,
-            row['performance_range_score'] * 0.30 if pd.notna(row['performance_range_score']) else None
+            row['value_efficiency_score'] * 0.25 if pd.notna(row['value_efficiency_score']) else None,
+            row['age_usage_score'] * 0.25 if pd.notna(row['age_usage_score']) else None,
+            row['performance_range_score'] * 0.25 if pd.notna(row['performance_range_score']) else None,
+            row['equipment_score'] * 0.25 if pd.notna(row['equipment_score']) else None
         ]).sum() if any(pd.notna([row['value_efficiency_score'],
                                   row['age_usage_score'],
-                                  row['performance_range_score']])) else None,
+                                  row['performance_range_score'],
+                                  row['equipment_score']])) else None,
         axis=1
     )
 
@@ -1445,7 +1573,8 @@ with sync_playwright() as p:
     df = df[existing_columns]
 
     # Calculate all scoring metrics
-    df = calculate_all_scores(df)
+    preferences_file = "data/ardonis_bmw_preferences.json"
+    df = calculate_all_scores(df, preferences_file=preferences_file)
 
     # Display summary
     logger.info("=" * 60)
@@ -1490,6 +1619,12 @@ with sync_playwright() as p:
             valid_scores = df['performance_range_score'].dropna()
             if len(valid_scores) > 0:
                 logger.info(f"Performance/Range Score - Avg: {valid_scores.mean():.1f}, Min: {valid_scores.min():.1f}, Max: {valid_scores.max():.1f}")
+
+        # Equipment scores
+        if 'equipment_score' in df.columns:
+            valid_scores = df['equipment_score'].dropna()
+            if len(valid_scores) > 0:
+                logger.info(f"Equipment Score - Avg: {valid_scores.mean():.1f}, Min: {valid_scores.min():.1f}, Max: {valid_scores.max():.1f}")
 
         # Final overall score
         if 'final_score' in df.columns:
@@ -1564,7 +1699,7 @@ with sync_playwright() as p:
 
     # Extract scores from df and merge into merged_history temporarily
     score_cols = ['car_id', 'value_efficiency_score', 'age_usage_score',
-                  'performance_range_score', 'final_score']
+                  'performance_range_score', 'equipment_score', 'final_score']
     if all(col in df.columns for col in score_cols):
         df_scores = df[score_cols].copy()
         # Merge scores into merged_history for scores history processing
@@ -1607,7 +1742,7 @@ with sync_playwright() as p:
         # Merge scores on car_id
         latest_records = latest_records.merge(
             latest_scores[['car_id', 'value_efficiency_score', 'age_usage_score',
-                          'performance_range_score', 'final_score']],
+                          'performance_range_score', 'equipment_score', 'final_score']],
             on='car_id',
             how='left'
         )
