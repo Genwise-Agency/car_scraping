@@ -33,6 +33,12 @@ EQUIPMENT_COLUMNS = [
     'is_latest', 'scrape_date'
 ]
 
+SCORES_COLUMNS = [
+    'car_id', 'value_efficiency_score', 'age_usage_score',
+    'performance_range_score', 'final_score', 'valid_from', 'valid_to',
+    'is_latest', 'scrape_date'
+]
+
 
 def load_historical_data(history_file):
     """Load historical car data from CSV"""
@@ -251,27 +257,41 @@ def merge_equipment_history(car_history_df, equipment_history_df, scrape_date):
     logger.info("=" * 60)
 
     for idx, car_row in latest_cars.iterrows():
-        car_id = car_row['car_id']
-        equipments_json = car_row.get('equipments')
-        valid_from = car_row['valid_from']
-        valid_to = car_row['valid_to']
-        is_latest = car_row['is_latest']
-        scrape_date_str = car_row['scrape_date']
+        try:
+            car_id = car_row['car_id']
+            if pd.isna(car_id):
+                continue
 
-        # Convert dates to string if needed
-        if pd.notna(valid_from):
-            valid_from = valid_from.isoformat() if hasattr(valid_from, 'isoformat') else str(valid_from)
-        if pd.notna(valid_to):
-            valid_to = valid_to.isoformat() if hasattr(valid_to, 'isoformat') else str(valid_to)
-        else:
-            valid_to = None
-        if pd.notna(scrape_date_str):
-            scrape_date_str = scrape_date_str.isoformat() if hasattr(scrape_date_str, 'isoformat') else str(scrape_date_str)
+            equipments_json = car_row.get('equipments')
+            valid_from = car_row.get('valid_from')
+            valid_to = car_row.get('valid_to')
+            is_latest = car_row.get('is_latest', True)
+            scrape_date_str = car_row.get('scrape_date')
 
-        equipment_items = extract_equipment_from_json(
-            car_id, equipments_json, valid_from, valid_to, is_latest, scrape_date_str
-        )
-        new_equipment_records.extend(equipment_items)
+            # Convert dates to string if needed
+            if pd.notna(valid_from):
+                valid_from = valid_from.isoformat() if hasattr(valid_from, 'isoformat') else str(valid_from)
+            else:
+                valid_from = today_str
+
+            if pd.notna(valid_to):
+                valid_to = valid_to.isoformat() if hasattr(valid_to, 'isoformat') else str(valid_to)
+            else:
+                valid_to = None
+
+            if pd.notna(scrape_date_str):
+                scrape_date_str = scrape_date_str.isoformat() if hasattr(scrape_date_str, 'isoformat') else str(scrape_date_str)
+            else:
+                scrape_date_str = today_str
+
+            equipment_items = extract_equipment_from_json(
+                car_id, equipments_json, valid_from, valid_to, is_latest, scrape_date_str
+            )
+            if equipment_items:
+                new_equipment_records.extend(equipment_items)
+        except Exception as e:
+            logger.warning(f"      Error processing equipment for car row {idx}: {e}")
+            continue
 
     # Create new equipment dataframe
     new_equipment_df = pd.DataFrame(new_equipment_records)
@@ -289,49 +309,121 @@ def merge_equipment_history(car_history_df, equipment_history_df, scrape_date):
 
         # Keep old non-latest records
         old_equipment = equipment_history_df[equipment_history_df['is_latest'] == False].copy()
-        if not old_equipment.empty:
+        if not old_equipment.empty and isinstance(old_equipment, pd.DataFrame):
             merged_equipment_records.append(old_equipment)
 
         existing_car_ids = set(current_equipment['car_id'].unique()) if not current_equipment.empty else set()
 
         for car_id in car_ids:
-            car_new_equipment = new_equipment_df[new_equipment_df['car_id'] == car_id]
-            car_old_equipment = current_equipment[current_equipment['car_id'] == car_id] if car_id in existing_car_ids else pd.DataFrame()
+            try:
+                if pd.isna(car_id):
+                    continue
 
-            if car_old_equipment.empty:
-                # New car - add all equipment
-                merged_equipment_records.append(car_new_equipment)
-            else:
-                # Create sets for comparison
-                new_set = set()
-                for _, row in car_new_equipment.iterrows():
-                    new_set.add((row['category'], row['equipment_name']))
+                car_new_equipment = new_equipment_df[new_equipment_df['car_id'] == car_id]
+                car_old_equipment = current_equipment[current_equipment['car_id'] == car_id] if car_id in existing_car_ids else pd.DataFrame()
 
-                old_set = set()
-                for _, row in car_old_equipment.iterrows():
-                    old_set.add((row['category'], row['equipment_name']))
-
-                # Mark old equipment as not latest if car equipment changed
-                if new_set != old_set:
-                    # End old equipment records
-                    for _, old_row in car_old_equipment.iterrows():
-                        old_record = old_row.to_dict()
-                        old_record['valid_to'] = today_str
-                        old_record['is_latest'] = False
-                        merged_equipment_records.append(old_record)
-
-                    # Add new equipment records
-                    merged_equipment_records.append(car_new_equipment)
+                if car_old_equipment.empty:
+                    # New car - add all equipment
+                    if not car_new_equipment.empty and isinstance(car_new_equipment, pd.DataFrame):
+                        merged_equipment_records.append(car_new_equipment)
                 else:
-                    # No change - just update scrape_date
-                    for _, old_row in car_old_equipment.iterrows():
-                        old_record = old_row.to_dict()
-                        old_record['scrape_date'] = today_str
-                        merged_equipment_records.append(old_record)
+                    # Create sets for comparison
+                    new_set = set()
+                    for _, row in car_new_equipment.iterrows():
+                        try:
+                            category = row.get('category')
+                            equipment_name = row.get('equipment_name')
+                            if pd.notna(category) and pd.notna(equipment_name):
+                                new_set.add((str(category), str(equipment_name)))
+                        except Exception as e:
+                            logger.warning(f"      Error processing new equipment row for car {car_id}: {e}")
+                            continue
 
-        # Combine all records
+                    old_set = set()
+                    for _, row in car_old_equipment.iterrows():
+                        try:
+                            category = row.get('category')
+                            equipment_name = row.get('equipment_name')
+                            if pd.notna(category) and pd.notna(equipment_name):
+                                old_set.add((str(category), str(equipment_name)))
+                        except Exception as e:
+                            logger.warning(f"      Error processing old equipment row for car {car_id}: {e}")
+                            continue
+
+                    # Mark old equipment as not latest if car equipment changed
+                    if new_set != old_set:
+                        # End old equipment records
+                        old_records_list = []
+                        for _, old_row in car_old_equipment.iterrows():
+                            try:
+                                old_record = old_row.to_dict()
+                                old_record['valid_to'] = today_str
+                                old_record['is_latest'] = False
+                                old_records_list.append(old_record)
+                            except Exception as e:
+                                logger.warning(f"      Error converting old equipment record for car {car_id}: {e}")
+                                continue
+
+                        # Convert list of dicts to DataFrame before appending
+                        if old_records_list:
+                            try:
+                                old_records_df = pd.DataFrame(old_records_list)
+                                if not old_records_df.empty:
+                                    merged_equipment_records.append(old_records_df)
+                            except Exception as e:
+                                logger.warning(f"      Error creating DataFrame for old equipment records (car {car_id}): {e}")
+
+                        # Add new equipment records
+                        if not car_new_equipment.empty and isinstance(car_new_equipment, pd.DataFrame):
+                            merged_equipment_records.append(car_new_equipment)
+                    else:
+                        # No change - just update scrape_date
+                        updated_records_list = []
+                        for _, old_row in car_old_equipment.iterrows():
+                            try:
+                                old_record = old_row.to_dict()
+                                old_record['scrape_date'] = today_str
+                                updated_records_list.append(old_record)
+                            except Exception as e:
+                                logger.warning(f"      Error converting updated equipment record for car {car_id}: {e}")
+                                continue
+
+                        # Convert list of dicts to DataFrame before appending
+                        if updated_records_list:
+                            try:
+                                updated_records_df = pd.DataFrame(updated_records_list)
+                                if not updated_records_df.empty:
+                                    merged_equipment_records.append(updated_records_df)
+                            except Exception as e:
+                                logger.warning(f"      Error creating DataFrame for updated equipment records (car {car_id}): {e}")
+            except Exception as e:
+                logger.warning(f"      Error processing equipment for car {car_id}: {e}")
+                continue
+
+        # Combine all records - ensure all items are DataFrames
         if merged_equipment_records:
-            merged_equipment = pd.concat(merged_equipment_records, ignore_index=True)
+            # Filter out empty DataFrames and ensure all are DataFrames
+            valid_records = []
+            for df in merged_equipment_records:
+                if isinstance(df, pd.DataFrame) and not df.empty:
+                    # Ensure all required columns exist
+                    missing_cols = set(EQUIPMENT_COLUMNS) - set(df.columns)
+                    if missing_cols:
+                        logger.warning(f"      Missing columns in equipment DataFrame: {missing_cols}")
+                        # Add missing columns with None values
+                        for col in missing_cols:
+                            df[col] = None
+                    valid_records.append(df)
+
+            if valid_records:
+                try:
+                    merged_equipment = pd.concat(valid_records, ignore_index=True)
+                except Exception as e:
+                    logger.error(f"      Error concatenating equipment records: {e}")
+                    logger.warning(f"      Falling back to new equipment DataFrame only")
+                    merged_equipment = new_equipment_df
+            else:
+                merged_equipment = new_equipment_df
         else:
             merged_equipment = new_equipment_df
     else:
@@ -345,10 +437,300 @@ def merge_equipment_history(car_history_df, equipment_history_df, scrape_date):
     return merged_equipment
 
 
+def load_scores_history(scores_file):
+    """Load historical scores data from CSV"""
+    if os.path.exists(scores_file):
+        try:
+            df = pd.read_csv(scores_file, dtype={'car_id': 'Int64'})
+            # Convert date columns to datetime
+            for col in ['valid_from', 'valid_to', 'scrape_date']:
+                if col in df.columns:
+                    df[col] = pd.to_datetime(df[col], errors='coerce')
+            logger.info(f"Loaded {len(df)} scores records from {scores_file}")
+            return df
+        except Exception as e:
+            logger.warning(f"Error loading scores file: {e}. Starting fresh.")
+            return pd.DataFrame(columns=SCORES_COLUMNS)
+    return pd.DataFrame(columns=SCORES_COLUMNS)
+
+
+def merge_scores_history(car_history_df, scores_history_df, scrape_date):
+    """Merge scores data from car history with scores history"""
+    today = scrape_date.date()
+    today_str = today.isoformat()
+
+    # Get latest car records (to extract current scores)
+    latest_cars = get_latest_records(car_history_df)
+
+    # Extract scores from latest car records
+    new_scores_records = []
+
+    logger.info("=" * 60)
+    logger.info("PROCESSING SCORES DATA...")
+    logger.info("=" * 60)
+
+    for idx, car_row in latest_cars.iterrows():
+        try:
+            car_id = car_row['car_id']
+            if pd.isna(car_id):
+                continue
+
+            # Extract score columns
+            value_efficiency_score = car_row.get('value_efficiency_score')
+            age_usage_score = car_row.get('age_usage_score')
+            performance_range_score = car_row.get('performance_range_score')
+            final_score = car_row.get('final_score')
+            valid_from = car_row.get('valid_from')
+            valid_to = car_row.get('valid_to')
+            is_latest = car_row.get('is_latest', True)
+            scrape_date_str = car_row.get('scrape_date')
+
+            # Convert dates to string if needed
+            if pd.notna(valid_from):
+                valid_from = valid_from.isoformat() if hasattr(valid_from, 'isoformat') else str(valid_from)
+            else:
+                valid_from = today_str
+
+            if pd.notna(valid_to):
+                valid_to = valid_to.isoformat() if hasattr(valid_to, 'isoformat') else str(valid_to)
+            else:
+                valid_to = None
+
+            if pd.notna(scrape_date_str):
+                scrape_date_str = scrape_date_str.isoformat() if hasattr(scrape_date_str, 'isoformat') else str(scrape_date_str)
+            else:
+                scrape_date_str = today_str
+
+            # Only add record if at least one score exists
+            if pd.notna(value_efficiency_score) or pd.notna(age_usage_score) or \
+               pd.notna(performance_range_score) or pd.notna(final_score):
+                score_record = {
+                    'car_id': car_id,
+                    'value_efficiency_score': value_efficiency_score if pd.notna(value_efficiency_score) else None,
+                    'age_usage_score': age_usage_score if pd.notna(age_usage_score) else None,
+                    'performance_range_score': performance_range_score if pd.notna(performance_range_score) else None,
+                    'final_score': final_score if pd.notna(final_score) else None,
+                    'valid_from': valid_from,
+                    'valid_to': valid_to,
+                    'is_latest': is_latest,
+                    'scrape_date': scrape_date_str
+                }
+                new_scores_records.append(score_record)
+        except Exception as e:
+            logger.warning(f"      Error processing scores for car row {idx}: {e}")
+            continue
+
+    # Create new scores dataframe
+    new_scores_df = pd.DataFrame(new_scores_records)
+
+    if new_scores_df.empty:
+        logger.info("      No scores records to process")
+        return scores_history_df if not scores_history_df.empty else pd.DataFrame(columns=SCORES_COLUMNS)
+
+    # Get current scores for each car (latest records)
+    car_ids = new_scores_df['car_id'].unique()
+
+    if not scores_history_df.empty:
+        current_scores = scores_history_df[scores_history_df['is_latest'] == True].copy()
+        merged_scores_records = []
+
+        # Keep old non-latest records
+        old_scores = scores_history_df[scores_history_df['is_latest'] == False].copy()
+        if not old_scores.empty and isinstance(old_scores, pd.DataFrame):
+            merged_scores_records.append(old_scores)
+
+        existing_car_ids = set(current_scores['car_id'].unique()) if not current_scores.empty else set()
+
+        for car_id in car_ids:
+            try:
+                if pd.isna(car_id):
+                    continue
+
+                car_new_scores = new_scores_df[new_scores_df['car_id'] == car_id]
+                car_old_scores = current_scores[current_scores['car_id'] == car_id] if car_id in existing_car_ids else pd.DataFrame()
+
+                if car_old_scores.empty:
+                    # New car - add all scores
+                    if not car_new_scores.empty and isinstance(car_new_scores, pd.DataFrame):
+                        merged_scores_records.append(car_new_scores)
+                else:
+                    # Compare scores to see if they changed
+                    # Create comparison dicts (round to 2 decimals for comparison)
+                    new_scores_dict = {}
+                    if not car_new_scores.empty:
+                        row = car_new_scores.iloc[0]
+                        new_scores_dict = {
+                            'value_efficiency_score': round(row.get('value_efficiency_score', 0), 2) if pd.notna(row.get('value_efficiency_score')) else None,
+                            'age_usage_score': round(row.get('age_usage_score', 0), 2) if pd.notna(row.get('age_usage_score')) else None,
+                            'performance_range_score': round(row.get('performance_range_score', 0), 2) if pd.notna(row.get('performance_range_score')) else None,
+                            'final_score': round(row.get('final_score', 0), 2) if pd.notna(row.get('final_score')) else None
+                        }
+
+                    old_scores_dict = {}
+                    if not car_old_scores.empty:
+                        row = car_old_scores.iloc[0]
+                        old_scores_dict = {
+                            'value_efficiency_score': round(row.get('value_efficiency_score', 0), 2) if pd.notna(row.get('value_efficiency_score')) else None,
+                            'age_usage_score': round(row.get('age_usage_score', 0), 2) if pd.notna(row.get('age_usage_score')) else None,
+                            'performance_range_score': round(row.get('performance_range_score', 0), 2) if pd.notna(row.get('performance_range_score')) else None,
+                            'final_score': round(row.get('final_score', 0), 2) if pd.notna(row.get('final_score')) else None
+                        }
+
+                    # Check if scores changed
+                    scores_changed = new_scores_dict != old_scores_dict
+
+                    if scores_changed:
+                        # End old scores record
+                        old_records_list = []
+                        for _, old_row in car_old_scores.iterrows():
+                            try:
+                                old_record = old_row.to_dict()
+                                old_record['valid_to'] = today_str
+                                old_record['is_latest'] = False
+                                old_records_list.append(old_record)
+                            except Exception as e:
+                                logger.warning(f"      Error converting old scores record for car {car_id}: {e}")
+                                continue
+
+                        # Convert list of dicts to DataFrame before appending
+                        if old_records_list:
+                            try:
+                                old_records_df = pd.DataFrame(old_records_list)
+                                if not old_records_df.empty:
+                                    merged_scores_records.append(old_records_df)
+                            except Exception as e:
+                                logger.warning(f"      Error creating DataFrame for old scores records (car {car_id}): {e}")
+
+                        # Add new scores records
+                        if not car_new_scores.empty and isinstance(car_new_scores, pd.DataFrame):
+                            merged_scores_records.append(car_new_scores)
+                    else:
+                        # No change - just update scrape_date
+                        updated_records_list = []
+                        for _, old_row in car_old_scores.iterrows():
+                            try:
+                                old_record = old_row.to_dict()
+                                old_record['scrape_date'] = today_str
+                                updated_records_list.append(old_record)
+                            except Exception as e:
+                                logger.warning(f"      Error converting updated scores record for car {car_id}: {e}")
+                                continue
+
+                        # Convert list of dicts to DataFrame before appending
+                        if updated_records_list:
+                            try:
+                                updated_records_df = pd.DataFrame(updated_records_list)
+                                if not updated_records_df.empty:
+                                    merged_scores_records.append(updated_records_df)
+                            except Exception as e:
+                                logger.warning(f"      Error creating DataFrame for updated scores records (car {car_id}): {e}")
+            except Exception as e:
+                logger.warning(f"      Error processing scores for car {car_id}: {e}")
+                continue
+
+        # Combine all records - ensure all items are DataFrames
+        if merged_scores_records:
+            # Filter out empty DataFrames and ensure all are DataFrames
+            valid_records = []
+            for df in merged_scores_records:
+                if isinstance(df, pd.DataFrame) and not df.empty:
+                    # Ensure all required columns exist
+                    missing_cols = set(SCORES_COLUMNS) - set(df.columns)
+                    if missing_cols:
+                        logger.warning(f"      Missing columns in scores DataFrame: {missing_cols}")
+                        # Add missing columns with None values
+                        for col in missing_cols:
+                            df[col] = None
+                    valid_records.append(df)
+
+            if valid_records:
+                try:
+                    merged_scores = pd.concat(valid_records, ignore_index=True)
+                except Exception as e:
+                    logger.error(f"      Error concatenating scores records: {e}")
+                    logger.warning(f"      Falling back to new scores DataFrame only")
+                    merged_scores = new_scores_df
+            else:
+                merged_scores = new_scores_df
+        else:
+            merged_scores = new_scores_df
+    else:
+        # First time - no history
+        merged_scores = new_scores_df
+
+    logger.info(f"      Processed scores for {len(car_ids)} cars")
+    logger.info(f"      Total scores records: {len(merged_scores)}")
+    logger.info("=" * 60)
+
+    return merged_scores
+
+
+def export_equipment_list(equipment_history_df, output_dir):
+    """Extract all unique equipment categories and items, export as JSON"""
+    logger.info("=" * 60)
+    logger.info("EXTRACTING EQUIPMENT LIST...")
+    logger.info("=" * 60)
+
+    try:
+        if equipment_history_df.empty:
+            logger.warning("      No equipment data available")
+            return
+
+        # Get all unique categories
+        categories = equipment_history_df['category'].dropna().unique().tolist()
+        categories = sorted([str(cat) for cat in categories])
+
+        # Build equipment list grouped by category
+        equipment_list = {}
+
+        for category in categories:
+            # Get all equipment items for this category
+            category_equipment = equipment_history_df[
+                equipment_history_df['category'] == category
+            ]['equipment_name'].dropna().unique().tolist()
+
+            # Sort and remove duplicates
+            category_equipment = sorted(list(set([str(item) for item in category_equipment])))
+
+            if category_equipment:
+                equipment_list[category] = category_equipment
+
+        # Create summary statistics
+        total_categories = len(equipment_list)
+        total_equipment_items = sum(len(items) for items in equipment_list.values())
+
+        # Build output structure
+        output_data = {
+            'metadata': {
+                'extraction_date': datetime.now().isoformat(),
+                'total_categories': total_categories,
+                'total_unique_equipment_items': total_equipment_items,
+                'categories': categories
+            },
+            'equipment_by_category': equipment_list
+        }
+
+        # Export to JSON
+        equipment_list_file = f"{output_dir}/equipment_list.json"
+        with open(equipment_list_file, 'w', encoding='utf-8') as f:
+            json.dump(output_data, f, ensure_ascii=False, indent=2)
+
+        logger.info(f"      ✓ Equipment list exported: {equipment_list_file}")
+        logger.info(f"      ✓ Total categories: {total_categories}")
+        logger.info(f"      ✓ Total unique equipment items: {total_equipment_items}")
+        logger.info("=" * 60)
+
+    except Exception as e:
+        logger.error(f"      ✗ Error exporting equipment list: {str(e)}")
+
+
 #url = "https://www.bmw.be/fr-be/sl/stocklocator_uc/results?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%252C%2522i5_G61E%2522%252C%2522i5_G60E%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D"
 
 # avec toit ouvrant
-url="https://www.bmw.be/fr-be/sl/stocklocator_uc/results?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%252C%2522i5_G61E%2522%252C%2522i5_G60E%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D"
+#url="https://www.bmw.be/fr-be/sl/stocklocator_uc/results?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%252C%2522i5_G61E%2522%252C%2522i5_G60E%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D"
+
+# all BMW i4
+url = "https://www.bmw.be/fr-be/sl/stocklocator_uc/results?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%257D"
 
 def parse_price(price_str):
     """Convert price string like '59 950,00 €' to float like 59950.0"""
@@ -445,6 +827,316 @@ def parse_registration_date(date_str):
         return None
     except Exception as e:
         return None
+
+
+def calculate_age_metrics(df):
+    """Calculate age and usage metrics"""
+    df = df.copy()
+    current_date = datetime.now()
+
+    # Calculate age in months
+    df['age_months'] = df['registration_date'].apply(
+        lambda x: (current_date.year - x.year) * 12 + (current_date.month - x.month)
+        if pd.notna(x) else None
+    )
+
+    # Calculate age in years (for annual mileage)
+    df['age_years'] = df['age_months'] / 12.0
+
+    # Calculate annual mileage (kilometers per year)
+    df['annual_mileage'] = df.apply(
+        lambda row: row['kilometers'] / row['age_years']
+        if pd.notna(row['kilometers']) and pd.notna(row['age_years']) and row['age_years'] > 0
+        else None,
+        axis=1
+    )
+
+    # Newness score (higher for newer cars, 0-100 scale)
+    # 2024 cars = 100, decreasing by 10 per year
+    df['newness_score'] = df['registration_date'].apply(
+        lambda x: max(0, 100 - (current_date.year - x.year) * 10)
+        if pd.notna(x) else None
+    )
+
+    return df
+
+
+def calculate_value_efficiency_metrics(df):
+    """Calculate value efficiency metrics and scores"""
+    df = df.copy()
+
+    # Price per kilometer (lower is better)
+    df['price_per_km'] = df.apply(
+        lambda row: row['price'] / row['kilometers']
+        if pd.notna(row['price']) and pd.notna(row['kilometers']) and row['kilometers'] > 0
+        else None,
+        axis=1
+    )
+
+    # Price per kW (lower is better)
+    df['price_per_kw'] = df.apply(
+        lambda row: row['price'] / row['horse_power_kw']
+        if pd.notna(row['price']) and pd.notna(row['horse_power_kw']) and row['horse_power_kw'] > 0
+        else None,
+        axis=1
+    )
+
+    # Price per km range (lower is better)
+    df['price_per_km_range'] = df.apply(
+        lambda row: row['price'] / row['battery_range_km']
+        if pd.notna(row['price']) and pd.notna(row['battery_range_km']) and row['battery_range_km'] > 0
+        else None,
+        axis=1
+    )
+
+    # Normalize to 0-100 scores (lower values = higher scores)
+    # Price per km score
+    valid_price_per_km = df['price_per_km'].dropna()
+    if len(valid_price_per_km) > 0:
+        min_val = valid_price_per_km.min()
+        max_val = valid_price_per_km.max()
+        if max_val > min_val:
+            df['value_score_price_per_km'] = df['price_per_km'].apply(
+                lambda x: 100 * (1 - (x - min_val) / (max_val - min_val))
+                if pd.notna(x) else None
+            )
+        else:
+            df['value_score_price_per_km'] = 50 if len(valid_price_per_km) > 0 else None
+    else:
+        df['value_score_price_per_km'] = None
+
+    # Price per kW score
+    valid_price_per_kw = df['price_per_kw'].dropna()
+    if len(valid_price_per_kw) > 0:
+        min_val = valid_price_per_kw.min()
+        max_val = valid_price_per_kw.max()
+        if max_val > min_val:
+            df['value_score_price_per_kw'] = df['price_per_kw'].apply(
+                lambda x: 100 * (1 - (x - min_val) / (max_val - min_val))
+                if pd.notna(x) else None
+            )
+        else:
+            df['value_score_price_per_kw'] = 50 if len(valid_price_per_kw) > 0 else None
+    else:
+        df['value_score_price_per_kw'] = None
+
+    # Price per km range score
+    valid_price_per_range = df['price_per_km_range'].dropna()
+    if len(valid_price_per_range) > 0:
+        min_val = valid_price_per_range.min()
+        max_val = valid_price_per_range.max()
+        if max_val > min_val:
+            df['value_score_price_per_range'] = df['price_per_km_range'].apply(
+                lambda x: 100 * (1 - (x - min_val) / (max_val - min_val))
+                if pd.notna(x) else None
+            )
+        else:
+            df['value_score_price_per_range'] = 50 if len(valid_price_per_range) > 0 else None
+    else:
+        df['value_score_price_per_range'] = None
+
+    # Overall value efficiency score (average of the three)
+    df['value_efficiency_score'] = df.apply(
+        lambda row: pd.Series([
+            row['value_score_price_per_km'],
+            row['value_score_price_per_kw'],
+            row['value_score_price_per_range']
+        ]).mean() if any(pd.notna([row['value_score_price_per_km'],
+                                   row['value_score_price_per_kw'],
+                                   row['value_score_price_per_range']])) else None,
+        axis=1
+    )
+
+    return df
+
+
+def calculate_age_usage_scores(df):
+    """Calculate age and usage scores"""
+    df = df.copy()
+
+    # Age score (newer = better, 0-100 scale)
+    # Penalize age: newer cars get higher scores
+    valid_age = df['age_months'].dropna()
+    if len(valid_age) > 0:
+        min_age = valid_age.min()
+        max_age = valid_age.max()
+        if max_age > min_age:
+            df['age_score'] = df['age_months'].apply(
+                lambda x: 100 * (1 - (x - min_age) / (max_age - min_age))
+                if pd.notna(x) else None
+            )
+        else:
+            df['age_score'] = 100 if len(valid_age) > 0 else None
+    else:
+        df['age_score'] = None
+
+    # Annual mileage score (lower mileage = better, 0-100 scale)
+    # Bonus for < 10k km/year, penalty for > 20k km/year
+    valid_annual = df['annual_mileage'].dropna()
+    if len(valid_annual) > 0:
+        # Use a scoring function: 100 for 0 km/year, decreasing linearly
+        # Optimal: < 10k km/year = high score (80-100)
+        # Good: 10-15k km/year = medium-high (60-80)
+        # Acceptable: 15-20k km/year = medium (40-60)
+        # High: > 20k km/year = low (0-40)
+        def mileage_score(annual_km):
+            if pd.isna(annual_km):
+                return None
+            if annual_km <= 10000:
+                return 80 + (10000 - annual_km) / 10000 * 20  # 80-100
+            elif annual_km <= 15000:
+                return 60 + (15000 - annual_km) / 5000 * 20  # 60-80
+            elif annual_km <= 20000:
+                return 40 + (20000 - annual_km) / 5000 * 20  # 40-60
+            else:
+                return max(0, 40 - (annual_km - 20000) / 10000 * 40)  # 0-40
+
+        df['usage_score'] = df['annual_mileage'].apply(mileage_score)
+    else:
+        df['usage_score'] = None
+
+    # Overall age & usage score (weighted average: 40% age, 40% usage, 20% newness)
+    df['age_usage_score'] = df.apply(
+        lambda row: pd.Series([
+            row['age_score'] * 0.4 if pd.notna(row['age_score']) else None,
+            row['usage_score'] * 0.4 if pd.notna(row['usage_score']) else None,
+            row['newness_score'] * 0.2 if pd.notna(row['newness_score']) else None
+        ]).sum() if any(pd.notna([row['age_score'], row['usage_score'], row['newness_score']])) else None,
+        axis=1
+    )
+
+    return df
+
+
+def calculate_performance_range_scores(df):
+    """Calculate performance and range metrics and scores"""
+    df = df.copy()
+
+    # Range efficiency (km per kW) - higher is better
+    df['range_efficiency'] = df.apply(
+        lambda row: row['battery_range_km'] / row['horse_power_kw']
+        if pd.notna(row['battery_range_km']) and pd.notna(row['horse_power_kw']) and row['horse_power_kw'] > 0
+        else None,
+        axis=1
+    )
+
+    # Range adequacy score (bonus for >= 400 km)
+    def range_adequacy_score(range_km):
+        if pd.isna(range_km):
+            return None
+        if range_km >= 500:
+            return 100
+        elif range_km >= 450:
+            return 90
+        elif range_km >= 400:
+            return 80
+        elif range_km >= 350:
+            return 60
+        elif range_km >= 300:
+            return 40
+        else:
+            return 20
+
+    df['range_adequacy_score'] = df['battery_range_km'].apply(range_adequacy_score)
+
+    # Power adequacy score (bonus for >= 200 kW)
+    def power_adequacy_score(power_kw):
+        if pd.isna(power_kw):
+            return None
+        if power_kw >= 300:
+            return 100
+        elif power_kw >= 250:
+            return 90
+        elif power_kw >= 200:
+            return 80
+        elif power_kw >= 150:
+            return 60
+        elif power_kw >= 100:
+            return 40
+        else:
+            return 20
+
+    df['power_adequacy_score'] = df['horse_power_kw'].apply(power_adequacy_score)
+
+    # Range efficiency score (normalized 0-100, higher is better)
+    valid_efficiency = df['range_efficiency'].dropna()
+    if len(valid_efficiency) > 0:
+        min_val = valid_efficiency.min()
+        max_val = valid_efficiency.max()
+        if max_val > min_val:
+            df['range_efficiency_score'] = df['range_efficiency'].apply(
+                lambda x: 100 * (x - min_val) / (max_val - min_val)
+                if pd.notna(x) else None
+            )
+        else:
+            df['range_efficiency_score'] = 50 if len(valid_efficiency) > 0 else None
+    else:
+        df['range_efficiency_score'] = None
+
+    # Overall performance/range score (weighted: 40% range adequacy, 30% power adequacy, 30% efficiency)
+    df['performance_range_score'] = df.apply(
+        lambda row: pd.Series([
+            row['range_adequacy_score'] * 0.4 if pd.notna(row['range_adequacy_score']) else None,
+            row['power_adequacy_score'] * 0.3 if pd.notna(row['power_adequacy_score']) else None,
+            row['range_efficiency_score'] * 0.3 if pd.notna(row['range_efficiency_score']) else None
+        ]).sum() if any(pd.notna([row['range_adequacy_score'],
+                                  row['power_adequacy_score'],
+                                  row['range_efficiency_score']])) else None,
+        axis=1
+    )
+
+    return df
+
+
+def calculate_all_scores(df):
+    """Calculate all scoring metrics and add them to the DataFrame"""
+    logger.info("=" * 60)
+    logger.info("CALCULATING SCORING METRICS...")
+    logger.info("=" * 60)
+
+    # Step 1: Calculate age metrics
+    logger.info("  → Calculating age and usage metrics...")
+    df = calculate_age_metrics(df)
+
+    # Step 2: Calculate value efficiency metrics
+    logger.info("  → Calculating value efficiency metrics...")
+    df = calculate_value_efficiency_metrics(df)
+
+    # Step 3: Calculate age & usage scores
+    logger.info("  → Calculating age & usage scores...")
+    df = calculate_age_usage_scores(df)
+
+    # Step 4: Calculate performance/range scores
+    logger.info("  → Calculating performance/range scores...")
+    df = calculate_performance_range_scores(df)
+
+    # Step 5: Calculate final overall score
+    logger.info("  → Calculating final overall score...")
+    df = calculate_final_score(df)
+
+    logger.info("  ✓ All scoring metrics calculated")
+    logger.info("=" * 60)
+
+    return df
+
+
+def calculate_final_score(df):
+    """Calculate final overall score combining all category scores"""
+    df = df.copy()
+
+    # Overall score (weighted average: 35% value, 35% age/usage, 30% performance)
+    df['final_score'] = df.apply(
+        lambda row: pd.Series([
+            row['value_efficiency_score'] * 0.35 if pd.notna(row['value_efficiency_score']) else None,
+            row['age_usage_score'] * 0.35 if pd.notna(row['age_usage_score']) else None,
+            row['performance_range_score'] * 0.30 if pd.notna(row['performance_range_score']) else None
+        ]).sum() if any(pd.notna([row['value_efficiency_score'],
+                                  row['age_usage_score'],
+                                  row['performance_range_score']])) else None,
+        axis=1
+    )
+
+    return df
 
 logger.info("=" * 60)
 logger.info("Starting BMW car scraping script")
@@ -752,6 +1444,9 @@ with sync_playwright() as p:
     existing_columns = [col for col in column_order if col in df.columns]
     df = df[existing_columns]
 
+    # Calculate all scoring metrics
+    df = calculate_all_scores(df)
+
     # Display summary
     logger.info("=" * 60)
     logger.info("DATA SUMMARY:")
@@ -770,6 +1465,39 @@ with sync_playwright() as p:
 
     logger.info(f"DataFrame shape: {df.shape}")
     logger.info(f"Columns: {', '.join(df.columns.tolist())}")
+
+    # Display scoring summary
+    if len(df) > 0 and 'value_efficiency_score' in df.columns:
+        logger.info("")
+        logger.info("=" * 60)
+        logger.info("SCORING SUMMARY:")
+        logger.info("=" * 60)
+
+        # Value efficiency scores
+        if 'value_efficiency_score' in df.columns:
+            valid_scores = df['value_efficiency_score'].dropna()
+            if len(valid_scores) > 0:
+                logger.info(f"Value Efficiency Score - Avg: {valid_scores.mean():.1f}, Min: {valid_scores.min():.1f}, Max: {valid_scores.max():.1f}")
+
+        # Age & usage scores
+        if 'age_usage_score' in df.columns:
+            valid_scores = df['age_usage_score'].dropna()
+            if len(valid_scores) > 0:
+                logger.info(f"Age & Usage Score - Avg: {valid_scores.mean():.1f}, Min: {valid_scores.min():.1f}, Max: {valid_scores.max():.1f}")
+
+        # Performance/range scores
+        if 'performance_range_score' in df.columns:
+            valid_scores = df['performance_range_score'].dropna()
+            if len(valid_scores) > 0:
+                logger.info(f"Performance/Range Score - Avg: {valid_scores.mean():.1f}, Min: {valid_scores.min():.1f}, Max: {valid_scores.max():.1f}")
+
+        # Final overall score
+        if 'final_score' in df.columns:
+            valid_scores = df['final_score'].dropna()
+            if len(valid_scores) > 0:
+                logger.info(f"Final Score - Avg: {valid_scores.mean():.1f}, Min: {valid_scores.min():.1f}, Max: {valid_scores.max():.1f}")
+
+        logger.info("=" * 60)
 
     # Historical tracking
     logger.info("=" * 60)
@@ -826,6 +1554,44 @@ with sync_playwright() as p:
     except Exception as e:
         logger.error(f"      ✗ Error saving equipment history: {str(e)}")
 
+    # Export equipment list for standardization review
+    export_equipment_list(merged_equipment, output_dir)
+
+    # Process scores history
+    # First, merge scores from scraped data into merged_history (for scores extraction)
+    scores_file = f"{output_dir}/bmw_cars_scores_history.csv"
+    scores_history_df = load_scores_history(scores_file)
+
+    # Extract scores from df and merge into merged_history temporarily
+    score_cols = ['car_id', 'value_efficiency_score', 'age_usage_score',
+                  'performance_range_score', 'final_score']
+    if all(col in df.columns for col in score_cols):
+        df_scores = df[score_cols].copy()
+        # Merge scores into merged_history for scores history processing
+        merged_history_with_scores = merged_history.merge(
+            df_scores,
+            on='car_id',
+            how='left'
+        )
+    else:
+        merged_history_with_scores = merged_history
+
+    merged_scores = merge_scores_history(merged_history_with_scores, scores_history_df, scrape_date)
+
+    # Save scores history to CSV
+    try:
+        # Convert datetime columns to string format for CSV
+        df_scores_export = merged_scores.copy()
+        for col in ['valid_from', 'valid_to', 'scrape_date']:
+            if col in df_scores_export.columns:
+                df_scores_export[col] = df_scores_export[col].astype(str)
+
+        df_scores_export.to_csv(scores_file, index=False)
+        logger.info(f"      ✓ Scores history saved: {scores_file}")
+        logger.info(f"      ✓ Total scores records: {len(df_scores_export)}")
+    except Exception as e:
+        logger.error(f"      ✗ Error saving scores history: {str(e)}")
+
     # Export current state (latest records only) to Excel
     logger.info("=" * 60)
     logger.info("EXPORTING CURRENT STATE TO EXCEL...")
@@ -833,6 +1599,21 @@ with sync_playwright() as p:
 
     # Get latest records for current state export
     latest_records = get_latest_records(merged_history)
+
+    # Join scores from scores history (latest scores)
+    logger.info("      → Joining scores from scores history...")
+    latest_scores = get_latest_records(merged_scores)
+    if not latest_scores.empty:
+        # Merge scores on car_id
+        latest_records = latest_records.merge(
+            latest_scores[['car_id', 'value_efficiency_score', 'age_usage_score',
+                          'performance_range_score', 'final_score']],
+            on='car_id',
+            how='left'
+        )
+        logger.info(f"      ✓ Joined scores for {len(latest_records[latest_records['final_score'].notna()])} cars")
+    else:
+        logger.warning("      → No scores found in history, scores will be missing in export")
 
     # Generate filename with timestamp
     date_str = datetime.now().strftime("%Y-%m-%d")
@@ -869,4 +1650,3 @@ with sync_playwright() as p:
     logger.info("\nPress Enter to close the browser...")
     input()
     browser.close()
-
