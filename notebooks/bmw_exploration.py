@@ -15,6 +15,176 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+# Historical tracking columns
+TRACKING_COLUMNS = [
+    'car_id', 'model_name', 'price', 'kilometers', 'registration_date',
+    'horse_power_kw', 'horse_power_ps', 'equipments'
+]
+
+HISTORY_COLUMNS = [
+    'car_id', 'model_name', 'price', 'kilometers', 'registration_date',
+    'horse_power_kw', 'horse_power_ps', 'equipments',
+    'first_seen_date', 'last_seen_date', 'valid_from', 'valid_to',
+    'is_latest', 'status', 'link', 'scrape_date'
+]
+
+
+def load_historical_data(history_file):
+    """Load historical car data from CSV"""
+    if os.path.exists(history_file):
+        try:
+            df = pd.read_csv(history_file, dtype={'car_id': 'Int64'})
+            # Convert date columns to datetime
+            for col in ['first_seen_date', 'last_seen_date', 'valid_from', 'valid_to', 'scrape_date']:
+                if col in df.columns:
+                    df[col] = pd.to_datetime(df[col], errors='coerce')
+            logger.info(f"Loaded {len(df)} historical records from {history_file}")
+            return df
+        except Exception as e:
+            logger.warning(f"Error loading history file: {e}. Starting fresh.")
+            return pd.DataFrame(columns=HISTORY_COLUMNS)
+    return pd.DataFrame(columns=HISTORY_COLUMNS)
+
+
+def get_latest_records(history_df):
+    """Get only the latest version of each car"""
+    if history_df.empty:
+        return history_df
+    return history_df[history_df['is_latest'] == True].copy()
+
+
+def compare_records(old_record, new_record, tracking_cols):
+    """Check if any tracked columns have changed"""
+    for col in tracking_cols:
+        if col in ['price', 'kilometers', 'horse_power_kw', 'horse_power_ps']:
+            # Handle numeric comparisons with NaN
+            old_val = old_record[col] if pd.notna(old_record[col]) else None
+            new_val = new_record[col] if pd.notna(new_record[col]) else None
+            if old_val != new_val:
+                return True
+        else:
+            # String comparisons
+            if str(old_record[col]) != str(new_record[col]):
+                return True
+    return False
+
+
+def merge_historical_data(current_data, history_df, scrape_date):
+    """Merge current scrape with historical data using SCD Type 2"""
+    today = scrape_date.date()
+    today_str = today.isoformat()
+
+    # Get latest records
+    latest_df = get_latest_records(history_df)
+
+    # Ensure car_id is integer type
+    current_data['car_id'] = current_data['car_id'].astype('Int64')
+    if not latest_df.empty:
+        latest_df['car_id'] = latest_df['car_id'].astype('Int64')
+
+    new_records = []
+    processed_ids = set()
+
+    logger.info("=" * 60)
+    logger.info("HISTORICAL DATA MERGE")
+    logger.info("=" * 60)
+
+    # Process current data
+    for idx, row in current_data.iterrows():
+        car_id = row['car_id']
+        processed_ids.add(car_id)
+
+        # Check if car exists in latest history
+        old_record = latest_df[latest_df['car_id'] == car_id]
+
+        if old_record.empty:
+            # New car
+            logger.info(f"[NEW] Car ID {car_id}: {row['model_name']}")
+            new_row = row.to_dict()
+            new_row.update({
+                'first_seen_date': today_str,
+                'last_seen_date': today_str,
+                'valid_from': today_str,
+                'valid_to': None,
+                'is_latest': True,
+                'status': 'active',
+                'scrape_date': today_str
+            })
+            new_records.append(new_row)
+        else:
+            old_record = old_record.iloc[0]
+
+            # Check if values changed
+            if compare_records(old_record, row, TRACKING_COLUMNS):
+                # Values changed - end old record
+                logger.info(f"[CHANGED] Car ID {car_id}: {row['model_name']}")
+
+                # Mark old record as not latest
+                old_row = history_df[
+                    (history_df['car_id'] == car_id) &
+                    (history_df['is_latest'] == True)
+                ].iloc[0].to_dict()
+                old_row['valid_to'] = today_str
+                old_row['is_latest'] = False
+                new_records.append(old_row)
+
+                # Add new version
+                new_row = row.to_dict()
+                new_row.update({
+                    'first_seen_date': old_record['first_seen_date'],
+                    'last_seen_date': today_str,
+                    'valid_from': today_str,
+                    'valid_to': None,
+                    'is_latest': True,
+                    'status': 'active',
+                    'scrape_date': today_str
+                })
+                new_records.append(new_row)
+            else:
+                # No changes - just update last_seen_date and scrape_date
+                logger.info(f"[UPDATED] Car ID {car_id}: {row['model_name']}")
+                old_row = old_record.to_dict()
+                old_row['last_seen_date'] = today_str
+                old_row['scrape_date'] = today_str
+                new_records.append(old_row)
+
+    # Mark disappeared cars as sold
+    if not latest_df.empty:
+        disappeared_cars = latest_df[
+            ~latest_df['car_id'].isin(processed_ids) &
+            (latest_df['status'] == 'active')
+        ]
+
+        for idx, old_record in disappeared_cars.iterrows():
+            car_id = old_record['car_id']
+            logger.info(f"[SOLD/REMOVED] Car ID {car_id}: {old_record['model_name']}")
+
+            # Mark as sold
+            old_row = old_record.to_dict()
+            old_row['valid_to'] = today_str
+            old_row['is_latest'] = False
+            old_row['status'] = 'sold'
+            new_records.append(old_row)
+
+    # Combine old history (non-latest) with new records
+    old_history = history_df[history_df['is_latest'] == False].copy() if not history_df.empty else pd.DataFrame(columns=HISTORY_COLUMNS)
+
+    # Create new history dataframe
+    new_records_df = pd.DataFrame(new_records)
+
+    if not old_history.empty:
+        merged_history = pd.concat([old_history, new_records_df], ignore_index=True)
+    else:
+        merged_history = new_records_df
+
+    logger.info("=" * 60)
+    logger.info(f"Summary: {len(new_records)} records in current state")
+    logger.info(f"Total historical records: {len(merged_history)}")
+    logger.info("=" * 60)
+
+    return merged_history
+
+
 #url = "https://www.bmw.be/fr-be/sl/stocklocator_uc/results?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%252C%2522i5_G61E%2522%252C%2522i5_G60E%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D"
 
 # avec toit ouvrant
@@ -407,9 +577,9 @@ with sync_playwright() as p:
     logger.info(f"DataFrame shape: {df.shape}")
     logger.info(f"Columns: {', '.join(df.columns.tolist())}")
 
-    # Export to Excel
+    # Historical tracking
     logger.info("=" * 60)
-    logger.info("EXPORTING TO EXCEL...")
+    logger.info("HISTORICAL DATA TRACKING...")
     logger.info("=" * 60)
 
     # Create results/bmw directory if it doesn't exist
@@ -417,25 +587,68 @@ with sync_playwright() as p:
     os.makedirs(output_dir, exist_ok=True)
     logger.info(f"      ✓ Directory created/verified: {output_dir}")
 
+    # Keep tracking columns + link for historical data
+    tracking_cols_with_link = TRACKING_COLUMNS + ['link']
+    df_tracking = df[tracking_cols_with_link].copy()
+
+    # Load historical data
+    history_file = f"{output_dir}/bmw_cars_history.csv"
+    history_df = load_historical_data(history_file)
+
+    # Merge current data with history using SCD Type 2
+    scrape_date = datetime.now()
+    merged_history = merge_historical_data(df_tracking, history_df, scrape_date)
+
+    # Save merged history to CSV
+    try:
+        # Convert datetime columns to string format for CSV
+        df_history_export = merged_history.copy()
+        for col in ['first_seen_date', 'last_seen_date', 'valid_from', 'valid_to', 'scrape_date']:
+            if col in df_history_export.columns:
+                df_history_export[col] = df_history_export[col].astype(str)
+
+        df_history_export.to_csv(history_file, index=False)
+        logger.info(f"      ✓ Historical data saved: {history_file}")
+        logger.info(f"      ✓ Total historical records: {len(df_history_export)}")
+    except Exception as e:
+        logger.error(f"      ✗ Error saving history: {str(e)}")
+
+    # Export current state (latest records only) to Excel
+    logger.info("=" * 60)
+    logger.info("EXPORTING CURRENT STATE TO EXCEL...")
+    logger.info("=" * 60)
+
+    # Get latest records for current state export
+    latest_records = get_latest_records(merged_history)
+
     # Generate filename with timestamp
     date_str = datetime.now().strftime("%Y-%m-%d")
     excel_filename = f"{output_dir}/bmw_cars_{date_str}.xlsx"
 
     # Export DataFrame to Excel
     try:
-        # Create a copy of the dataframe for export
-        df_export = df.copy()
+        # Create a copy for export
+        df_export = latest_records.copy()
 
         # Convert datetime objects to strings for Excel compatibility
-        if 'registration_date' in df_export.columns:
-            df_export['registration_date'] = df_export['registration_date'].apply(
-                lambda x: x.strftime('%Y-%m-%d') if pd.notna(x) else None
-            )
+        for col in ['first_seen_date', 'last_seen_date', 'valid_from', 'valid_to', 'scrape_date']:
+            if col in df_export.columns:
+                df_export[col] = df_export[col].astype(str)
 
-        # Export to Excel
         df_export.to_excel(excel_filename, index=False, engine='openpyxl')
         logger.info(f"      ✓ Excel file exported: {excel_filename}")
         logger.info(f"      ✓ Total rows exported: {len(df_export)}")
+
+        # Show summary
+        logger.info("")
+        logger.info("=" * 60)
+        logger.info("INVENTORY SUMMARY")
+        logger.info("=" * 60)
+        active_cars = len(df_export[df_export['status'] == 'active'])
+        sold_cars = len(df_export[df_export['status'] == 'sold'])
+        logger.info(f"Active cars: {active_cars}")
+        logger.info(f"Sold/Removed cars: {sold_cars}")
+        logger.info(f"Total unique cars seen: {len(merged_history['car_id'].unique())}")
     except Exception as e:
         logger.error(f"      ✗ Error exporting to Excel: {str(e)}")
         logger.warning(f"      → Make sure openpyxl is installed: pip install openpyxl")
