@@ -18,14 +18,19 @@ logger = logging.getLogger(__name__)
 # Historical tracking columns
 TRACKING_COLUMNS = [
     'car_id', 'model_name', 'price', 'kilometers', 'registration_date',
-    'horse_power_kw', 'horse_power_ps', 'equipments'
+    'horse_power_kw', 'horse_power_ps', 'battery_range_km', 'equipments'
 ]
 
 HISTORY_COLUMNS = [
     'car_id', 'model_name', 'price', 'kilometers', 'registration_date',
-    'horse_power_kw', 'horse_power_ps', 'equipments',
+    'horse_power_kw', 'horse_power_ps', 'battery_range_km', 'equipments',
     'first_seen_date', 'last_seen_date', 'valid_from', 'valid_to',
     'is_latest', 'status', 'link', 'scrape_date'
+]
+
+EQUIPMENT_COLUMNS = [
+    'car_id', 'category', 'equipment_name', 'valid_from', 'valid_to',
+    'is_latest', 'scrape_date'
 ]
 
 
@@ -56,7 +61,7 @@ def get_latest_records(history_df):
 def compare_records(old_record, new_record, tracking_cols):
     """Check if any tracked columns have changed"""
     for col in tracking_cols:
-        if col in ['price', 'kilometers', 'horse_power_kw', 'horse_power_ps']:
+        if col in ['price', 'kilometers', 'horse_power_kw', 'horse_power_ps', 'battery_range_km']:
             # Handle numeric comparisons with NaN
             old_val = old_record[col] if pd.notna(old_record[col]) else None
             new_val = new_record[col] if pd.notna(new_record[col]) else None
@@ -185,6 +190,161 @@ def merge_historical_data(current_data, history_df, scrape_date):
     return merged_history
 
 
+def extract_equipment_from_json(car_id, equipments_json, valid_from, valid_to, is_latest, scrape_date):
+    """Extract equipment items from JSON and create normalized records"""
+    equipment_records = []
+
+    if not equipments_json:
+        return equipment_records
+
+    try:
+        equipment_data = json.loads(equipments_json) if isinstance(equipments_json, str) else equipments_json
+
+        for category, equipment_list in equipment_data.items():
+            if equipment_list:
+                for equipment_name in equipment_list:
+                    equipment_records.append({
+                        'car_id': car_id,
+                        'category': category,
+                        'equipment_name': equipment_name,
+                        'valid_from': valid_from,
+                        'valid_to': valid_to,
+                        'is_latest': is_latest,
+                        'scrape_date': scrape_date
+                    })
+    except Exception as e:
+        logger.warning(f"Error parsing equipment JSON for car {car_id}: {e}")
+
+    return equipment_records
+
+
+def load_equipment_history(equipment_file):
+    """Load historical equipment data from CSV"""
+    if os.path.exists(equipment_file):
+        try:
+            df = pd.read_csv(equipment_file, dtype={'car_id': 'Int64'})
+            # Convert date columns to datetime
+            for col in ['valid_from', 'valid_to', 'scrape_date']:
+                if col in df.columns:
+                    df[col] = pd.to_datetime(df[col], errors='coerce')
+            logger.info(f"Loaded {len(df)} equipment records from {equipment_file}")
+            return df
+        except Exception as e:
+            logger.warning(f"Error loading equipment file: {e}. Starting fresh.")
+            return pd.DataFrame(columns=EQUIPMENT_COLUMNS)
+    return pd.DataFrame(columns=EQUIPMENT_COLUMNS)
+
+
+def merge_equipment_history(car_history_df, equipment_history_df, scrape_date):
+    """Merge equipment data from car history with equipment history"""
+    today = scrape_date.date()
+    today_str = today.isoformat()
+
+    # Get latest car records (to extract current equipment)
+    latest_cars = get_latest_records(car_history_df)
+
+    # Extract equipment from latest car records
+    new_equipment_records = []
+
+    logger.info("=" * 60)
+    logger.info("PROCESSING EQUIPMENT DATA...")
+    logger.info("=" * 60)
+
+    for idx, car_row in latest_cars.iterrows():
+        car_id = car_row['car_id']
+        equipments_json = car_row.get('equipments')
+        valid_from = car_row['valid_from']
+        valid_to = car_row['valid_to']
+        is_latest = car_row['is_latest']
+        scrape_date_str = car_row['scrape_date']
+
+        # Convert dates to string if needed
+        if pd.notna(valid_from):
+            valid_from = valid_from.isoformat() if hasattr(valid_from, 'isoformat') else str(valid_from)
+        if pd.notna(valid_to):
+            valid_to = valid_to.isoformat() if hasattr(valid_to, 'isoformat') else str(valid_to)
+        else:
+            valid_to = None
+        if pd.notna(scrape_date_str):
+            scrape_date_str = scrape_date_str.isoformat() if hasattr(scrape_date_str, 'isoformat') else str(scrape_date_str)
+
+        equipment_items = extract_equipment_from_json(
+            car_id, equipments_json, valid_from, valid_to, is_latest, scrape_date_str
+        )
+        new_equipment_records.extend(equipment_items)
+
+    # Create new equipment dataframe
+    new_equipment_df = pd.DataFrame(new_equipment_records)
+
+    if new_equipment_df.empty:
+        logger.info("      No equipment records to process")
+        return equipment_history_df if not equipment_history_df.empty else pd.DataFrame(columns=EQUIPMENT_COLUMNS)
+
+    # Get current equipment for each car (latest records)
+    car_ids = new_equipment_df['car_id'].unique()
+
+    if not equipment_history_df.empty:
+        current_equipment = equipment_history_df[equipment_history_df['is_latest'] == True].copy()
+        merged_equipment_records = []
+
+        # Keep old non-latest records
+        old_equipment = equipment_history_df[equipment_history_df['is_latest'] == False].copy()
+        if not old_equipment.empty:
+            merged_equipment_records.append(old_equipment)
+
+        existing_car_ids = set(current_equipment['car_id'].unique()) if not current_equipment.empty else set()
+
+        for car_id in car_ids:
+            car_new_equipment = new_equipment_df[new_equipment_df['car_id'] == car_id]
+            car_old_equipment = current_equipment[current_equipment['car_id'] == car_id] if car_id in existing_car_ids else pd.DataFrame()
+
+            if car_old_equipment.empty:
+                # New car - add all equipment
+                merged_equipment_records.append(car_new_equipment)
+            else:
+                # Create sets for comparison
+                new_set = set()
+                for _, row in car_new_equipment.iterrows():
+                    new_set.add((row['category'], row['equipment_name']))
+
+                old_set = set()
+                for _, row in car_old_equipment.iterrows():
+                    old_set.add((row['category'], row['equipment_name']))
+
+                # Mark old equipment as not latest if car equipment changed
+                if new_set != old_set:
+                    # End old equipment records
+                    for _, old_row in car_old_equipment.iterrows():
+                        old_record = old_row.to_dict()
+                        old_record['valid_to'] = today_str
+                        old_record['is_latest'] = False
+                        merged_equipment_records.append(old_record)
+
+                    # Add new equipment records
+                    merged_equipment_records.append(car_new_equipment)
+                else:
+                    # No change - just update scrape_date
+                    for _, old_row in car_old_equipment.iterrows():
+                        old_record = old_row.to_dict()
+                        old_record['scrape_date'] = today_str
+                        merged_equipment_records.append(old_record)
+
+        # Combine all records
+        if merged_equipment_records:
+            merged_equipment = pd.concat(merged_equipment_records, ignore_index=True)
+        else:
+            merged_equipment = new_equipment_df
+    else:
+        # First time - no history
+        merged_equipment = new_equipment_df
+
+    logger.info(f"      Processed equipment for {len(car_ids)} cars")
+    logger.info(f"      Total equipment records: {len(merged_equipment)}")
+    logger.info("=" * 60)
+
+    return merged_equipment
+
+
 #url = "https://www.bmw.be/fr-be/sl/stocklocator_uc/results?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%252C%2522i5_G61E%2522%252C%2522i5_G60E%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D"
 
 # avec toit ouvrant
@@ -243,6 +403,20 @@ def parse_horse_power(power_str):
     ps_match = re.search(r'\((\d+)\s*PS\)', power_str)
     ps = int(ps_match.group(1)) if ps_match else None
     return kw, ps
+
+
+def parse_battery_range(range_str):
+    """Extract battery range from string like '475 km' to integer like 475"""
+    if not range_str:
+        return None
+    # Extract numbers only
+    numbers = re.findall(r'\d+', range_str.replace(' ', ''))
+    if numbers:
+        try:
+            return int(numbers[0])
+        except:
+            return None
+    return None
 
 
 def parse_registration_date(date_str):
@@ -454,6 +628,25 @@ with sync_playwright() as p:
             car_data['horse_power_ps'] = None
             logger.warning(f"      → horse_power: Not found ({str(e)})")
 
+        # Battery range (Autonomie électrique)
+        try:
+            # Find the technical data table row containing the battery range
+            battery_range_container = page.locator('div[data-technical-data-key="wltpPureElectricRangeCombinedKilometer"]').locator('xpath=ancestor::div[contains(@class, "technical-data_table")]')
+            battery_range_container.wait_for(state='visible', timeout=5000)
+            # Get the value from the headline-5 div within the same container
+            battery_range_value = battery_range_container.locator('div.headline-5 span').inner_text().strip()
+            if not battery_range_value:
+                # Fallback: try direct sibling
+                battery_range_label = page.locator('div[data-technical-data-key="wltpPureElectricRangeCombinedKilometer"]')
+                battery_range_value = battery_range_label.locator('xpath=following-sibling::div[contains(@class, "headline-5")]//span').inner_text().strip()
+            car_data['battery_range_raw'] = battery_range_value
+            car_data['battery_range_km'] = parse_battery_range(battery_range_value)
+            logger.info(f"      → battery_range_km: {car_data['battery_range_km']} (raw: {car_data['battery_range_raw']})")
+        except Exception as e:
+            car_data['battery_range_raw'] = None
+            car_data['battery_range_km'] = None
+            logger.warning(f"      → battery_range: Not found ({str(e)})")
+
         # Extract equipment information
         equipment_data = {}
         try:
@@ -552,6 +745,7 @@ with sync_playwright() as p:
         'kilometers', 'kilometers_raw',
         'registration_date', 'registration_date_raw',
         'horse_power_kw', 'horse_power_ps', 'horse_power_raw',
+        'battery_range_km', 'battery_range_raw',
         'equipments', 'link'
     ]
     # Only include columns that exist
@@ -612,6 +806,25 @@ with sync_playwright() as p:
         logger.info(f"      ✓ Total historical records: {len(df_history_export)}")
     except Exception as e:
         logger.error(f"      ✗ Error saving history: {str(e)}")
+
+    # Process equipment history
+    equipment_file = f"{output_dir}/bmw_cars_equipment_history.csv"
+    equipment_history_df = load_equipment_history(equipment_file)
+    merged_equipment = merge_equipment_history(merged_history, equipment_history_df, scrape_date)
+
+    # Save equipment history to CSV
+    try:
+        # Convert datetime columns to string format for CSV
+        df_equipment_export = merged_equipment.copy()
+        for col in ['valid_from', 'valid_to', 'scrape_date']:
+            if col in df_equipment_export.columns:
+                df_equipment_export[col] = df_equipment_export[col].astype(str)
+
+        df_equipment_export.to_csv(equipment_file, index=False)
+        logger.info(f"      ✓ Equipment history saved: {equipment_file}")
+        logger.info(f"      ✓ Total equipment records: {len(df_equipment_export)}")
+    except Exception as e:
+        logger.error(f"      ✗ Error saving equipment history: {str(e)}")
 
     # Export current state (latest records only) to Excel
     logger.info("=" * 60)

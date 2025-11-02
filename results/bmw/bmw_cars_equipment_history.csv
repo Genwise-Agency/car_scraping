@@ -1,0 +1,966 @@
+car_id,category,equipment_name,valid_from,valid_to,is_latest,scrape_date
+39582,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-02,None,True,2025-11-02
+39582,Equipements électriques,Active Cruise Control avec fonction Stop&Go,2025-11-02,None,True,2025-11-02
+39582,Equipements électriques,Adaptive LED headlights,2025-11-02,None,True,2025-11-02
+39582,Equipements électriques,Climatisation à réglage électronique,2025-11-02,None,True,2025-11-02
+39582,Equipements électriques,Driving Assistant Pack,2025-11-02,None,True,2025-11-02
+39582,Equipements électriques,High Beam Assist,2025-11-02,None,True,2025-11-02
+39582,Equipements électriques,M Lights Shadow Line,2025-11-02,None,True,2025-11-02
+39582,Equipements électriques,Parking Assistant Pack,2025-11-02,None,True,2025-11-02
+39582,Equipements électriques,Système d'alarme,2025-11-02,None,True,2025-11-02
+39582,Equipements extérieurs,Accès confort,2025-11-02,None,True,2025-11-02
+39582,Equipements extérieurs,Spoiler arrière M,2025-11-02,None,True,2025-11-02
+39582,Equipements extérieurs,Kit aérodynamique M,2025-11-02,None,True,2025-11-02
+39582,Equipements extérieurs,M Shadow Line hochglänzend,2025-11-02,None,True,2025-11-02
+39582,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,2025-11-02,None,True,2025-11-02
+39582,Equipements extérieurs,Vitres teintées foncées à l'arrière,2025-11-02,None,True,2025-11-02
+39582,Equipements intérieurs,Ceintures de sécurité M,2025-11-02,None,True,2025-11-02
+39582,Equipements intérieurs,Lumière intérieure d'ambiance,2025-11-02,None,True,2025-11-02
+39582,Equipements intérieurs,Ciel de pavillon M en Anthrazit,2025-11-02,None,True,2025-11-02
+39582,Equipements intérieurs,Pack rangement,2025-11-02,None,True,2025-11-02
+39582,Equipements intérieurs,Pack rétroviseurs,2025-11-02,None,True,2025-11-02
+39582,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,2025-11-02,None,True,2025-11-02
+39582,Equipements intérieurs,Sièges chauffants à l'avant,2025-11-02,None,True,2025-11-02
+39582,Equipements intérieurs,Soutien lombaire à l'avant,2025-11-02,None,True,2025-11-02
+39582,Equipements intérieurs,Tableau de bord Luxury,2025-11-02,None,True,2025-11-02
+39582,Equipements intérieurs,Toit ouvrant à commande électrique,2025-11-02,None,True,2025-11-02
+39582,Equipements intérieurs,Volant chauffant,2025-11-02,None,True,2025-11-02
+39582,Equipements intérieurs,Volant M sport,2025-11-02,None,True,2025-11-02
+39582,Jantes,Kit de réparation de pneus Plus,2025-11-02,None,True,2025-11-02
+39582,Télécommunication embarquée,BMW Live Cockpit Navigation Plus,2025-11-02,None,True,2025-11-02
+39582,Télécommunication embarquée,Espace de rangement pour Wireless Charging,2025-11-02,None,True,2025-11-02
+39582,Télécommunication embarquée,Harman/kardon Surround Sound System,2025-11-02,None,True,2025-11-02
+39582,Télécommunication embarquée,Intelligent Emergency Call - eCall,2025-11-02,None,True,2025-11-02
+39582,Télécommunication embarquée,Personal eSIM,2025-11-02,None,True,2025-11-02
+39582,"Transmission, suspension et direction",Attelage de remorque (rabattable électriquement),2025-11-02,None,True,2025-11-02
+39582,"Transmission, suspension et direction","Freins M Sport, rot",2025-11-02,None,True,2025-11-02
+39582,"Transmission, suspension et direction",Suspension adaptative M,2025-11-02,None,True,2025-11-02
+39582,"Transmission, suspension et direction",Variable Sport Steering,2025-11-02,None,True,2025-11-02
+39582,"Transmission, suspension et direction",Volant M sport,2025-11-02,None,True,2025-11-02
+39582,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+39582,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+39582,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+39582,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+39582,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+14074,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-02,None,True,2025-11-02
+14074,Equipements électriques,Climatisation à réglage électronique,2025-11-02,None,True,2025-11-02
+14074,Equipements électriques,Driving Assistant Pack Professional,2025-11-02,None,True,2025-11-02
+14074,Equipements électriques,Parking Assistant Pack Plus,2025-11-02,None,True,2025-11-02
+14074,Equipements électriques,Système d'alarme,2025-11-02,None,True,2025-11-02
+14074,Equipements extérieurs,"Étriers de frein, laqués (blau)",2025-11-02,None,True,2025-11-02
+14074,Equipements extérieurs,Accès confort,2025-11-02,None,True,2025-11-02
+14074,Equipements extérieurs,Kit aérodynamique M,2025-11-02,None,True,2025-11-02
+14074,Equipements extérieurs,M Shadow Line hochglänzend,2025-11-02,None,True,2025-11-02
+14074,Equipements extérieurs,Vitres teintées foncées à l'arrière,2025-11-02,None,True,2025-11-02
+14074,Equipements intérieurs,Lumière intérieure d'ambiance,2025-11-02,None,True,2025-11-02
+14074,Equipements intérieurs,Ciel de pavillon M en Anthrazit,2025-11-02,None,True,2025-11-02
+14074,Equipements intérieurs,Pack rangement,2025-11-02,None,True,2025-11-02
+14074,Equipements intérieurs,Pack rétroviseurs,2025-11-02,None,True,2025-11-02
+14074,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,2025-11-02,None,True,2025-11-02
+14074,Equipements intérieurs,Sièges chauffants à l'avant,2025-11-02,None,True,2025-11-02
+14074,Equipements intérieurs,Soutien lombaire à l'avant,2025-11-02,None,True,2025-11-02
+14074,Equipements intérieurs,Toit ouvrant à commande électrique,2025-11-02,None,True,2025-11-02
+14074,Equipements intérieurs,Volant chauffant,2025-11-02,None,True,2025-11-02
+14074,Equipements intérieurs,Volant M sport,2025-11-02,None,True,2025-11-02
+14074,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,2025-11-02,None,True,2025-11-02
+14074,Télécommunication embarquée,Espace de rangement pour Wireless Charging,2025-11-02,None,True,2025-11-02
+14074,Télécommunication embarquée,Intelligent Emergency Call - eCall,2025-11-02,None,True,2025-11-02
+14074,Télécommunication embarquée,Personal eSIM,2025-11-02,None,True,2025-11-02
+14074,Télécommunication embarquée,Système haut-parleurs HiFi,2025-11-02,None,True,2025-11-02
+14074,"Transmission, suspension et direction","Étriers de frein, laqués (blau)",2025-11-02,None,True,2025-11-02
+14074,"Transmission, suspension et direction",Attelage de remorque (rabattable électriquement),2025-11-02,None,True,2025-11-02
+14074,"Transmission, suspension et direction",Volant M sport,2025-11-02,None,True,2025-11-02
+14074,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+14074,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+14074,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+14074,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+44976,Charging,Adaptateur pour prise domestique (type E+F),2025-11-02,None,True,2025-11-02
+44976,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-02,None,True,2025-11-02
+44976,Charging,Flexible Fast Charger (mode 2),2025-11-02,None,True,2025-11-02
+44976,Equipements électriques,Adaptive LED headlights,2025-11-02,None,True,2025-11-02
+44976,Equipements électriques,BMW IconicSounds Electric,2025-11-02,None,True,2025-11-02
+44976,Equipements électriques,Climatisation à réglage électronique,2025-11-02,None,True,2025-11-02
+44976,Equipements électriques,Cruise Control,2025-11-02,None,True,2025-11-02
+44976,Equipements électriques,Driving Assistant Pack,2025-11-02,None,True,2025-11-02
+44976,Equipements électriques,High Beam Assist,2025-11-02,None,True,2025-11-02
+44976,Equipements électriques,Parking Assistant Pack Plus,2025-11-02,None,True,2025-11-02
+44976,Equipements électriques,Système d'alarme,2025-11-02,None,True,2025-11-02
+44976,Equipements extérieurs,"Étriers de frein, laqués (blau)",2025-11-02,None,True,2025-11-02
+44976,Equipements extérieurs,Accès confort,2025-11-02,None,True,2025-11-02
+44976,Equipements extérieurs,Kit aérodynamique M,2025-11-02,None,True,2025-11-02
+44976,Equipements extérieurs,M Shadow Line hochglänzend,2025-11-02,None,True,2025-11-02
+44976,Equipements extérieurs,Vitres teintées foncées à l'arrière,2025-11-02,None,True,2025-11-02
+44976,Equipements intérieurs,Lumière intérieure d'ambiance,2025-11-02,None,True,2025-11-02
+44976,Equipements intérieurs,Ciel de pavillon M en Anthrazit,2025-11-02,None,True,2025-11-02
+44976,Equipements intérieurs,Pack rangement,2025-11-02,None,True,2025-11-02
+44976,Equipements intérieurs,Pack rétroviseurs,2025-11-02,None,True,2025-11-02
+44976,Equipements intérieurs,Réglage en largeur du dossier pour conducteur,2025-11-02,None,True,2025-11-02
+44976,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,2025-11-02,None,True,2025-11-02
+44976,Equipements intérieurs,Sièges chauffants à l'avant,2025-11-02,None,True,2025-11-02
+44976,Equipements intérieurs,Soutien lombaire à l'avant,2025-11-02,None,True,2025-11-02
+44976,Equipements intérieurs,Toit ouvrant à commande électrique,2025-11-02,None,True,2025-11-02
+44976,Equipements intérieurs,Volant M sport,2025-11-02,None,True,2025-11-02
+44976,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,2025-11-02,None,True,2025-11-02
+44976,Télécommunication embarquée,Espace de rangement pour Wireless Charging,2025-11-02,None,True,2025-11-02
+44976,Télécommunication embarquée,Harman/kardon Surround Sound System,2025-11-02,None,True,2025-11-02
+44976,Télécommunication embarquée,Intelligent Emergency Call - eCall,2025-11-02,None,True,2025-11-02
+44976,Télécommunication embarquée,Personal eSIM,2025-11-02,None,True,2025-11-02
+44976,"Transmission, suspension et direction","Étriers de frein, laqués (blau)",2025-11-02,None,True,2025-11-02
+44976,"Transmission, suspension et direction",Attelage de remorque (rabattable électriquement),2025-11-02,None,True,2025-11-02
+44976,"Transmission, suspension et direction",Volant M sport,2025-11-02,None,True,2025-11-02
+44976,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+44976,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+44976,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+44976,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+44516,Charging,Adaptateur pour prise domestique (type E+F),2025-11-02,None,True,2025-11-02
+44516,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-02,None,True,2025-11-02
+44516,Charging,Flexible Fast Charger (mode 2),2025-11-02,None,True,2025-11-02
+44516,Equipements électriques,Adaptive LED headlights,2025-11-02,None,True,2025-11-02
+44516,Equipements électriques,BMW IconicSounds Electric,2025-11-02,None,True,2025-11-02
+44516,Equipements électriques,Climatisation à réglage électronique,2025-11-02,None,True,2025-11-02
+44516,Equipements électriques,Driving Assistant Pack Professional,2025-11-02,None,True,2025-11-02
+44516,Equipements électriques,High Beam Assist,2025-11-02,None,True,2025-11-02
+44516,Equipements électriques,Parking Assistant Pack Plus,2025-11-02,None,True,2025-11-02
+44516,Equipements électriques,Système d'alarme,2025-11-02,None,True,2025-11-02
+44516,Equipements extérieurs,"Étriers de frein, laqués (blau)",2025-11-02,None,True,2025-11-02
+44516,Equipements extérieurs,Accès confort,2025-11-02,None,True,2025-11-02
+44516,Equipements extérieurs,Kit aérodynamique M,2025-11-02,None,True,2025-11-02
+44516,Equipements extérieurs,M Shadow Line hochglänzend,2025-11-02,None,True,2025-11-02
+44516,Equipements extérieurs,Vitres teintées foncées à l'arrière,2025-11-02,None,True,2025-11-02
+44516,Equipements intérieurs,Eléments intérieur avec finition en cristal 'CraftedClarity',2025-11-02,None,True,2025-11-02
+44516,Equipements intérieurs,Lumière intérieure d'ambiance,2025-11-02,None,True,2025-11-02
+44516,Equipements intérieurs,Ciel de pavillon M en Anthrazit,2025-11-02,None,True,2025-11-02
+44516,Equipements intérieurs,Pack rangement,2025-11-02,None,True,2025-11-02
+44516,Equipements intérieurs,Pack rétroviseurs,2025-11-02,None,True,2025-11-02
+44516,Equipements intérieurs,Réglage en largeur du dossier pour conducteur,2025-11-02,None,True,2025-11-02
+44516,Equipements intérieurs,"Réglage électrique des sièges avant, avec fonction-mémoire pour siège conducteur",2025-11-02,None,True,2025-11-02
+44516,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,2025-11-02,None,True,2025-11-02
+44516,Equipements intérieurs,Sièges chauffants à l'avant et à l'arrière,2025-11-02,None,True,2025-11-02
+44516,Equipements intérieurs,Soutien lombaire à l'avant,2025-11-02,None,True,2025-11-02
+44516,Equipements intérieurs,Toit ouvrant à commande électrique,2025-11-02,None,True,2025-11-02
+44516,Equipements intérieurs,Volant chauffant,2025-11-02,None,True,2025-11-02
+44516,Equipements intérieurs,Volant M sport,2025-11-02,None,True,2025-11-02
+44516,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,2025-11-02,None,True,2025-11-02
+44516,Télécommunication embarquée,Espace de rangement pour Wireless Charging,2025-11-02,None,True,2025-11-02
+44516,Télécommunication embarquée,Intelligent Emergency Call - eCall,2025-11-02,None,True,2025-11-02
+44516,Télécommunication embarquée,Personal eSIM,2025-11-02,None,True,2025-11-02
+44516,Télécommunication embarquée,Système haut-parleurs HiFi,2025-11-02,None,True,2025-11-02
+44516,"Transmission, suspension et direction","Étriers de frein, laqués (blau)",2025-11-02,None,True,2025-11-02
+44516,"Transmission, suspension et direction",Attelage de remorque (rabattable électriquement),2025-11-02,None,True,2025-11-02
+44516,"Transmission, suspension et direction",Suspension adaptative M,2025-11-02,None,True,2025-11-02
+44516,"Transmission, suspension et direction",Variable Sport Steering,2025-11-02,None,True,2025-11-02
+44516,"Transmission, suspension et direction",Volant M sport,2025-11-02,None,True,2025-11-02
+44516,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+44516,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+44516,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+44516,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+39484,Charging,Adaptateur pour prise domestique (type E+F),2025-11-02,None,True,2025-11-02
+39484,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-02,None,True,2025-11-02
+39484,Charging,Flexible Fast Charger (mode 2),2025-11-02,None,True,2025-11-02
+39484,Equipements électriques,Adaptive LED headlights,2025-11-02,None,True,2025-11-02
+39484,Equipements électriques,BMW IconicSounds Electric,2025-11-02,None,True,2025-11-02
+39484,Equipements électriques,Climatisation à réglage électronique,2025-11-02,None,True,2025-11-02
+39484,Equipements électriques,Driving Assistant Pack Professional,2025-11-02,None,True,2025-11-02
+39484,Equipements électriques,High Beam Assist,2025-11-02,None,True,2025-11-02
+39484,Equipements électriques,Parking Assistant Pack Plus,2025-11-02,None,True,2025-11-02
+39484,Equipements électriques,Système d'alarme,2025-11-02,None,True,2025-11-02
+39484,Equipements extérieurs,"Étriers de frein, laqués (blau)",2025-11-02,None,True,2025-11-02
+39484,Equipements extérieurs,Accès confort,2025-11-02,None,True,2025-11-02
+39484,Equipements extérieurs,Kit aérodynamique M,2025-11-02,None,True,2025-11-02
+39484,Equipements extérieurs,M Shadow Line hochglänzend,2025-11-02,None,True,2025-11-02
+39484,Equipements extérieurs,Vitres teintées foncées à l'arrière,2025-11-02,None,True,2025-11-02
+39484,Equipements intérieurs,Lumière intérieure d'ambiance,2025-11-02,None,True,2025-11-02
+39484,Equipements intérieurs,Ciel de pavillon M en Anthrazit,2025-11-02,None,True,2025-11-02
+39484,Equipements intérieurs,Pack rangement,2025-11-02,None,True,2025-11-02
+39484,Equipements intérieurs,Pack rétroviseurs,2025-11-02,None,True,2025-11-02
+39484,Equipements intérieurs,Réglage en largeur du dossier pour conducteur,2025-11-02,None,True,2025-11-02
+39484,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,2025-11-02,None,True,2025-11-02
+39484,Equipements intérieurs,Sièges chauffants à l'avant,2025-11-02,None,True,2025-11-02
+39484,Equipements intérieurs,Soutien lombaire à l'avant,2025-11-02,None,True,2025-11-02
+39484,Equipements intérieurs,Toit ouvrant à commande électrique,2025-11-02,None,True,2025-11-02
+39484,Equipements intérieurs,Volant M sport,2025-11-02,None,True,2025-11-02
+39484,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,2025-11-02,None,True,2025-11-02
+39484,Télécommunication embarquée,Espace de rangement pour Wireless Charging,2025-11-02,None,True,2025-11-02
+39484,Télécommunication embarquée,Intelligent Emergency Call - eCall,2025-11-02,None,True,2025-11-02
+39484,Télécommunication embarquée,Personal eSIM,2025-11-02,None,True,2025-11-02
+39484,Télécommunication embarquée,Système haut-parleurs HiFi,2025-11-02,None,True,2025-11-02
+39484,"Transmission, suspension et direction","Étriers de frein, laqués (blau)",2025-11-02,None,True,2025-11-02
+39484,"Transmission, suspension et direction",Attelage de remorque (rabattable électriquement),2025-11-02,None,True,2025-11-02
+39484,"Transmission, suspension et direction",Suspension adaptative M,2025-11-02,None,True,2025-11-02
+39484,"Transmission, suspension et direction",Variable Sport Steering,2025-11-02,None,True,2025-11-02
+39484,"Transmission, suspension et direction",Volant M sport,2025-11-02,None,True,2025-11-02
+39484,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+39484,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+39484,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+39484,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+27433,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-02,None,True,2025-11-02
+27433,Equipements électriques,Adaptive LED headlights,2025-11-02,None,True,2025-11-02
+27433,Equipements électriques,Climatisation à réglage électronique,2025-11-02,None,True,2025-11-02
+27433,Equipements électriques,Cruise Control,2025-11-02,None,True,2025-11-02
+27433,Equipements électriques,Driving Assistant Pack,2025-11-02,None,True,2025-11-02
+27433,Equipements électriques,High Beam Assist,2025-11-02,None,True,2025-11-02
+27433,Equipements électriques,M Lights Shadow Line,2025-11-02,None,True,2025-11-02
+27433,Equipements électriques,Parking Assistant Pack Plus,2025-11-02,None,True,2025-11-02
+27433,Equipements électriques,Système d'alarme,2025-11-02,None,True,2025-11-02
+27433,Equipements extérieurs,Accès confort,2025-11-02,None,True,2025-11-02
+27433,Equipements extérieurs,Spoiler arrière M,2025-11-02,None,True,2025-11-02
+27433,Equipements extérieurs,Kit aérodynamique M,2025-11-02,None,True,2025-11-02
+27433,Equipements extérieurs,M Shadow Line hochglänzend,2025-11-02,None,True,2025-11-02
+27433,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,2025-11-02,None,True,2025-11-02
+27433,Equipements extérieurs,Vitres teintées foncées à l'arrière,2025-11-02,None,True,2025-11-02
+27433,Equipements intérieurs,Ceintures de sécurité M,2025-11-02,None,True,2025-11-02
+27433,Equipements intérieurs,Lumière intérieure d'ambiance,2025-11-02,None,True,2025-11-02
+27433,Equipements intérieurs,Ciel de pavillon M en Anthrazit,2025-11-02,None,True,2025-11-02
+27433,Equipements intérieurs,Pack rangement,2025-11-02,None,True,2025-11-02
+27433,Equipements intérieurs,Pack rétroviseurs,2025-11-02,None,True,2025-11-02
+27433,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,2025-11-02,None,True,2025-11-02
+27433,Equipements intérieurs,Sièges chauffants à l'avant,2025-11-02,None,True,2025-11-02
+27433,Equipements intérieurs,Soutien lombaire à l'avant,2025-11-02,None,True,2025-11-02
+27433,Equipements intérieurs,Toit ouvrant à commande électrique,2025-11-02,None,True,2025-11-02
+27433,Equipements intérieurs,Volant M sport,2025-11-02,None,True,2025-11-02
+27433,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,2025-11-02,None,True,2025-11-02
+27433,Télécommunication embarquée,Espace de rangement pour Wireless Charging,2025-11-02,None,True,2025-11-02
+27433,Télécommunication embarquée,Harman/kardon Surround Sound System,2025-11-02,None,True,2025-11-02
+27433,Télécommunication embarquée,Intelligent Emergency Call - eCall,2025-11-02,None,True,2025-11-02
+27433,Télécommunication embarquée,Personal eSIM,2025-11-02,None,True,2025-11-02
+27433,"Transmission, suspension et direction","Freins M Sport, rot",2025-11-02,None,True,2025-11-02
+27433,"Transmission, suspension et direction",Volant M sport,2025-11-02,None,True,2025-11-02
+27433,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+27433,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+27433,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+27433,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+27433,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+94567,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-02,None,True,2025-11-02
+94567,Equipements électriques,Active Cruise Control avec fonction Stop&Go,2025-11-02,None,True,2025-11-02
+94567,Equipements électriques,Adaptive LED headlights,2025-11-02,None,True,2025-11-02
+94567,Equipements électriques,Climatisation à réglage électronique,2025-11-02,None,True,2025-11-02
+94567,Equipements électriques,Driving Assistant Pack,2025-11-02,None,True,2025-11-02
+94567,Equipements électriques,High Beam Assist,2025-11-02,None,True,2025-11-02
+94567,Equipements électriques,M Lights Shadow Line,2025-11-02,None,True,2025-11-02
+94567,Equipements électriques,Parking Assistant Pack Plus,2025-11-02,None,True,2025-11-02
+94567,Equipements électriques,Système d'alarme,2025-11-02,None,True,2025-11-02
+94567,Equipements extérieurs,Spoiler arrière M,2025-11-02,None,True,2025-11-02
+94567,Equipements extérieurs,Kit aérodynamique M,2025-11-02,None,True,2025-11-02
+94567,Equipements extérieurs,M Shadow Line hochglänzend,2025-11-02,None,True,2025-11-02
+94567,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,2025-11-02,None,True,2025-11-02
+94567,Equipements extérieurs,Vitres teintées foncées à l'arrière,2025-11-02,None,True,2025-11-02
+94567,Equipements intérieurs,Ceintures de sécurité M,2025-11-02,None,True,2025-11-02
+94567,Equipements intérieurs,Lumière intérieure d'ambiance,2025-11-02,None,True,2025-11-02
+94567,Equipements intérieurs,Ciel de pavillon M en Anthrazit,2025-11-02,None,True,2025-11-02
+94567,Equipements intérieurs,Pack rangement,2025-11-02,None,True,2025-11-02
+94567,Equipements intérieurs,Pack rétroviseurs,2025-11-02,None,True,2025-11-02
+94567,Equipements intérieurs,"Réglage électrique des sièges avant, avec fonction-mémoire pour siège conducteur",2025-11-02,None,True,2025-11-02
+94567,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,2025-11-02,None,True,2025-11-02
+94567,Equipements intérieurs,Sièges chauffants à l'avant,2025-11-02,None,True,2025-11-02
+94567,Equipements intérieurs,Toit ouvrant à commande électrique,2025-11-02,None,True,2025-11-02
+94567,Equipements intérieurs,Volant chauffant,2025-11-02,None,True,2025-11-02
+94567,Equipements intérieurs,Volant M sport,2025-11-02,None,True,2025-11-02
+94567,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,2025-11-02,None,True,2025-11-02
+94567,Télécommunication embarquée,Intelligent Emergency Call - eCall,2025-11-02,None,True,2025-11-02
+94567,Télécommunication embarquée,Personal eSIM,2025-11-02,None,True,2025-11-02
+94567,Télécommunication embarquée,Système haut-parleurs HiFi,2025-11-02,None,True,2025-11-02
+94567,"Transmission, suspension et direction","Freins M Sport, rot",2025-11-02,None,True,2025-11-02
+94567,"Transmission, suspension et direction",Volant M sport,2025-11-02,None,True,2025-11-02
+94567,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+94567,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+94567,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+94567,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+27644,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-02,None,True,2025-11-02
+27644,Equipements électriques,Active Cruise Control avec fonction Stop&Go,2025-11-02,None,True,2025-11-02
+27644,Equipements électriques,Adaptive LED headlights,2025-11-02,None,True,2025-11-02
+27644,Equipements électriques,Climatisation à réglage électronique,2025-11-02,None,True,2025-11-02
+27644,Equipements électriques,Driving Assistant Pack,2025-11-02,None,True,2025-11-02
+27644,Equipements électriques,High Beam Assist,2025-11-02,None,True,2025-11-02
+27644,Equipements électriques,M Lights Shadow Line,2025-11-02,None,True,2025-11-02
+27644,Equipements électriques,Parking Assistant Pack Plus,2025-11-02,None,True,2025-11-02
+27644,Equipements électriques,Système d'alarme,2025-11-02,None,True,2025-11-02
+27644,Equipements extérieurs,Spoiler arrière M,2025-11-02,None,True,2025-11-02
+27644,Equipements extérieurs,Kit aérodynamique M,2025-11-02,None,True,2025-11-02
+27644,Equipements extérieurs,M Shadow Line hochglänzend,2025-11-02,None,True,2025-11-02
+27644,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,2025-11-02,None,True,2025-11-02
+27644,Equipements extérieurs,Vitres teintées foncées à l'arrière,2025-11-02,None,True,2025-11-02
+27644,Equipements intérieurs,Ceintures de sécurité M,2025-11-02,None,True,2025-11-02
+27644,Equipements intérieurs,Lumière intérieure d'ambiance,2025-11-02,None,True,2025-11-02
+27644,Equipements intérieurs,Ciel de pavillon M en Anthrazit,2025-11-02,None,True,2025-11-02
+27644,Equipements intérieurs,Pack rangement,2025-11-02,None,True,2025-11-02
+27644,Equipements intérieurs,Pack rétroviseurs,2025-11-02,None,True,2025-11-02
+27644,Equipements intérieurs,"Réglage électrique des sièges avant, avec fonction-mémoire pour siège conducteur",2025-11-02,None,True,2025-11-02
+27644,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,2025-11-02,None,True,2025-11-02
+27644,Equipements intérieurs,Sièges chauffants à l'avant,2025-11-02,None,True,2025-11-02
+27644,Equipements intérieurs,Toit ouvrant à commande électrique,2025-11-02,None,True,2025-11-02
+27644,Equipements intérieurs,Volant chauffant,2025-11-02,None,True,2025-11-02
+27644,Equipements intérieurs,Volant M sport,2025-11-02,None,True,2025-11-02
+27644,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,2025-11-02,None,True,2025-11-02
+27644,Télécommunication embarquée,Intelligent Emergency Call - eCall,2025-11-02,None,True,2025-11-02
+27644,Télécommunication embarquée,Personal eSIM,2025-11-02,None,True,2025-11-02
+27644,Télécommunication embarquée,Système haut-parleurs HiFi,2025-11-02,None,True,2025-11-02
+27644,"Transmission, suspension et direction","Freins M Sport, rot",2025-11-02,None,True,2025-11-02
+27644,"Transmission, suspension et direction",Volant M sport,2025-11-02,None,True,2025-11-02
+27644,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+27644,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+27644,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+27644,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+1806,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-02,None,True,2025-11-02
+1806,Equipements électriques,Active Cruise Control avec fonction Stop&Go,2025-11-02,None,True,2025-11-02
+1806,Equipements électriques,Adaptive LED headlights,2025-11-02,None,True,2025-11-02
+1806,Equipements électriques,Climatisation à réglage électronique,2025-11-02,None,True,2025-11-02
+1806,Equipements électriques,Driving Assistant Pack,2025-11-02,None,True,2025-11-02
+1806,Equipements électriques,High Beam Assist,2025-11-02,None,True,2025-11-02
+1806,Equipements électriques,M Lights Shadow Line,2025-11-02,None,True,2025-11-02
+1806,Equipements électriques,Parking Assistant Pack Plus,2025-11-02,None,True,2025-11-02
+1806,Equipements électriques,Système d'alarme,2025-11-02,None,True,2025-11-02
+1806,Equipements extérieurs,Spoiler arrière M,2025-11-02,None,True,2025-11-02
+1806,Equipements extérieurs,Kit aérodynamique M,2025-11-02,None,True,2025-11-02
+1806,Equipements extérieurs,M Shadow Line hochglänzend,2025-11-02,None,True,2025-11-02
+1806,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,2025-11-02,None,True,2025-11-02
+1806,Equipements extérieurs,Vitres teintées foncées à l'arrière,2025-11-02,None,True,2025-11-02
+1806,Equipements intérieurs,Ceintures de sécurité M,2025-11-02,None,True,2025-11-02
+1806,Equipements intérieurs,Lumière intérieure d'ambiance,2025-11-02,None,True,2025-11-02
+1806,Equipements intérieurs,Ciel de pavillon M en Anthrazit,2025-11-02,None,True,2025-11-02
+1806,Equipements intérieurs,Pack rangement,2025-11-02,None,True,2025-11-02
+1806,Equipements intérieurs,Pack rétroviseurs,2025-11-02,None,True,2025-11-02
+1806,Equipements intérieurs,"Réglage électrique des sièges avant, avec fonction-mémoire pour siège conducteur",2025-11-02,None,True,2025-11-02
+1806,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,2025-11-02,None,True,2025-11-02
+1806,Equipements intérieurs,Sièges chauffants à l'avant,2025-11-02,None,True,2025-11-02
+1806,Equipements intérieurs,Toit ouvrant à commande électrique,2025-11-02,None,True,2025-11-02
+1806,Equipements intérieurs,Volant chauffant,2025-11-02,None,True,2025-11-02
+1806,Equipements intérieurs,Volant M sport,2025-11-02,None,True,2025-11-02
+1806,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,2025-11-02,None,True,2025-11-02
+1806,Télécommunication embarquée,Intelligent Emergency Call - eCall,2025-11-02,None,True,2025-11-02
+1806,Télécommunication embarquée,Personal eSIM,2025-11-02,None,True,2025-11-02
+1806,Télécommunication embarquée,Système haut-parleurs HiFi,2025-11-02,None,True,2025-11-02
+1806,"Transmission, suspension et direction",Attelage de remorque (rabattable électriquement),2025-11-02,None,True,2025-11-02
+1806,"Transmission, suspension et direction","Freins M Sport, rot",2025-11-02,None,True,2025-11-02
+1806,"Transmission, suspension et direction",Volant M sport,2025-11-02,None,True,2025-11-02
+1806,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+1806,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+1806,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+1806,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+1806,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+42538,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-02,None,True,2025-11-02
+42538,Equipements électriques,Adaptive LED headlights,2025-11-02,None,True,2025-11-02
+42538,Equipements électriques,Climatisation à réglage électronique,2025-11-02,None,True,2025-11-02
+42538,Equipements électriques,Cruise Control,2025-11-02,None,True,2025-11-02
+42538,Equipements électriques,High Beam Assist,2025-11-02,None,True,2025-11-02
+42538,Equipements électriques,M Lights Shadow Line,2025-11-02,None,True,2025-11-02
+42538,Equipements électriques,Parking Assistant Pack,2025-11-02,None,True,2025-11-02
+42538,Equipements électriques,Système d'alarme,2025-11-02,None,True,2025-11-02
+42538,Equipements extérieurs,Accès confort,2025-11-02,None,True,2025-11-02
+42538,Equipements extérieurs,Spoiler arrière M,2025-11-02,None,True,2025-11-02
+42538,Equipements extérieurs,Kit aérodynamique M,2025-11-02,None,True,2025-11-02
+42538,Equipements extérieurs,M Shadow Line hochglänzend,2025-11-02,None,True,2025-11-02
+42538,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,2025-11-02,None,True,2025-11-02
+42538,Equipements extérieurs,Vitres teintées foncées à l'arrière,2025-11-02,None,True,2025-11-02
+42538,Equipements intérieurs,Ceintures de sécurité M,2025-11-02,None,True,2025-11-02
+42538,Equipements intérieurs,Lumière intérieure d'ambiance,2025-11-02,None,True,2025-11-02
+42538,Equipements intérieurs,Ciel de pavillon M en Anthrazit,2025-11-02,None,True,2025-11-02
+42538,Equipements intérieurs,Pack rangement,2025-11-02,None,True,2025-11-02
+42538,Equipements intérieurs,Pack rétroviseurs,2025-11-02,None,True,2025-11-02
+42538,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,2025-11-02,None,True,2025-11-02
+42538,Equipements intérieurs,Sièges chauffants à l'avant,2025-11-02,None,True,2025-11-02
+42538,Equipements intérieurs,Soutien lombaire à l'avant,2025-11-02,None,True,2025-11-02
+42538,Equipements intérieurs,Toit ouvrant à commande électrique,2025-11-02,None,True,2025-11-02
+42538,Equipements intérieurs,Volant M sport,2025-11-02,None,True,2025-11-02
+42538,Télécommunication embarquée,BMW Live Cockpit Navigation Plus,2025-11-02,None,True,2025-11-02
+42538,Télécommunication embarquée,Espace de rangement pour Wireless Charging,2025-11-02,None,True,2025-11-02
+42538,Télécommunication embarquée,Intelligent Emergency Call - eCall,2025-11-02,None,True,2025-11-02
+42538,Télécommunication embarquée,Personal eSIM,2025-11-02,None,True,2025-11-02
+42538,"Transmission, suspension et direction","Freins M Sport, rot",2025-11-02,None,True,2025-11-02
+42538,"Transmission, suspension et direction",Volant M sport,2025-11-02,None,True,2025-11-02
+42538,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+42538,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+42538,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+42538,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+42538,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+45201,Charging,Adaptateur pour prise domestique (type E+F),2025-11-02,None,True,2025-11-02
+45201,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-02,None,True,2025-11-02
+45201,Charging,Flexible Fast Charger (mode 2),2025-11-02,None,True,2025-11-02
+45201,Equipements électriques,Adaptive LED headlights,2025-11-02,None,True,2025-11-02
+45201,Equipements électriques,BMW IconicSounds Electric,2025-11-02,None,True,2025-11-02
+45201,Equipements électriques,Climatisation à réglage électronique,2025-11-02,None,True,2025-11-02
+45201,Equipements électriques,Driving Assistant Pack Professional,2025-11-02,None,True,2025-11-02
+45201,Equipements électriques,High Beam Assist,2025-11-02,None,True,2025-11-02
+45201,Equipements électriques,M Lights Shadow Line,2025-11-02,None,True,2025-11-02
+45201,Equipements électriques,Parking Assistant Pack Plus,2025-11-02,None,True,2025-11-02
+45201,Equipements électriques,Système d'alarme,2025-11-02,None,True,2025-11-02
+45201,Equipements extérieurs,Accès confort,2025-11-02,None,True,2025-11-02
+45201,Equipements extérieurs,Spoiler arrière M,2025-11-02,None,True,2025-11-02
+45201,Equipements extérieurs,Kit aérodynamique M,2025-11-02,None,True,2025-11-02
+45201,Equipements extérieurs,M Shadow Line hochglänzend,2025-11-02,None,True,2025-11-02
+45201,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,2025-11-02,None,True,2025-11-02
+45201,Equipements extérieurs,Vitres teintées foncées à l'arrière,2025-11-02,None,True,2025-11-02
+45201,Equipements intérieurs,Ceintures de sécurité M,2025-11-02,None,True,2025-11-02
+45201,Equipements intérieurs,Lumière intérieure d'ambiance,2025-11-02,None,True,2025-11-02
+45201,Equipements intérieurs,Ciel de pavillon M en Anthrazit,2025-11-02,None,True,2025-11-02
+45201,Equipements intérieurs,Pack rangement,2025-11-02,None,True,2025-11-02
+45201,Equipements intérieurs,Pack rétroviseurs,2025-11-02,None,True,2025-11-02
+45201,Equipements intérieurs,"Réglage électrique des sièges avant, avec fonction-mémoire pour siège conducteur",2025-11-02,None,True,2025-11-02
+45201,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,2025-11-02,None,True,2025-11-02
+45201,Equipements intérieurs,Sièges chauffants à l'avant,2025-11-02,None,True,2025-11-02
+45201,Equipements intérieurs,Soutien lombaire à l'avant,2025-11-02,None,True,2025-11-02
+45201,Equipements intérieurs,Toit ouvrant à commande électrique,2025-11-02,None,True,2025-11-02
+45201,Equipements intérieurs,Volant M sport,2025-11-02,None,True,2025-11-02
+45201,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,2025-11-02,None,True,2025-11-02
+45201,Télécommunication embarquée,Espace de rangement pour Wireless Charging,2025-11-02,None,True,2025-11-02
+45201,Télécommunication embarquée,Intelligent Emergency Call - eCall,2025-11-02,None,True,2025-11-02
+45201,Télécommunication embarquée,Personal eSIM,2025-11-02,None,True,2025-11-02
+45201,Télécommunication embarquée,Système haut-parleurs HiFi,2025-11-02,None,True,2025-11-02
+45201,"Transmission, suspension et direction","Freins M Sport, rot",2025-11-02,None,True,2025-11-02
+45201,"Transmission, suspension et direction",Volant M sport,2025-11-02,None,True,2025-11-02
+45201,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+45201,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+45201,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+45201,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+93924,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-02,None,True,2025-11-02
+93924,Equipements électriques,Active Cruise Control avec fonction Stop&Go,2025-11-02,None,True,2025-11-02
+93924,Equipements électriques,Adaptive LED headlights,2025-11-02,None,True,2025-11-02
+93924,Equipements électriques,Climatisation à réglage électronique,2025-11-02,None,True,2025-11-02
+93924,Equipements électriques,Driving Assistant Pack,2025-11-02,None,True,2025-11-02
+93924,Equipements électriques,High Beam Assist,2025-11-02,None,True,2025-11-02
+93924,Equipements électriques,M Lights Shadow Line,2025-11-02,None,True,2025-11-02
+93924,Equipements électriques,Parking Assistant Pack Plus,2025-11-02,None,True,2025-11-02
+93924,Equipements électriques,Système d'alarme,2025-11-02,None,True,2025-11-02
+93924,Equipements extérieurs,Accès confort,2025-11-02,None,True,2025-11-02
+93924,Equipements extérieurs,Spoiler arrière M,2025-11-02,None,True,2025-11-02
+93924,Equipements extérieurs,Kit aérodynamique M,2025-11-02,None,True,2025-11-02
+93924,Equipements extérieurs,M Shadow Line hochglänzend,2025-11-02,None,True,2025-11-02
+93924,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,2025-11-02,None,True,2025-11-02
+93924,Equipements extérieurs,Vitres teintées foncées à l'arrière,2025-11-02,None,True,2025-11-02
+93924,Equipements intérieurs,Ceintures de sécurité M,2025-11-02,None,True,2025-11-02
+93924,Equipements intérieurs,Lumière intérieure d'ambiance,2025-11-02,None,True,2025-11-02
+93924,Equipements intérieurs,Ciel de pavillon M en Anthrazit,2025-11-02,None,True,2025-11-02
+93924,Equipements intérieurs,Pack rangement,2025-11-02,None,True,2025-11-02
+93924,Equipements intérieurs,Pack rétroviseurs,2025-11-02,None,True,2025-11-02
+93924,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,2025-11-02,None,True,2025-11-02
+93924,Equipements intérieurs,Sièges chauffants à l'avant,2025-11-02,None,True,2025-11-02
+93924,Equipements intérieurs,Soutien lombaire à l'avant,2025-11-02,None,True,2025-11-02
+93924,Equipements intérieurs,Toit ouvrant à commande électrique,2025-11-02,None,True,2025-11-02
+93924,Equipements intérieurs,Volant M sport,2025-11-02,None,True,2025-11-02
+93924,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,2025-11-02,None,True,2025-11-02
+93924,Télécommunication embarquée,Espace de rangement pour Wireless Charging,2025-11-02,None,True,2025-11-02
+93924,Télécommunication embarquée,Harman/kardon Surround Sound System,2025-11-02,None,True,2025-11-02
+93924,Télécommunication embarquée,Intelligent Emergency Call - eCall,2025-11-02,None,True,2025-11-02
+93924,Télécommunication embarquée,Personal eSIM,2025-11-02,None,True,2025-11-02
+93924,"Transmission, suspension et direction","Freins M Sport, rot",2025-11-02,None,True,2025-11-02
+93924,"Transmission, suspension et direction",Volant M sport,2025-11-02,None,True,2025-11-02
+93924,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+93924,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+93924,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+93924,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+93924,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+39694,ConnectedDrive FA,BMW IconicSounds Electric,2025-11-02,None,True,2025-11-02
+39694,ConnectedDrive FA,BMW Live Cockpit Navigation Professional avec Head-Up Display,2025-11-02,None,True,2025-11-02
+39694,ConnectedDrive FA,Driving Assistant Pack Professional,2025-11-02,None,True,2025-11-02
+39694,ConnectedDrive FA,High Beam Assist,2025-11-02,None,True,2025-11-02
+39694,ConnectedDrive FA,Parking Assistant Pack Plus,2025-11-02,None,True,2025-11-02
+39694,ConnectedDrive S&A,BMW Teleservices,2025-11-02,None,True,2025-11-02
+39694,ConnectedDrive S&A,Intelligent Emergency Call - eCall,2025-11-02,None,True,2025-11-02
+39694,Klima,Climatisation à réglage électronique,2025-11-02,None,True,2025-11-02
+39694,Komfort,Accès confort,2025-11-02,None,True,2025-11-02
+39694,Komfort,Lumière intérieure d'ambiance,2025-11-02,None,True,2025-11-02
+39694,Komfort,Pack rangement,2025-11-02,None,True,2025-11-02
+39694,Komfort,Toit ouvrant à commande électrique,2025-11-02,None,True,2025-11-02
+39694,Komfort,Volant M sport,2025-11-02,None,True,2025-11-02
+39694,Laden,Adaptateur pour prise domestique (type E+F),2025-11-02,None,True,2025-11-02
+39694,Laden,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-02,None,True,2025-11-02
+39694,Laden,Flexible Fast Charger (mode 2),2025-11-02,None,True,2025-11-02
+39694,Optik innen/außen,"Étriers de frein, laqués (blau)",2025-11-02,None,True,2025-11-02
+39694,Optik innen/außen,Kit aérodynamique M,2025-11-02,None,True,2025-11-02
+39694,Optik innen/außen,Ciel de pavillon M en Anthrazit,2025-11-02,None,True,2025-11-02
+39694,Optik innen/außen,M Shadow Line hochglänzend,2025-11-02,None,True,2025-11-02
+39694,Optik innen/außen,Tableau de bord Luxury,2025-11-02,None,True,2025-11-02
+39694,Optik innen/außen,Vitres teintées foncées à l'arrière,2025-11-02,None,True,2025-11-02
+39694,Polsterungen,Sièges chauffants à l'avant,2025-11-02,None,True,2025-11-02
+39694,Polsterungen,Soutien lombaire à l'avant,2025-11-02,None,True,2025-11-02
+39694,Räder,Boulons antivol,2025-11-02,None,True,2025-11-02
+39694,Radio,Espace de rangement pour Wireless Charging,2025-11-02,None,True,2025-11-02
+39694,Radio,Personal eSIM,2025-11-02,None,True,2025-11-02
+39694,Radio,Système haut-parleurs HiFi,2025-11-02,None,True,2025-11-02
+39694,Sicherheit,Adaptive LED headlights,2025-11-02,None,True,2025-11-02
+39694,Sicherheit,Désactivation airbag passager,2025-11-02,None,True,2025-11-02
+39694,Sicherheit,Pack rétroviseurs,2025-11-02,None,True,2025-11-02
+39694,Sicherheit,Rétroviseur intérieur anti-éblouissement automatique,2025-11-02,None,True,2025-11-02
+39694,Sicherheit,Système d'alarme,2025-11-02,None,True,2025-11-02
+44606,ConnectedDrive FA,BMW IconicSounds Electric,2025-11-02,None,True,2025-11-02
+44606,ConnectedDrive FA,BMW Live Cockpit Navigation Professional avec Head-Up Display,2025-11-02,None,True,2025-11-02
+44606,ConnectedDrive FA,Cruise Control,2025-11-02,None,True,2025-11-02
+44606,ConnectedDrive FA,Driving Assistant Pack,2025-11-02,None,True,2025-11-02
+44606,ConnectedDrive FA,High Beam Assist,2025-11-02,None,True,2025-11-02
+44606,ConnectedDrive FA,Parking Assistant Pack Plus,2025-11-02,None,True,2025-11-02
+44606,ConnectedDrive S&A,BMW Teleservices,2025-11-02,None,True,2025-11-02
+44606,ConnectedDrive S&A,Intelligent Emergency Call - eCall,2025-11-02,None,True,2025-11-02
+44606,Klima,Climatisation à réglage électronique,2025-11-02,None,True,2025-11-02
+44606,Komfort,Accès confort,2025-11-02,None,True,2025-11-02
+44606,Komfort,Lumière intérieure d'ambiance,2025-11-02,None,True,2025-11-02
+44606,Komfort,Pack rangement,2025-11-02,None,True,2025-11-02
+44606,Komfort,Toit ouvrant à commande électrique,2025-11-02,None,True,2025-11-02
+44606,Komfort,Volant M sport,2025-11-02,None,True,2025-11-02
+44606,Laden,Adaptateur pour prise domestique (type E+F),2025-11-02,None,True,2025-11-02
+44606,Laden,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-02,None,True,2025-11-02
+44606,Laden,Flexible Fast Charger (mode 2),2025-11-02,None,True,2025-11-02
+44606,Optik innen/außen,Ceintures de sécurité M,2025-11-02,None,True,2025-11-02
+44606,Optik innen/außen,Kit aérodynamique M,2025-11-02,None,True,2025-11-02
+44606,Optik innen/außen,Ciel de pavillon M en Anthrazit,2025-11-02,None,True,2025-11-02
+44606,Optik innen/außen,M Lights Shadow Line,2025-11-02,None,True,2025-11-02
+44606,Optik innen/außen,M Shadow Line hochglänzend,2025-11-02,None,True,2025-11-02
+44606,Optik innen/außen,M Shadow Line hochglänzend avec éléments supplémentaires,2025-11-02,None,True,2025-11-02
+44606,Optik innen/außen,Vitres teintées foncées à l'arrière,2025-11-02,None,True,2025-11-02
+44606,Polsterungen,Réglage en largeur du dossier pour conducteur,2025-11-02,None,True,2025-11-02
+44606,Polsterungen,"Réglage électrique des sièges avant, avec fonction-mémoire pour siège conducteur",2025-11-02,None,True,2025-11-02
+44606,Polsterungen,Sièges chauffants à l'avant,2025-11-02,None,True,2025-11-02
+44606,Polsterungen,Soutien lombaire à l'avant,2025-11-02,None,True,2025-11-02
+44606,Räder,Boulons antivol,2025-11-02,None,True,2025-11-02
+44606,Radio,Espace de rangement pour Wireless Charging,2025-11-02,None,True,2025-11-02
+44606,Radio,Personal eSIM,2025-11-02,None,True,2025-11-02
+44606,Radio,Système haut-parleurs HiFi,2025-11-02,None,True,2025-11-02
+44606,Sicherheit,Adaptive LED headlights,2025-11-02,None,True,2025-11-02
+44606,Sicherheit,Désactivation airbag passager,2025-11-02,None,True,2025-11-02
+44606,Sicherheit,Pack rétroviseurs,2025-11-02,None,True,2025-11-02
+44606,Sicherheit,Rétroviseur intérieur anti-éblouissement automatique,2025-11-02,None,True,2025-11-02
+44606,Sicherheit,Système d'alarme,2025-11-02,None,True,2025-11-02
+44606,Sportlichkeit,Spoiler arrière M,2025-11-02,None,True,2025-11-02
+44606,Sportlichkeit,"Freins M Sport, rot",2025-11-02,None,True,2025-11-02
+44606,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+27566,ConnectedDrive FA,BMW IconicSounds Electric,2025-11-02,None,True,2025-11-02
+27566,ConnectedDrive FA,BMW Live Cockpit Navigation Professional avec Head-Up Display,2025-11-02,None,True,2025-11-02
+27566,ConnectedDrive FA,Cruise Control,2025-11-02,None,True,2025-11-02
+27566,ConnectedDrive FA,Driving Assistant Pack,2025-11-02,None,True,2025-11-02
+27566,ConnectedDrive FA,High Beam Assist,2025-11-02,None,True,2025-11-02
+27566,ConnectedDrive FA,Parking Assistant Pack Plus,2025-11-02,None,True,2025-11-02
+27566,ConnectedDrive S&A,BMW Teleservices,2025-11-02,None,True,2025-11-02
+27566,ConnectedDrive S&A,Intelligent Emergency Call - eCall,2025-11-02,None,True,2025-11-02
+27566,Klima,Climatisation à réglage électronique,2025-11-02,None,True,2025-11-02
+27566,Komfort,Accès confort,2025-11-02,None,True,2025-11-02
+27566,Komfort,Lumière intérieure d'ambiance,2025-11-02,None,True,2025-11-02
+27566,Komfort,Pack rangement,2025-11-02,None,True,2025-11-02
+27566,Komfort,Toit ouvrant à commande électrique,2025-11-02,None,True,2025-11-02
+27566,Komfort,Volant M sport,2025-11-02,None,True,2025-11-02
+27566,Laden,Adaptateur pour prise domestique (type E+F),2025-11-02,None,True,2025-11-02
+27566,Laden,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-02,None,True,2025-11-02
+27566,Laden,Flexible Fast Charger (mode 2),2025-11-02,None,True,2025-11-02
+27566,Optik innen/außen,Ceintures de sécurité M,2025-11-02,None,True,2025-11-02
+27566,Optik innen/außen,Kit aérodynamique M,2025-11-02,None,True,2025-11-02
+27566,Optik innen/außen,Ciel de pavillon M en Anthrazit,2025-11-02,None,True,2025-11-02
+27566,Optik innen/außen,M Lights Shadow Line,2025-11-02,None,True,2025-11-02
+27566,Optik innen/außen,M Shadow Line hochglänzend,2025-11-02,None,True,2025-11-02
+27566,Optik innen/außen,M Shadow Line hochglänzend avec éléments supplémentaires,2025-11-02,None,True,2025-11-02
+27566,Optik innen/außen,Vitres teintées foncées à l'arrière,2025-11-02,None,True,2025-11-02
+27566,Polsterungen,Réglage en largeur du dossier pour conducteur,2025-11-02,None,True,2025-11-02
+27566,Polsterungen,Sièges chauffants à l'avant,2025-11-02,None,True,2025-11-02
+27566,Polsterungen,Soutien lombaire à l'avant,2025-11-02,None,True,2025-11-02
+27566,Räder,Boulons antivol,2025-11-02,None,True,2025-11-02
+27566,Radio,Espace de rangement pour Wireless Charging,2025-11-02,None,True,2025-11-02
+27566,Radio,Personal eSIM,2025-11-02,None,True,2025-11-02
+27566,Radio,Système haut-parleurs HiFi,2025-11-02,None,True,2025-11-02
+27566,Sicherheit,Adaptive LED headlights,2025-11-02,None,True,2025-11-02
+27566,Sicherheit,Désactivation airbag passager,2025-11-02,None,True,2025-11-02
+27566,Sicherheit,Pack rétroviseurs,2025-11-02,None,True,2025-11-02
+27566,Sicherheit,Rétroviseur intérieur anti-éblouissement automatique,2025-11-02,None,True,2025-11-02
+27566,Sicherheit,Système d'alarme,2025-11-02,None,True,2025-11-02
+27566,Sportlichkeit,Spoiler arrière M,2025-11-02,None,True,2025-11-02
+27566,Sportlichkeit,"Freins M Sport, rot",2025-11-02,None,True,2025-11-02
+27566,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+43611,ConnectedDrive FA,BMW IconicSounds Electric,2025-11-02,None,True,2025-11-02
+43611,ConnectedDrive FA,BMW Live Cockpit Navigation Professional avec Head-Up Display,2025-11-02,None,True,2025-11-02
+43611,ConnectedDrive FA,Driving Assistant Pack Professional,2025-11-02,None,True,2025-11-02
+43611,ConnectedDrive FA,High Beam Assist,2025-11-02,None,True,2025-11-02
+43611,ConnectedDrive FA,Parking Assistant Pack Plus,2025-11-02,None,True,2025-11-02
+43611,ConnectedDrive S&A,BMW Teleservices,2025-11-02,None,True,2025-11-02
+43611,ConnectedDrive S&A,Intelligent Emergency Call - eCall,2025-11-02,None,True,2025-11-02
+43611,Fahrwerk,Suspension adaptative M,2025-11-02,None,True,2025-11-02
+43611,Klima,Climatisation à réglage électronique,2025-11-02,None,True,2025-11-02
+43611,Klima,Volant chauffant,2025-11-02,None,True,2025-11-02
+43611,Komfort,Accès confort,2025-11-02,None,True,2025-11-02
+43611,Komfort,Attelage de remorque (rabattable électriquement),2025-11-02,None,True,2025-11-02
+43611,Komfort,Lumière intérieure d'ambiance,2025-11-02,None,True,2025-11-02
+43611,Komfort,Pack rangement,2025-11-02,None,True,2025-11-02
+43611,Komfort,Toit ouvrant à commande électrique,2025-11-02,None,True,2025-11-02
+43611,Komfort,Volant M sport,2025-11-02,None,True,2025-11-02
+43611,Laden,Adaptateur pour prise domestique (type E+F),2025-11-02,None,True,2025-11-02
+43611,Laden,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-02,None,True,2025-11-02
+43611,Laden,Flexible Fast Charger (mode 2),2025-11-02,None,True,2025-11-02
+43611,Optik innen/außen,"Étriers de frein, laqués (blau)",2025-11-02,None,True,2025-11-02
+43611,Optik innen/außen,Kit aérodynamique M,2025-11-02,None,True,2025-11-02
+43611,Optik innen/außen,Ciel de pavillon M en Anthrazit,2025-11-02,None,True,2025-11-02
+43611,Optik innen/außen,M Shadow Line hochglänzend,2025-11-02,None,True,2025-11-02
+43611,Optik innen/außen,Vitres teintées foncées à l'arrière,2025-11-02,None,True,2025-11-02
+43611,Polsterungen,"Réglage électrique des sièges avant, avec fonction-mémoire pour siège conducteur",2025-11-02,None,True,2025-11-02
+43611,Polsterungen,Sièges chauffants à l'avant,2025-11-02,None,True,2025-11-02
+43611,Polsterungen,Soutien lombaire à l'avant,2025-11-02,None,True,2025-11-02
+43611,Räder,Boulons antivol,2025-11-02,None,True,2025-11-02
+43611,Radio,Espace de rangement pour Wireless Charging,2025-11-02,None,True,2025-11-02
+43611,Radio,Harman/kardon Surround Sound System,2025-11-02,None,True,2025-11-02
+43611,Radio,Personal eSIM,2025-11-02,None,True,2025-11-02
+43611,Sicherheit,Adaptive LED headlights,2025-11-02,None,True,2025-11-02
+43611,Sicherheit,Désactivation airbag passager,2025-11-02,None,True,2025-11-02
+43611,Sicherheit,Pack rétroviseurs,2025-11-02,None,True,2025-11-02
+43611,Sicherheit,Rétroviseur intérieur anti-éblouissement automatique,2025-11-02,None,True,2025-11-02
+43611,Sicherheit,Système d'alarme,2025-11-02,None,True,2025-11-02
+43611,Sportlichkeit,Variable Sport Steering,2025-11-02,None,True,2025-11-02
+43611,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+27404,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-02,None,True,2025-11-02
+27404,Equipements électriques,Active Cruise Control avec fonction Stop&Go,2025-11-02,None,True,2025-11-02
+27404,Equipements électriques,Climatisation à réglage électronique,2025-11-02,None,True,2025-11-02
+27404,Equipements électriques,Driving Assistant Pack,2025-11-02,None,True,2025-11-02
+27404,Equipements électriques,Parking Assistant Pack Plus,2025-11-02,None,True,2025-11-02
+27404,Equipements électriques,Système d'alarme,2025-11-02,None,True,2025-11-02
+27404,Equipements extérieurs,"Étriers de frein, laqués (blau)",2025-11-02,None,True,2025-11-02
+27404,Equipements extérieurs,Accès confort,2025-11-02,None,True,2025-11-02
+27404,Equipements extérieurs,Kit aérodynamique M,2025-11-02,None,True,2025-11-02
+27404,Equipements extérieurs,M Shadow Line hochglänzend,2025-11-02,None,True,2025-11-02
+27404,Equipements extérieurs,Vitres teintées foncées à l'arrière,2025-11-02,None,True,2025-11-02
+27404,Equipements intérieurs,Lumière intérieure d'ambiance,2025-11-02,None,True,2025-11-02
+27404,Equipements intérieurs,Ciel de pavillon M en Anthrazit,2025-11-02,None,True,2025-11-02
+27404,Equipements intérieurs,Pack rangement,2025-11-02,None,True,2025-11-02
+27404,Equipements intérieurs,Pack rétroviseurs,2025-11-02,None,True,2025-11-02
+27404,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,2025-11-02,None,True,2025-11-02
+27404,Equipements intérieurs,Sièges chauffants à l'avant,2025-11-02,None,True,2025-11-02
+27404,Equipements intérieurs,Soutien lombaire à l'avant,2025-11-02,None,True,2025-11-02
+27404,Equipements intérieurs,Toit ouvrant à commande électrique,2025-11-02,None,True,2025-11-02
+27404,Equipements intérieurs,Volant chauffant,2025-11-02,None,True,2025-11-02
+27404,Equipements intérieurs,Volant M sport,2025-11-02,None,True,2025-11-02
+27404,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,2025-11-02,None,True,2025-11-02
+27404,Télécommunication embarquée,Espace de rangement pour Wireless Charging,2025-11-02,None,True,2025-11-02
+27404,Télécommunication embarquée,Intelligent Emergency Call - eCall,2025-11-02,None,True,2025-11-02
+27404,Télécommunication embarquée,Personal eSIM,2025-11-02,None,True,2025-11-02
+27404,Télécommunication embarquée,Système haut-parleurs HiFi,2025-11-02,None,True,2025-11-02
+27404,"Transmission, suspension et direction","Étriers de frein, laqués (blau)",2025-11-02,None,True,2025-11-02
+27404,"Transmission, suspension et direction",Suspension adaptative M,2025-11-02,None,True,2025-11-02
+27404,"Transmission, suspension et direction",Variable Sport Steering,2025-11-02,None,True,2025-11-02
+27404,"Transmission, suspension et direction",Volant M sport,2025-11-02,None,True,2025-11-02
+27404,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+27404,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+27404,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+27404,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+20301,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-02,None,True,2025-11-02
+20301,Equipements électriques,Climatisation à réglage électronique,2025-11-02,None,True,2025-11-02
+20301,Equipements électriques,Système d'alarme,2025-11-02,None,True,2025-11-02
+20301,Equipements extérieurs,M Shadow Line hochglänzend,2025-11-02,None,True,2025-11-02
+20301,Equipements intérieurs,Lumière intérieure d'ambiance,2025-11-02,None,True,2025-11-02
+20301,Equipements intérieurs,Pack rangement,2025-11-02,None,True,2025-11-02
+20301,Equipements intérieurs,Pack rétroviseurs,2025-11-02,None,True,2025-11-02
+20301,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,2025-11-02,None,True,2025-11-02
+20301,Equipements intérieurs,Sièges chauffants à l'avant,2025-11-02,None,True,2025-11-02
+20301,Télécommunication embarquée,Intelligent Emergency Call - eCall,2025-11-02,None,True,2025-11-02
+20301,Télécommunication embarquée,Personal eSIM,2025-11-02,None,True,2025-11-02
+20301,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+20301,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+20301,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+20301,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+20301,Autres.,Exécution en bois noble Esche graublau offenporig,2025-11-02,None,True,2025-11-02
+20301,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+20301,Autres.,Accès confort,2025-11-02,None,True,2025-11-02
+20301,Autres.,Adaptive LED headlights,2025-11-02,None,True,2025-11-02
+20301,Autres.,Spoiler arrière M,2025-11-02,None,True,2025-11-02
+20301,Autres.,BMW IconicSounds Electric,2025-11-02,None,True,2025-11-02
+20301,Autres.,BMW Live Cockpit Navigation Professional avec Head-Up Display,2025-11-02,None,True,2025-11-02
+20301,Autres.,Boulons antivol,2025-11-02,None,True,2025-11-02
+20301,Autres.,Ceintures de sécurité M,2025-11-02,None,True,2025-11-02
+20301,Autres.,Driving Assistant Pack Professional,2025-11-02,None,True,2025-11-02
+20301,Autres.,Eléments intérieur avec finition en cristal 'CraftedClarity',2025-11-02,None,True,2025-11-02
+20301,Autres.,Espace de rangement pour Wireless Charging,2025-11-02,None,True,2025-11-02
+20301,Autres.,"Freins M Sport, rot",2025-11-02,None,True,2025-11-02
+20301,Autres.,Harman/kardon Surround Sound System,2025-11-02,None,True,2025-11-02
+20301,Autres.,High Beam Assist,2025-11-02,None,True,2025-11-02
+20301,Autres.,"Jantes alu styling 996 M 19"" (bicolor)",2025-11-02,None,True,2025-11-02
+20301,Autres.,Kit aérodynamique M,2025-11-02,None,True,2025-11-02
+20301,Autres.,Ciel de pavillon M en Anthrazit,2025-11-02,None,True,2025-11-02
+20301,Autres.,M Lights Shadow Line,2025-11-02,None,True,2025-11-02
+20301,Autres.,M Shadow Line hochglänzend avec éléments supplémentaires,2025-11-02,None,True,2025-11-02
+20301,Autres.,Parking Assistant Pack Plus,2025-11-02,None,True,2025-11-02
+20301,Autres.,Réglage en largeur du dossier pour conducteur,2025-11-02,None,True,2025-11-02
+20301,Autres.,"Réglage électrique des sièges avant, avec fonction-mémoire pour siège conducteur",2025-11-02,None,True,2025-11-02
+20301,Autres.,Soutien lombaire à l'avant,2025-11-02,None,True,2025-11-02
+20301,Autres.,Suspension adaptative M,2025-11-02,None,True,2025-11-02
+20301,Autres.,Tableau de bord Luxury,2025-11-02,None,True,2025-11-02
+20301,Autres.,Toit ouvrant à commande électrique,2025-11-02,None,True,2025-11-02
+20301,Autres.,Variable Sport Steering,2025-11-02,None,True,2025-11-02
+20301,Autres.,Vitres teintées foncées à l'arrière,2025-11-02,None,True,2025-11-02
+20301,Autres.,Volant chauffant,2025-11-02,None,True,2025-11-02
+20301,Autres.,Volant M sport,2025-11-02,None,True,2025-11-02
+40022,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-02,None,True,2025-11-02
+40022,Equipements électriques,Adaptive LED headlights,2025-11-02,None,True,2025-11-02
+40022,Equipements électriques,Climatisation à réglage électronique,2025-11-02,None,True,2025-11-02
+40022,Equipements électriques,Driving Assistant Pack Professional,2025-11-02,None,True,2025-11-02
+40022,Equipements électriques,High Beam Assist,2025-11-02,None,True,2025-11-02
+40022,Equipements électriques,M Lights Shadow Line,2025-11-02,None,True,2025-11-02
+40022,Equipements électriques,Parking Assistant Pack Plus,2025-11-02,None,True,2025-11-02
+40022,Equipements électriques,Système d'alarme,2025-11-02,None,True,2025-11-02
+40022,Equipements extérieurs,Accès confort,2025-11-02,None,True,2025-11-02
+40022,Equipements extérieurs,Spoiler arrière M,2025-11-02,None,True,2025-11-02
+40022,Equipements extérieurs,Kit aérodynamique M,2025-11-02,None,True,2025-11-02
+40022,Equipements extérieurs,M Shadow Line hochglänzend,2025-11-02,None,True,2025-11-02
+40022,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,2025-11-02,None,True,2025-11-02
+40022,Equipements extérieurs,Vitres teintées foncées à l'arrière,2025-11-02,None,True,2025-11-02
+40022,Equipements intérieurs,Ceintures de sécurité M,2025-11-02,None,True,2025-11-02
+40022,Equipements intérieurs,Lumière intérieure d'ambiance,2025-11-02,None,True,2025-11-02
+40022,Equipements intérieurs,Ciel de pavillon M en Anthrazit,2025-11-02,None,True,2025-11-02
+40022,Equipements intérieurs,Pack rangement,2025-11-02,None,True,2025-11-02
+40022,Equipements intérieurs,Pack rétroviseurs,2025-11-02,None,True,2025-11-02
+40022,Equipements intérieurs,Réglage en largeur du dossier pour conducteur,2025-11-02,None,True,2025-11-02
+40022,Equipements intérieurs,"Réglage électrique des sièges avant, avec fonction-mémoire pour siège conducteur",2025-11-02,None,True,2025-11-02
+40022,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,2025-11-02,None,True,2025-11-02
+40022,Equipements intérieurs,Sièges chauffants à l'avant,2025-11-02,None,True,2025-11-02
+40022,Equipements intérieurs,Soutien lombaire à l'avant,2025-11-02,None,True,2025-11-02
+40022,Equipements intérieurs,Toit ouvrant à commande électrique,2025-11-02,None,True,2025-11-02
+40022,Equipements intérieurs,Volant M sport,2025-11-02,None,True,2025-11-02
+40022,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,2025-11-02,None,True,2025-11-02
+40022,Télécommunication embarquée,Espace de rangement pour Wireless Charging,2025-11-02,None,True,2025-11-02
+40022,Télécommunication embarquée,Intelligent Emergency Call - eCall,2025-11-02,None,True,2025-11-02
+40022,Télécommunication embarquée,Personal eSIM,2025-11-02,None,True,2025-11-02
+40022,Télécommunication embarquée,Système haut-parleurs HiFi,2025-11-02,None,True,2025-11-02
+40022,"Transmission, suspension et direction",Attelage de remorque (rabattable électriquement),2025-11-02,None,True,2025-11-02
+40022,"Transmission, suspension et direction","Freins M Sport, rot",2025-11-02,None,True,2025-11-02
+40022,"Transmission, suspension et direction",Suspension adaptative M,2025-11-02,None,True,2025-11-02
+40022,"Transmission, suspension et direction",Variable Sport Steering,2025-11-02,None,True,2025-11-02
+40022,"Transmission, suspension et direction",Volant M sport,2025-11-02,None,True,2025-11-02
+40022,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+40022,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+40022,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+40022,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+27838,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-02,None,True,2025-11-02
+27838,Equipements électriques,BMW Laserlight,2025-11-02,None,True,2025-11-02
+27838,Equipements électriques,Climatiseur automatique avec 3 zones,2025-11-02,None,True,2025-11-02
+27838,Equipements électriques,Driving Assistant Pack Professional,2025-11-02,None,True,2025-11-02
+27838,Equipements électriques,High Beam Assist,2025-11-02,None,True,2025-11-02
+27838,Equipements électriques,M Lights Shadow Line,2025-11-02,None,True,2025-11-02
+27838,Equipements électriques,Parking Assistant Pack,2025-11-02,None,True,2025-11-02
+27838,Equipements électriques,Système d'alarme,2025-11-02,None,True,2025-11-02
+27838,Equipements extérieurs,Accès confort,2025-11-02,None,True,2025-11-02
+27838,Equipements extérieurs,Spoiler arrière M,2025-11-02,None,True,2025-11-02
+27838,Equipements extérieurs,Kit aérodynamique M,2025-11-02,None,True,2025-11-02
+27838,Equipements extérieurs,M Shadow Line hochglänzend,2025-11-02,None,True,2025-11-02
+27838,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,2025-11-02,None,True,2025-11-02
+27838,Equipements extérieurs,Vitres teintées foncées à l'arrière,2025-11-02,None,True,2025-11-02
+27838,Equipements intérieurs,Ceintures de sécurité M,2025-11-02,None,True,2025-11-02
+27838,Equipements intérieurs,Lumière intérieure d'ambiance,2025-11-02,None,True,2025-11-02
+27838,Equipements intérieurs,Ciel de pavillon M en Anthrazit,2025-11-02,None,True,2025-11-02
+27838,Equipements intérieurs,Pack rangement,2025-11-02,None,True,2025-11-02
+27838,Equipements intérieurs,Pack rétroviseurs,2025-11-02,None,True,2025-11-02
+27838,Equipements intérieurs,Réglage en largeur du dossier pour conducteur,2025-11-02,None,True,2025-11-02
+27838,Equipements intérieurs,"Réglage électrique des sièges avant, avec fonction-mémoire pour siège conducteur",2025-11-02,None,True,2025-11-02
+27838,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,2025-11-02,None,True,2025-11-02
+27838,Equipements intérieurs,Sièges chauffants à l'avant,2025-11-02,None,True,2025-11-02
+27838,Equipements intérieurs,Soutien lombaire à l'avant,2025-11-02,None,True,2025-11-02
+27838,Equipements intérieurs,Tableau de bord recouvert de Sensatec,2025-11-02,None,True,2025-11-02
+27838,Equipements intérieurs,Toit ouvrant à commande électrique,2025-11-02,None,True,2025-11-02
+27838,Equipements intérieurs,Volant chauffant,2025-11-02,None,True,2025-11-02
+27838,Equipements intérieurs,Volant M sport,2025-11-02,None,True,2025-11-02
+27838,Télécommunication embarquée,Intelligent Emergency Call - eCall,2025-11-02,None,True,2025-11-02
+27838,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,2025-11-02,None,True,2025-11-02
+27838,Télécommunication embarquée,Espace de rangement pour Wireless Charging,2025-11-02,None,True,2025-11-02
+27838,Télécommunication embarquée,Harman/kardon Surround Sound System,2025-11-02,None,True,2025-11-02
+27838,"Transmission, suspension et direction",Attelage de remorque (rabattable électriquement),2025-11-02,None,True,2025-11-02
+27838,"Transmission, suspension et direction",Volant M sport,2025-11-02,None,True,2025-11-02
+27838,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+27838,Autres.,Battery Electric Vehicle,2025-11-02,None,True,2025-11-02
+27838,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+27838,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+27838,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+28441,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-02,None,True,2025-11-02
+28441,Equipements électriques,BMW IconicSounds Electric,2025-11-02,None,True,2025-11-02
+28441,Equipements électriques,BMW Laserlight,2025-11-02,None,True,2025-11-02
+28441,Equipements électriques,Climatiseur automatique avec 3 zones,2025-11-02,None,True,2025-11-02
+28441,Equipements électriques,Driving Assistant Pack Professional,2025-11-02,None,True,2025-11-02
+28441,Equipements électriques,High Beam Assist,2025-11-02,None,True,2025-11-02
+28441,Equipements électriques,M Lights Shadow Line,2025-11-02,None,True,2025-11-02
+28441,Equipements électriques,Parking Assistant Pack Plus,2025-11-02,None,True,2025-11-02
+28441,Equipements électriques,Système d'alarme,2025-11-02,None,True,2025-11-02
+28441,Equipements extérieurs,Accès confort,2025-11-02,None,True,2025-11-02
+28441,Equipements extérieurs,Spoiler arrière M,2025-11-02,None,True,2025-11-02
+28441,Equipements extérieurs,Kit aérodynamique M,2025-11-02,None,True,2025-11-02
+28441,Equipements extérieurs,M Shadow Line hochglänzend,2025-11-02,None,True,2025-11-02
+28441,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,2025-11-02,None,True,2025-11-02
+28441,Equipements extérieurs,Vitres teintées foncées à l'arrière,2025-11-02,None,True,2025-11-02
+28441,Equipements intérieurs,Ceintures de sécurité M,2025-11-02,None,True,2025-11-02
+28441,Equipements intérieurs,Lumière intérieure d'ambiance,2025-11-02,None,True,2025-11-02
+28441,Equipements intérieurs,Ciel de pavillon M en Anthrazit,2025-11-02,None,True,2025-11-02
+28441,Equipements intérieurs,Pack rangement,2025-11-02,None,True,2025-11-02
+28441,Equipements intérieurs,Pack rétroviseurs,2025-11-02,None,True,2025-11-02
+28441,Equipements intérieurs,"Réglage électrique des sièges avant, avec fonction-mémoire pour siège conducteur",2025-11-02,None,True,2025-11-02
+28441,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,2025-11-02,None,True,2025-11-02
+28441,Equipements intérieurs,Sièges chauffants à l'avant,2025-11-02,None,True,2025-11-02
+28441,Equipements intérieurs,Sièges M sport à l'avant,2025-11-02,None,True,2025-11-02
+28441,Equipements intérieurs,Soutien lombaire à l'avant,2025-11-02,None,True,2025-11-02
+28441,Equipements intérieurs,Tableau de bord recouvert de Sensatec,2025-11-02,None,True,2025-11-02
+28441,Equipements intérieurs,Toit ouvrant à commande électrique,2025-11-02,None,True,2025-11-02
+28441,Equipements intérieurs,Volant M sport,2025-11-02,None,True,2025-11-02
+28441,Télécommunication embarquée,Intelligent Emergency Call - eCall,2025-11-02,None,True,2025-11-02
+28441,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,2025-11-02,None,True,2025-11-02
+28441,Télécommunication embarquée,Espace de rangement pour Wireless Charging,2025-11-02,None,True,2025-11-02
+28441,Télécommunication embarquée,Harman/kardon Surround Sound System,2025-11-02,None,True,2025-11-02
+28441,"Transmission, suspension et direction",Attelage de remorque (rabattable électriquement),2025-11-02,None,True,2025-11-02
+28441,"Transmission, suspension et direction","Freins M Sport, rot",2025-11-02,None,True,2025-11-02
+28441,"Transmission, suspension et direction",Volant M sport,2025-11-02,None,True,2025-11-02
+28441,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+28441,Autres.,Battery Electric Vehicle,2025-11-02,None,True,2025-11-02
+28441,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+28441,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+28441,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+9811,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-02,None,True,2025-11-02
+9811,Charging,Flexible Fast Charger (mode 2),2025-11-02,None,True,2025-11-02
+9811,Equipements électriques,BMW IconicSounds Electric,2025-11-02,None,True,2025-11-02
+9811,Equipements électriques,Climatiseur automatique avec 3 zones,2025-11-02,None,True,2025-11-02
+9811,Equipements électriques,Cruise Control,2025-11-02,None,True,2025-11-02
+9811,Equipements électriques,Driving Assistant Pack,2025-11-02,None,True,2025-11-02
+9811,Equipements électriques,High Beam Assist,2025-11-02,None,True,2025-11-02
+9811,Equipements électriques,Parking Assistant Pack Plus,2025-11-02,None,True,2025-11-02
+9811,Equipements électriques,Système d'alarme,2025-11-02,None,True,2025-11-02
+9811,Equipements extérieurs,Accès confort,2025-11-02,None,True,2025-11-02
+9811,Equipements extérieurs,Kit aérodynamique M,2025-11-02,None,True,2025-11-02
+9811,Equipements extérieurs,M Shadow Line hochglänzend,2025-11-02,None,True,2025-11-02
+9811,Equipements extérieurs,Vitres teintées foncées à l'arrière,2025-11-02,None,True,2025-11-02
+9811,Equipements intérieurs,Lumière intérieure d'ambiance,2025-11-02,None,True,2025-11-02
+9811,Equipements intérieurs,Ciel de pavillon M en Anthrazit,2025-11-02,None,True,2025-11-02
+9811,Equipements intérieurs,Pack rangement,2025-11-02,None,True,2025-11-02
+9811,Equipements intérieurs,Pack rétroviseurs,2025-11-02,None,True,2025-11-02
+9811,Equipements intérieurs,"Réglage électrique des sièges avant, avec fonction-mémoire pour siège conducteur",2025-11-02,None,True,2025-11-02
+9811,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,2025-11-02,None,True,2025-11-02
+9811,Equipements intérieurs,Sièges chauffants à l'avant,2025-11-02,None,True,2025-11-02
+9811,Equipements intérieurs,Soutien lombaire à l'avant,2025-11-02,None,True,2025-11-02
+9811,Equipements intérieurs,Tableau de bord recouvert de Sensatec,2025-11-02,None,True,2025-11-02
+9811,Equipements intérieurs,Toit ouvrant à commande électrique,2025-11-02,None,True,2025-11-02
+9811,Equipements intérieurs,Volant M sport,2025-11-02,None,True,2025-11-02
+9811,Télécommunication embarquée,Intelligent Emergency Call - eCall,2025-11-02,None,True,2025-11-02
+9811,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,2025-11-02,None,True,2025-11-02
+9811,Télécommunication embarquée,Espace de rangement pour Wireless Charging,2025-11-02,None,True,2025-11-02
+9811,Télécommunication embarquée,Personal eSIM,2025-11-02,None,True,2025-11-02
+9811,Télécommunication embarquée,Système haut-parleurs HiFi,2025-11-02,None,True,2025-11-02
+9811,"Transmission, suspension et direction",Suspension adaptative M,2025-11-02,None,True,2025-11-02
+9811,"Transmission, suspension et direction",Variable Sport Steering,2025-11-02,None,True,2025-11-02
+9811,"Transmission, suspension et direction",Volant M sport,2025-11-02,None,True,2025-11-02
+9811,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+9811,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+9811,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+9811,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+88830,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-02,None,True,2025-11-02
+88830,Charging,Flexible Fast Charger (mode 2),2025-11-02,None,True,2025-11-02
+88830,Equipements électriques,BMW IconicSounds Electric,2025-11-02,None,True,2025-11-02
+88830,Equipements électriques,BMW Laserlight,2025-11-02,None,True,2025-11-02
+88830,Equipements électriques,Climatiseur automatique avec 3 zones,2025-11-02,None,True,2025-11-02
+88830,Equipements électriques,Driving Assistant Pack Professional,2025-11-02,None,True,2025-11-02
+88830,Equipements électriques,High Beam Assist,2025-11-02,None,True,2025-11-02
+88830,Equipements électriques,Parking Assistant Pack Plus,2025-11-02,None,True,2025-11-02
+88830,Equipements électriques,Système d'alarme,2025-11-02,None,True,2025-11-02
+88830,Equipements extérieurs,Accès confort,2025-11-02,None,True,2025-11-02
+88830,Equipements extérieurs,Kit aérodynamique M,2025-11-02,None,True,2025-11-02
+88830,Equipements extérieurs,M Shadow Line hochglänzend,2025-11-02,None,True,2025-11-02
+88830,Equipements extérieurs,Vitres teintées foncées à l'arrière,2025-11-02,None,True,2025-11-02
+88830,Equipements intérieurs,Lumière intérieure d'ambiance,2025-11-02,None,True,2025-11-02
+88830,Equipements intérieurs,Ciel de pavillon M en Anthrazit,2025-11-02,None,True,2025-11-02
+88830,Equipements intérieurs,Pack rangement,2025-11-02,None,True,2025-11-02
+88830,Equipements intérieurs,Pack rétroviseurs,2025-11-02,None,True,2025-11-02
+88830,Equipements intérieurs,Réglage en largeur du dossier pour conducteur,2025-11-02,None,True,2025-11-02
+88830,Equipements intérieurs,"Réglage électrique des sièges avant, avec fonction-mémoire pour siège conducteur",2025-11-02,None,True,2025-11-02
+88830,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,2025-11-02,None,True,2025-11-02
+88830,Equipements intérieurs,Sièges chauffants à l'avant,2025-11-02,None,True,2025-11-02
+88830,Equipements intérieurs,Soutien lombaire à l'avant,2025-11-02,None,True,2025-11-02
+88830,Equipements intérieurs,Tableau de bord recouvert de Sensatec,2025-11-02,None,True,2025-11-02
+88830,Equipements intérieurs,Toit ouvrant à commande électrique,2025-11-02,None,True,2025-11-02
+88830,Equipements intérieurs,Volant M sport,2025-11-02,None,True,2025-11-02
+88830,Télécommunication embarquée,Intelligent Emergency Call - eCall,2025-11-02,None,True,2025-11-02
+88830,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,2025-11-02,None,True,2025-11-02
+88830,Télécommunication embarquée,Espace de rangement pour Wireless Charging,2025-11-02,None,True,2025-11-02
+88830,Télécommunication embarquée,Harman/kardon Surround Sound System,2025-11-02,None,True,2025-11-02
+88830,Télécommunication embarquée,Personal eSIM,2025-11-02,None,True,2025-11-02
+88830,"Transmission, suspension et direction",Suspension adaptative M,2025-11-02,None,True,2025-11-02
+88830,"Transmission, suspension et direction",Variable Sport Steering,2025-11-02,None,True,2025-11-02
+88830,"Transmission, suspension et direction",Volant M sport,2025-11-02,None,True,2025-11-02
+88830,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+88830,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+88830,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+1746,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-02,None,True,2025-11-02
+1746,Equipements électriques,Climatiseur automatique avec 3 zones,2025-11-02,None,True,2025-11-02
+1746,Equipements électriques,Driving Assistant Pack Professional,2025-11-02,None,True,2025-11-02
+1746,Equipements électriques,M Lights Shadow Line,2025-11-02,None,True,2025-11-02
+1746,Equipements électriques,Parking Assistant Pack Plus,2025-11-02,None,True,2025-11-02
+1746,Equipements électriques,Système d'alarme,2025-11-02,None,True,2025-11-02
+1746,Equipements extérieurs,Accès confort,2025-11-02,None,True,2025-11-02
+1746,Equipements extérieurs,Spoiler arrière M,2025-11-02,None,True,2025-11-02
+1746,Equipements extérieurs,Kit aérodynamique M,2025-11-02,None,True,2025-11-02
+1746,Equipements extérieurs,M Shadow Line hochglänzend,2025-11-02,None,True,2025-11-02
+1746,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,2025-11-02,None,True,2025-11-02
+1746,Equipements extérieurs,Vitres teintées foncées à l'arrière,2025-11-02,None,True,2025-11-02
+1746,Equipements intérieurs,Ceintures de sécurité M,2025-11-02,None,True,2025-11-02
+1746,Equipements intérieurs,Lumière intérieure d'ambiance,2025-11-02,None,True,2025-11-02
+1746,Equipements intérieurs,Ciel de pavillon M en Anthrazit,2025-11-02,None,True,2025-11-02
+1746,Equipements intérieurs,Pack rangement,2025-11-02,None,True,2025-11-02
+1746,Equipements intérieurs,Pack rétroviseurs,2025-11-02,None,True,2025-11-02
+1746,Equipements intérieurs,Réglage en largeur du dossier pour conducteur,2025-11-02,None,True,2025-11-02
+1746,Equipements intérieurs,"Réglage électrique des sièges avant, avec fonction-mémoire pour siège conducteur",2025-11-02,None,True,2025-11-02
+1746,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,2025-11-02,None,True,2025-11-02
+1746,Equipements intérieurs,Sièges chauffants à l'avant,2025-11-02,None,True,2025-11-02
+1746,Equipements intérieurs,Soutien lombaire à l'avant,2025-11-02,None,True,2025-11-02
+1746,Equipements intérieurs,Tableau de bord recouvert de Sensatec,2025-11-02,None,True,2025-11-02
+1746,Equipements intérieurs,Toit ouvrant à commande électrique,2025-11-02,None,True,2025-11-02
+1746,Equipements intérieurs,Volant chauffant,2025-11-02,None,True,2025-11-02
+1746,Equipements intérieurs,Volant M sport,2025-11-02,None,True,2025-11-02
+1746,Télécommunication embarquée,Intelligent Emergency Call - eCall,2025-11-02,None,True,2025-11-02
+1746,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,2025-11-02,None,True,2025-11-02
+1746,Télécommunication embarquée,Espace de rangement pour Wireless Charging,2025-11-02,None,True,2025-11-02
+1746,Télécommunication embarquée,Harman/kardon Surround Sound System,2025-11-02,None,True,2025-11-02
+1746,"Transmission, suspension et direction","Freins M Sport, rot",2025-11-02,None,True,2025-11-02
+1746,"Transmission, suspension et direction",Volant M sport,2025-11-02,None,True,2025-11-02
+1746,Autres.,Battery Electric Vehicle,2025-11-02,None,True,2025-11-02
+1746,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+1746,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+1746,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+1746,Autres.,LED Headlights,2025-11-02,None,True,2025-11-02
+92901,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-02,None,True,2025-11-02
+92901,Equipements électriques,Climatiseur automatique avec 3 zones,2025-11-02,None,True,2025-11-02
+92901,Equipements électriques,Driving Assistant Pack Professional,2025-11-02,None,True,2025-11-02
+92901,Equipements électriques,M Lights Shadow Line,2025-11-02,None,True,2025-11-02
+92901,Equipements électriques,Parking Assistant Pack Plus,2025-11-02,None,True,2025-11-02
+92901,Equipements électriques,Système d'alarme,2025-11-02,None,True,2025-11-02
+92901,Equipements extérieurs,Accès confort,2025-11-02,None,True,2025-11-02
+92901,Equipements extérieurs,Spoiler arrière M,2025-11-02,None,True,2025-11-02
+92901,Equipements extérieurs,Kit aérodynamique M,2025-11-02,None,True,2025-11-02
+92901,Equipements extérieurs,M Shadow Line hochglänzend,2025-11-02,None,True,2025-11-02
+92901,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,2025-11-02,None,True,2025-11-02
+92901,Equipements extérieurs,Vitres teintées foncées à l'arrière,2025-11-02,None,True,2025-11-02
+92901,Equipements intérieurs,Ceintures de sécurité M,2025-11-02,None,True,2025-11-02
+92901,Equipements intérieurs,Ciel de pavillon M en Anthrazit,2025-11-02,None,True,2025-11-02
+92901,Equipements intérieurs,Pack rangement,2025-11-02,None,True,2025-11-02
+92901,Equipements intérieurs,Pack rétroviseurs,2025-11-02,None,True,2025-11-02
+92901,Equipements intérieurs,Réglage en largeur du dossier pour conducteur,2025-11-02,None,True,2025-11-02
+92901,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,2025-11-02,None,True,2025-11-02
+92901,Equipements intérieurs,Sièges chauffants à l'avant,2025-11-02,None,True,2025-11-02
+92901,Equipements intérieurs,Toit ouvrant à commande électrique,2025-11-02,None,True,2025-11-02
+92901,Equipements intérieurs,Volant chauffant,2025-11-02,None,True,2025-11-02
+92901,Equipements intérieurs,Volant M sport,2025-11-02,None,True,2025-11-02
+92901,Télécommunication embarquée,Intelligent Emergency Call - eCall,2025-11-02,None,True,2025-11-02
+92901,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,2025-11-02,None,True,2025-11-02
+92901,Télécommunication embarquée,Système haut-parleurs HiFi,2025-11-02,None,True,2025-11-02
+92901,"Transmission, suspension et direction","Freins M Sport, rot",2025-11-02,None,True,2025-11-02
+92901,"Transmission, suspension et direction",Volant M sport,2025-11-02,None,True,2025-11-02
+92901,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+92901,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+92901,Autres.,S0ZUN,2025-11-02,None,True,2025-11-02
+27864,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-02,None,True,2025-11-02
+27864,Equipements électriques,Climatiseur automatique avec 3 zones,2025-11-02,None,True,2025-11-02
+27864,Equipements électriques,Driving Assistant Pack Professional,2025-11-02,None,True,2025-11-02
+27864,Equipements électriques,M Lights Shadow Line,2025-11-02,None,True,2025-11-02
+27864,Equipements électriques,Parking Assistant Pack,2025-11-02,None,True,2025-11-02
+27864,Equipements électriques,Système d'alarme,2025-11-02,None,True,2025-11-02
+27864,Equipements extérieurs,Spoiler arrière M,2025-11-02,None,True,2025-11-02
+27864,Equipements extérieurs,Kit aérodynamique M,2025-11-02,None,True,2025-11-02
+27864,Equipements extérieurs,M Shadow Line hochglänzend,2025-11-02,None,True,2025-11-02
+27864,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,2025-11-02,None,True,2025-11-02
+27864,Equipements extérieurs,Vitres teintées foncées à l'arrière,2025-11-02,None,True,2025-11-02
+27864,Equipements intérieurs,Ceintures de sécurité M,2025-11-02,None,True,2025-11-02
+27864,Equipements intérieurs,Ciel de pavillon M en Anthrazit,2025-11-02,None,True,2025-11-02
+27864,Equipements intérieurs,Pack rangement,2025-11-02,None,True,2025-11-02
+27864,Equipements intérieurs,Pack rétroviseurs,2025-11-02,None,True,2025-11-02
+27864,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,2025-11-02,None,True,2025-11-02
+27864,Equipements intérieurs,Sièges chauffants à l'avant,2025-11-02,None,True,2025-11-02
+27864,Equipements intérieurs,Tableau de bord recouvert de Sensatec,2025-11-02,None,True,2025-11-02
+27864,Equipements intérieurs,Toit ouvrant à commande électrique,2025-11-02,None,True,2025-11-02
+27864,Equipements intérieurs,Volant M sport,2025-11-02,None,True,2025-11-02
+27864,Télécommunication embarquée,Intelligent Emergency Call - eCall,2025-11-02,None,True,2025-11-02
+27864,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,2025-11-02,None,True,2025-11-02
+27864,Télécommunication embarquée,Espace de rangement pour Wireless Charging,2025-11-02,None,True,2025-11-02
+27864,"Transmission, suspension et direction","Freins M Sport, rot",2025-11-02,None,True,2025-11-02
+27864,"Transmission, suspension et direction",Volant M sport,2025-11-02,None,True,2025-11-02
+27864,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+27864,Autres.,Code interne,2025-11-02,None,True,2025-11-02
+27864,Autres.,Code interne,2025-11-02,None,True,2025-11-02
