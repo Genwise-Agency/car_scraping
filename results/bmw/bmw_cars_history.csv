@@ -1,5 +1,419 @@
 car_id,model_name,price,kilometers,registration_date,horse_power_kw,horse_power_ps,battery_range_km,equipments,link,first_seen_date,last_seen_date,valid_from,valid_to,is_latest,status,scrape_date
-39582,BMW i4 eDrive35 Gran Coupé M Edition,59950.0,9500,2025-08-01,210,286,475,"{
+14070,BMW i4 xDrive40 Gran Coupé,55900.0,7263,2025-04-01 00:00:00,295,401,512.0,"{
+  ""Charging"": [
+    ""Câble de recharge rapide jusqu'à 22kW (Mode 3)""
+  ],
+  ""Equipements électriques"": [
+    ""Adaptive LED headlights"",
+    ""Climatisation à réglage électronique"",
+    ""Driving Assistant Pack Professional"",
+    ""High Beam Assist"",
+    ""M Lights Shadow Line"",
+    ""Parking Assistant Pack Plus"",
+    ""Système d'alarme""
+  ],
+  ""Equipements extérieurs"": [
+    ""Spoiler arrière M"",
+    ""Kit aérodynamique M"",
+    ""M Shadow Line hochglänzend"",
+    ""M Shadow Line hochglänzend avec éléments supplémentaires"",
+    ""Vitres teintées foncées à l'arrière""
+  ],
+  ""Equipements intérieurs"": [
+    ""Ceintures de sécurité M"",
+    ""Lumière intérieure d'ambiance"",
+    ""Ciel de pavillon M en Anthrazit"",
+    ""Pack rangement"",
+    ""Pack rétroviseurs"",
+    ""Réglage électrique des sièges avant, avec fonction-mémoire pour siège conducteur"",
+    ""Rétroviseur intérieur anti-éblouissement automatique"",
+    ""Sièges chauffants à l'avant"",
+    ""Volant chauffant"",
+    ""Volant M sport""
+  ],
+  ""Télécommunication embarquée"": [
+    ""BMW Live Cockpit Navigation Professional avec Head-Up Display"",
+    ""Harman/kardon Surround Sound System"",
+    ""Intelligent Emergency Call - eCall"",
+    ""Personal eSIM""
+  ],
+  ""Transmission, suspension et direction"": [
+    ""Attelage de remorque (rabattable électriquement)"",
+    ""Freins M Sport, rot"",
+    ""Suspension adaptative M"",
+    ""Variable Sport Steering"",
+    ""Volant M sport""
+  ],
+  ""Autres."": [
+    ""Code interne"",
+    ""Code interne"",
+    ""Code interne""
+  ]
+}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/0194fadf-2025-7a82-80aa-adc54fe8ab1e?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C58000%255D%252C%2522USED_CAR_MILEAGE%2522%253A%255B0%252C10000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2025%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=41HD&paint=P0C4P&fabric=FKHSW&modelRangeCode=G26&options=S08WD,S07A2,S03MF,S05DN,S07M9,S03AC,S0775,S0710,S0754,S0534,S0337,S05AC,S0459,S08R3,S06AE,S0715,S06AF,S0493,S08WN,S0494,S0430,S04UR,S0431,S04T2,S0552,S06PA,S02VL,S05AU,S04GQ,S06VB,S033B,S02VF,S02PA,S0302,S04LN,S08TR,S0688,S0248,S03M2,S0548,S03FA,S0760,S05DA,S0420,S06U3",2025-11-03,2025-11-03,2025-11-03,None,True,active,2025-11-03
+9296,BMW i4 eDrive35 Gran Coupé,55750.0,6352,2025-04-01 00:00:00,210,286,459.0,"{
+  ""Charging"": [
+    ""Câble de recharge rapide jusqu'à 22kW (Mode 3)""
+  ],
+  ""Equipements électriques"": [
+    ""Active Cruise Control avec fonction Stop&Go"",
+    ""Adaptive LED headlights"",
+    ""Climatisation à réglage électronique"",
+    ""Driving Assistant Pack"",
+    ""High Beam Assist"",
+    ""M Lights Shadow Line"",
+    ""Parking Assistant Pack Plus"",
+    ""Système d'alarme""
+  ],
+  ""Equipements extérieurs"": [
+    ""Accès confort"",
+    ""Spoiler arrière M"",
+    ""Kit aérodynamique M"",
+    ""M Shadow Line hochglänzend"",
+    ""M Shadow Line hochglänzend avec éléments supplémentaires"",
+    ""Vitres teintées foncées à l'arrière""
+  ],
+  ""Equipements intérieurs"": [
+    ""Ceintures de sécurité M"",
+    ""Lumière intérieure d'ambiance"",
+    ""Ciel de pavillon M en Anthrazit"",
+    ""Pack rangement"",
+    ""Pack rétroviseurs"",
+    ""Rétroviseur intérieur anti-éblouissement automatique"",
+    ""Sièges chauffants à l'avant"",
+    ""Soutien lombaire à l'avant"",
+    ""Volant M sport""
+  ],
+  ""Télécommunication embarquée"": [
+    ""BMW Live Cockpit Navigation Professional avec Head-Up Display"",
+    ""Espace de rangement pour Wireless Charging"",
+    ""Harman/kardon Surround Sound System"",
+    ""Intelligent Emergency Call - eCall"",
+    ""Personal eSIM""
+  ],
+  ""Transmission, suspension et direction"": [
+    ""Attelage de remorque (rabattable électriquement)"",
+    ""Freins M Sport, rot"",
+    ""Volant M sport""
+  ],
+  ""Autres."": [
+    ""Code interne"",
+    ""Code interne"",
+    ""Code interne"",
+    ""Code interne"",
+    ""Code interne""
+  ]
+}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/0192ea61-6f47-7786-9647-743e758aff2c?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C58000%255D%252C%2522USED_CAR_MILEAGE%2522%253A%255B0%252C10000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2025%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=11HD&paint=P0475&fabric=FKHSW&modelRangeCode=G26&options=S08WD,S07A2,S03MF,S05DN,S06NX,S07M9,S08WC,S03AC,S0710,S0754,S05AC,S0715,S08WN,S0430,S0431,S04T2,S0552,S06VB,S033B,S0302,S05DF,S03M2,S0548,S05DA,S07LG,S0420,S0775,S0534,S0337,S08R3,S06AE,S06AF,S0493,S0494,S04UR,S06PA,S05AS,S04GQ,S02PA,S04LN,S0688,S03FA,S0760,S0322,S06U3,S0488",2025-11-03,2025-11-03,2025-11-03,None,True,active,2025-11-03
+27433,BMW i4 eDrive35 Gran Coupé,54900.0,5500,2025-01-01,210,286,462.0,"{
+  ""Charging"": [
+    ""Câble de recharge rapide jusqu'à 22kW (Mode 3)""
+  ],
+  ""Equipements électriques"": [
+    ""Adaptive LED headlights"",
+    ""Climatisation à réglage électronique"",
+    ""Cruise Control"",
+    ""Driving Assistant Pack"",
+    ""High Beam Assist"",
+    ""M Lights Shadow Line"",
+    ""Parking Assistant Pack Plus"",
+    ""Système d'alarme""
+  ],
+  ""Equipements extérieurs"": [
+    ""Accès confort"",
+    ""Spoiler arrière M"",
+    ""Kit aérodynamique M"",
+    ""M Shadow Line hochglänzend"",
+    ""M Shadow Line hochglänzend avec éléments supplémentaires"",
+    ""Vitres teintées foncées à l'arrière""
+  ],
+  ""Equipements intérieurs"": [
+    ""Ceintures de sécurité M"",
+    ""Lumière intérieure d'ambiance"",
+    ""Ciel de pavillon M en Anthrazit"",
+    ""Pack rangement"",
+    ""Pack rétroviseurs"",
+    ""Rétroviseur intérieur anti-éblouissement automatique"",
+    ""Sièges chauffants à l'avant"",
+    ""Soutien lombaire à l'avant"",
+    ""Toit ouvrant à commande électrique"",
+    ""Volant M sport""
+  ],
+  ""Télécommunication embarquée"": [
+    ""BMW Live Cockpit Navigation Professional avec Head-Up Display"",
+    ""Espace de rangement pour Wireless Charging"",
+    ""Harman/kardon Surround Sound System"",
+    ""Intelligent Emergency Call - eCall"",
+    ""Personal eSIM""
+  ],
+  ""Transmission, suspension et direction"": [
+    ""Freins M Sport, rot"",
+    ""Volant M sport""
+  ],
+  ""Autres."": [
+    ""Code interne"",
+    ""Code interne"",
+    ""Code interne"",
+    ""Code interne"",
+    ""Code interne""
+  ]
+}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/0191ff1e-b3ad-7f85-9154-817a3faa61ed?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=11HD&paint=P0C4P&fabric=FKHKC&modelRangeCode=G26&options=S08WD,S07A2,S03MF,S05DN,S06NX,S07M9,S08WC,S0710,S0754,S05AC,S0715,S08WN,S0430,S0431,S04T2,S0552,S06VB,S033B,S0302,S0544,S03M2,S0548,S05DA,S07LG,S0420,S0775,S0534,S0337,S08R3,S06AE,S06AF,S0493,S0494,S04UR,S06PA,S05AS,S04GQ,S09QY,S02PA,S04LN,S0688,S0403,S03FA,S0760,S0322,S06U3,S0488",2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-03,False,active,2025-11-02 00:00:00
+27433,BMW i4 eDrive35 Gran Coupé,54900.0,5500,2025-01-01 00:00:00,210,286,462.0,"{
+  ""Charging"": [
+    ""Câble de recharge rapide jusqu'à 22kW (Mode 3)""
+  ],
+  ""Equipements électriques"": [
+    ""Adaptive LED headlights"",
+    ""Climatisation à réglage électronique"",
+    ""Cruise Control"",
+    ""Driving Assistant Pack"",
+    ""High Beam Assist"",
+    ""M Lights Shadow Line"",
+    ""Parking Assistant Pack Plus"",
+    ""Système d'alarme""
+  ],
+  ""Equipements extérieurs"": [
+    ""Accès confort"",
+    ""Spoiler arrière M"",
+    ""Kit aérodynamique M"",
+    ""M Shadow Line hochglänzend"",
+    ""M Shadow Line hochglänzend avec éléments supplémentaires"",
+    ""Vitres teintées foncées à l'arrière""
+  ],
+  ""Equipements intérieurs"": [
+    ""Ceintures de sécurité M"",
+    ""Lumière intérieure d'ambiance"",
+    ""Ciel de pavillon M en Anthrazit"",
+    ""Pack rangement"",
+    ""Pack rétroviseurs"",
+    ""Rétroviseur intérieur anti-éblouissement automatique"",
+    ""Sièges chauffants à l'avant"",
+    ""Soutien lombaire à l'avant"",
+    ""Toit ouvrant à commande électrique"",
+    ""Volant M sport""
+  ],
+  ""Télécommunication embarquée"": [
+    ""BMW Live Cockpit Navigation Professional avec Head-Up Display"",
+    ""Espace de rangement pour Wireless Charging"",
+    ""Harman/kardon Surround Sound System"",
+    ""Intelligent Emergency Call - eCall"",
+    ""Personal eSIM""
+  ],
+  ""Transmission, suspension et direction"": [
+    ""Freins M Sport, rot"",
+    ""Volant M sport""
+  ],
+  ""Autres."": [
+    ""Code interne"",
+    ""Code interne"",
+    ""Code interne"",
+    ""Code interne"",
+    ""Code interne""
+  ]
+}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/0191ff1e-b3ad-7f85-9154-817a3faa61ed?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C58000%255D%252C%2522USED_CAR_MILEAGE%2522%253A%255B0%252C10000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2025%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=11HD&paint=P0C4P&fabric=FKHKC&modelRangeCode=G26&options=S08WD,S07A2,S03MF,S05DN,S06NX,S07M9,S08WC,S0710,S0754,S05AC,S0715,S08WN,S0430,S0431,S04T2,S0552,S06VB,S033B,S0302,S0544,S03M2,S0548,S05DA,S07LG,S0420,S0775,S0534,S0337,S08R3,S06AE,S06AF,S0493,S0494,S04UR,S06PA,S05AS,S04GQ,S09QY,S02PA,S04LN,S0688,S0403,S03FA,S0760,S0322,S06U3,S0488",2025-11-02 00:00:00,2025-11-03,2025-11-03,None,True,active,2025-11-03
+42538,BMW i4 eDrive40 Gran Coupé,56900.0,5735,2025-01-01,250,340,567.0,"{
+  ""Charging"": [
+    ""Câble de recharge rapide jusqu'à 22kW (Mode 3)""
+  ],
+  ""Equipements électriques"": [
+    ""Adaptive LED headlights"",
+    ""Climatisation à réglage électronique"",
+    ""Cruise Control"",
+    ""High Beam Assist"",
+    ""M Lights Shadow Line"",
+    ""Parking Assistant Pack"",
+    ""Système d'alarme""
+  ],
+  ""Equipements extérieurs"": [
+    ""Accès confort"",
+    ""Spoiler arrière M"",
+    ""Kit aérodynamique M"",
+    ""M Shadow Line hochglänzend"",
+    ""M Shadow Line hochglänzend avec éléments supplémentaires"",
+    ""Vitres teintées foncées à l'arrière""
+  ],
+  ""Equipements intérieurs"": [
+    ""Ceintures de sécurité M"",
+    ""Lumière intérieure d'ambiance"",
+    ""Ciel de pavillon M en Anthrazit"",
+    ""Pack rangement"",
+    ""Pack rétroviseurs"",
+    ""Rétroviseur intérieur anti-éblouissement automatique"",
+    ""Sièges chauffants à l'avant"",
+    ""Soutien lombaire à l'avant"",
+    ""Toit ouvrant à commande électrique"",
+    ""Volant M sport""
+  ],
+  ""Télécommunication embarquée"": [
+    ""BMW Live Cockpit Navigation Plus"",
+    ""Espace de rangement pour Wireless Charging"",
+    ""Intelligent Emergency Call - eCall"",
+    ""Personal eSIM""
+  ],
+  ""Transmission, suspension et direction"": [
+    ""Freins M Sport, rot"",
+    ""Volant M sport""
+  ],
+  ""Autres."": [
+    ""Code interne"",
+    ""Code interne"",
+    ""Code interne"",
+    ""Code interne"",
+    ""Code interne""
+  ]
+}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/0190025a-3cf8-7ea6-bb76-f50ac9e66849?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=21HD&paint=P0X1E&fabric=FKHSW&modelRangeCode=G26&options=S08WD,S03MF,S05DM,S06NX,S06WC,S07M9,S08WC,S0710,S0754,S05AC,S0715,S08WN,S0430,S08SM,S0431,S04T2,S0552,S06VB,S033B,S0302,S0544,S03M2,S0548,S05DA,S07LG,S0420,S0775,S0534,S0337,S08R3,S06AE,S06AF,S0493,S0494,S04UR,S06PA,S04GQ,S09QY,S02PA,S04LN,S0403,S03FK,S0760,S06U2,S0322,S0488",2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-03,False,active,2025-11-02 00:00:00
+42538,BMW i4 eDrive40 Gran Coupé,56900.0,5735,2025-01-01 00:00:00,250,340,567.0,"{
+  ""Charging"": [
+    ""Câble de recharge rapide jusqu'à 22kW (Mode 3)""
+  ],
+  ""Equipements électriques"": [
+    ""Adaptive LED headlights"",
+    ""Climatisation à réglage électronique"",
+    ""Cruise Control"",
+    ""High Beam Assist"",
+    ""M Lights Shadow Line"",
+    ""Parking Assistant Pack"",
+    ""Système d'alarme""
+  ],
+  ""Equipements extérieurs"": [
+    ""Accès confort"",
+    ""Spoiler arrière M"",
+    ""Kit aérodynamique M"",
+    ""M Shadow Line hochglänzend"",
+    ""M Shadow Line hochglänzend avec éléments supplémentaires"",
+    ""Vitres teintées foncées à l'arrière""
+  ],
+  ""Equipements intérieurs"": [
+    ""Ceintures de sécurité M"",
+    ""Lumière intérieure d'ambiance"",
+    ""Ciel de pavillon M en Anthrazit"",
+    ""Pack rangement"",
+    ""Pack rétroviseurs"",
+    ""Rétroviseur intérieur anti-éblouissement automatique"",
+    ""Sièges chauffants à l'avant"",
+    ""Soutien lombaire à l'avant"",
+    ""Toit ouvrant à commande électrique"",
+    ""Volant M sport""
+  ],
+  ""Télécommunication embarquée"": [
+    ""BMW Live Cockpit Navigation Plus"",
+    ""Espace de rangement pour Wireless Charging"",
+    ""Intelligent Emergency Call - eCall"",
+    ""Personal eSIM""
+  ],
+  ""Transmission, suspension et direction"": [
+    ""Freins M Sport, rot"",
+    ""Volant M sport""
+  ],
+  ""Autres."": [
+    ""Code interne"",
+    ""Code interne"",
+    ""Code interne"",
+    ""Code interne"",
+    ""Code interne""
+  ]
+}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/0190025a-3cf8-7ea6-bb76-f50ac9e66849?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C58000%255D%252C%2522USED_CAR_MILEAGE%2522%253A%255B0%252C10000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2025%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=21HD&paint=P0X1E&fabric=FKHSW&modelRangeCode=G26&options=S08WD,S03MF,S05DM,S06NX,S06WC,S07M9,S08WC,S0710,S0754,S05AC,S0715,S08WN,S0430,S08SM,S0431,S04T2,S0552,S06VB,S033B,S0302,S0544,S03M2,S0548,S05DA,S07LG,S0420,S0775,S0534,S0337,S08R3,S06AE,S06AF,S0493,S0494,S04UR,S06PA,S04GQ,S09QY,S02PA,S04LN,S0403,S03FK,S0760,S06U2,S0322,S0488",2025-11-02 00:00:00,2025-11-03,2025-11-03,None,True,active,2025-11-03
+94390,BMW i4 eDrive40 Gran Coupé,57890.0,8177,2025-01-01 00:00:00,250,340,528.0,"{
+  ""Charging"": [
+    ""Câble de recharge rapide jusqu'à 22kW (Mode 3)""
+  ],
+  ""Equipements électriques"": [
+    ""Adaptive LED headlights"",
+    ""Climatisation à réglage électronique"",
+    ""Cruise Control"",
+    ""High Beam Assist"",
+    ""M Lights Shadow Line"",
+    ""Parking Assistant Pack"",
+    ""Système d'alarme""
+  ],
+  ""Equipements extérieurs"": [
+    ""Accès confort"",
+    ""Spoiler arrière M"",
+    ""Kit aérodynamique M"",
+    ""M Shadow Line hochglänzend"",
+    ""M Shadow Line hochglänzend avec éléments supplémentaires"",
+    ""Vitres teintées foncées à l'arrière""
+  ],
+  ""Equipements intérieurs"": [
+    ""Ceintures de sécurité M"",
+    ""Lumière intérieure d'ambiance"",
+    ""Ciel de pavillon M en Anthrazit"",
+    ""Pack rangement"",
+    ""Pack rétroviseurs"",
+    ""Réglage en largeur du dossier pour conducteur"",
+    ""Rétroviseur intérieur anti-éblouissement automatique"",
+    ""Sièges chauffants à l'avant et à l'arrière"",
+    ""Soutien lombaire à l'avant"",
+    ""Volant M sport""
+  ],
+  ""Télécommunication embarquée"": [
+    ""BMW Live Cockpit Navigation Plus"",
+    ""Espace de rangement pour Wireless Charging"",
+    ""Intelligent Emergency Call - eCall"",
+    ""Personal eSIM"",
+    ""Système haut-parleurs HiFi""
+  ],
+  ""Transmission, suspension et direction"": [
+    ""Freins M Sport, rot"",
+    ""Suspension adaptative M"",
+    ""Variable Sport Steering"",
+    ""Volant M sport""
+  ],
+  ""Autres."": [
+    ""Code interne"",
+    ""Code interne"",
+    ""Code interne"",
+    ""Code interne"",
+    ""Code interne""
+  ]
+}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/0190a5c7-a772-77d2-a232-c06d769b9f17?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C58000%255D%252C%2522USED_CAR_MILEAGE%2522%253A%255B0%252C10000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2025%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=21HD&paint=P0C3Z&fabric=FMAMU&modelRangeCode=G26&options=S08WD,S03MF,S05DM,S06NX,S06WC,S07M9,S08WC,S0676,S0710,S0754,S05AC,S0715,S08WN,S0430,S0431,S04T2,S0552,S02VL,S06VB,S033B,S02VF,S0302,S0544,S03M2,S0548,S05DA,S07LG,S0420,S03FX,S0491,S0775,S0534,S0337,S08R3,S06AE,S06AF,S0493,S04UR,S06PA,S04GQ,S09QY,S02PA,S04LN,S04HA,S0760,S06U2,S0322,S0488",2025-11-03,2025-11-03,2025-11-03,None,True,active,2025-11-03
+1326,BMW i4 eDrive35 Gran Coupé,49900.0,9095,2025-01-01 00:00:00,210,286,,"{
+  ""Charging"": [
+    ""Câble de recharge rapide jusqu'à 22kW (Mode 3)"",
+    ""Flexible Fast Charger (mode 2)""
+  ],
+  ""Equipements électriques"": [
+    ""Climatiseur automatique avec 3 zones"",
+    ""Driving Assistant Pack Professional"",
+    ""Parking Assistant Pack"",
+    ""Système d'alarme""
+  ],
+  ""Equipements extérieurs"": [
+    ""Kit aérodynamique M"",
+    ""M Shadow Line hochglänzend"",
+    ""Vitres teintées foncées à l'arrière""
+  ],
+  ""Equipements intérieurs"": [
+    ""Ciel de pavillon M en Anthrazit"",
+    ""Pack rangement"",
+    ""Pack rétroviseurs"",
+    ""Rétroviseur intérieur anti-éblouissement automatique"",
+    ""Sièges chauffants à l'avant"",
+    ""Tableau de bord recouvert de Sensatec"",
+    ""Volant M sport""
+  ],
+  ""Packs & éditions"": [
+    ""Business Pack""
+  ],
+  ""Télécommunication embarquée"": [
+    ""Intelligent Emergency Call - eCall"",
+    ""BMW Live Cockpit Navigation Professional avec Head-Up Display"",
+    ""Espace de rangement pour Wireless Charging""
+  ],
+  ""Transmission, suspension et direction"": [
+    ""Attelage de remorque (rabattable électriquement)"",
+    ""Volant M sport""
+  ],
+  ""Trim Level"": [
+    ""Business Pack""
+  ],
+  ""Autres."": [
+    ""Battery Electric Vehicle"",
+    ""Code interne"",
+    ""Code interne"",
+    ""LED Headlights"",
+    ""Code interne""
+  ]
+}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/018e94d7-e72f-7267-8dcb-2019ce063051?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C58000%255D%252C%2522USED_CAR_MILEAGE%2522%253A%255B0%252C10000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2025%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=41AW&paint=P0C31&fabric=FKHSW&modelRangeCode=G26&options=S0ZB1,S0ZEV,S05DM,S06NX,S03AC,S08WT,S0775,S0710,S0534,S0337,S06AE,S0715,S06AF,S0493,S08WN,S0494,S0430,S0431,S04T2,S0ZLD,S04T3,S05AU,S04AW,S06VB,S02PA,S0302,S04LN,S08TR,S0ZT1,S0548,S03FA,S0760,S05DA,S0420,S06U3",2025-11-03,2025-11-03,2025-11-03,None,True,active,2025-11-03
+39582,BMW i4 eDrive35 Gran Coupé M Edition,59950.0,9500,2025-08-01,210,286,475.0,"{
   ""Charging"": [
     ""Câble de recharge rapide jusqu'à 22kW (Mode 3)""
   ],
@@ -59,8 +473,8 @@ car_id,model_name,price,kilometers,registration_date,horse_power_kw,horse_power_
     ""Code interne"",
     ""Code interne""
   ]
-}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/01966d0c-dbce-79bb-8cc6-ccd2613bd398?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=5EHD&paint=P0C36&fabric=FKHKC&modelRangeCode=G26&options=S08WD,S03MF,S04NW,S05DM,S06NX,S06WC,S07M9,S08WC,S03AC,S0710,S0754,S05AC,S0715,S08WN,S0430,S08SM,S0431,S04T2,S0552,S02VL,S02VD,S06VB,S033B,S02VF,S0302,S05DF,S03M2,S0548,S05DA,S07LG,S0420,S04MC,S0775,S0534,S0337,S08R3,S06AE,S06AF,S0493,S0494,S04UR,S06PA,S05AS,S04GQ,S02PA,S0688,S0248,S0403,S03FK,S0760,S06U2,S0322,S0488",2025-11-02,2025-11-02,2025-11-02,None,True,active,2025-11-02
-14074,BMW i4 eDrive35 Gran Coupé M Edition,58500.0,15001,2025-05-01,210,286,464,"{
+}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/01966d0c-dbce-79bb-8cc6-ccd2613bd398?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=5EHD&paint=P0C36&fabric=FKHKC&modelRangeCode=G26&options=S08WD,S03MF,S04NW,S05DM,S06NX,S06WC,S07M9,S08WC,S03AC,S0710,S0754,S05AC,S0715,S08WN,S0430,S08SM,S0431,S04T2,S0552,S02VL,S02VD,S06VB,S033B,S02VF,S0302,S05DF,S03M2,S0548,S05DA,S07LG,S0420,S04MC,S0775,S0534,S0337,S08R3,S06AE,S06AF,S0493,S0494,S04UR,S06PA,S05AS,S04GQ,S02PA,S0688,S0248,S0403,S03FK,S0760,S06U2,S0322,S0488",2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-03,False,sold,2025-11-02 00:00:00
+14074,BMW i4 eDrive35 Gran Coupé M Edition,58500.0,15001,2025-05-01,210,286,464.0,"{
   ""Charging"": [
     ""Câble de recharge rapide jusqu'à 22kW (Mode 3)""
   ],
@@ -107,8 +521,8 @@ car_id,model_name,price,kilometers,registration_date,horse_power_kw,horse_power_
     ""Code interne"",
     ""Code interne""
   ]
-}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/01939440-204d-7b22-a0d1-1d4ed0ed596f?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=1EHD&paint=P0C36&fabric=FKHSW&modelRangeCode=G26&options=S08WD,S07A2,S05DN,S06NX,S02BQ,S08WC,S03AC,S0775,S0676,S0710,S0534,S0337,S08R3,S06AE,S0715,S06AF,S0493,S08WN,S0494,S0430,S04UR,S0431,S04T2,S06PA,S05AU,S06VB,S02PA,S0302,S04LN,S08TR,S0248,S0403,S0548,S03FA,S0760,S05DA,S07LG,S0420,S0322,S06U3,S0488",2025-11-02,2025-11-02,2025-11-02,None,True,active,2025-11-02
-44976,BMW i4 eDrive40 Gran Coupé,55900.0,22889,2025-03-01,250,340,518,"{
+}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/01939440-204d-7b22-a0d1-1d4ed0ed596f?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=1EHD&paint=P0C36&fabric=FKHSW&modelRangeCode=G26&options=S08WD,S07A2,S05DN,S06NX,S02BQ,S08WC,S03AC,S0775,S0676,S0710,S0534,S0337,S08R3,S06AE,S0715,S06AF,S0493,S08WN,S0494,S0430,S04UR,S0431,S04T2,S06PA,S05AU,S06VB,S02PA,S0302,S04LN,S08TR,S0248,S0403,S0548,S03FA,S0760,S05DA,S07LG,S0420,S0322,S06U3,S0488",2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-03,False,sold,2025-11-02 00:00:00
+44976,BMW i4 eDrive40 Gran Coupé,55900.0,22889,2025-03-01,250,340,518.0,"{
   ""Charging"": [
     ""Adaptateur pour prise domestique (type E+F)"",
     ""Câble de recharge rapide jusqu'à 22kW (Mode 3)"",
@@ -161,8 +575,8 @@ car_id,model_name,price,kilometers,registration_date,horse_power_kw,horse_power_
     ""Code interne"",
     ""Code interne""
   ]
-}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/0194b79a-6463-7a38-8ef9-60a42d15a197?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=21HD&paint=P0300&fabric=FMANL&modelRangeCode=G26&options=S08WD,S07A2,S05YA,S05DN,S06NX,S02BQ,S08WC,S03AC,S0710,S05AC,S0715,S08WN,S0430,S0431,S04T2,S0552,S04T3,S06VB,S0302,S0544,S0548,S05DA,S07LG,S0420,S03FX,S04MC,S0491,S0775,S0534,S0337,S08R3,S06AE,S06AF,S0493,S04V1,S0494,S04UR,S06PA,S05AS,S09QY,S02PA,S0688,S0403,S0760,S0322,S06U3,S0488",2025-11-02,2025-11-02,2025-11-02,None,True,active,2025-11-02
-44516,BMW i4 xDrive40 Gran Coupé,56900.0,21346,2025-02-01,295,401,517,"{
+}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/0194b79a-6463-7a38-8ef9-60a42d15a197?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=21HD&paint=P0300&fabric=FMANL&modelRangeCode=G26&options=S08WD,S07A2,S05YA,S05DN,S06NX,S02BQ,S08WC,S03AC,S0710,S05AC,S0715,S08WN,S0430,S0431,S04T2,S0552,S04T3,S06VB,S0302,S0544,S0548,S05DA,S07LG,S0420,S03FX,S04MC,S0491,S0775,S0534,S0337,S08R3,S06AE,S06AF,S0493,S04V1,S0494,S04UR,S06PA,S05AS,S09QY,S02PA,S0688,S0403,S0760,S0322,S06U3,S0488",2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-03,False,sold,2025-11-02 00:00:00
+44516,BMW i4 xDrive40 Gran Coupé,56900.0,21346,2025-02-01,295,401,517.0,"{
   ""Charging"": [
     ""Adaptateur pour prise domestique (type E+F)"",
     ""Câble de recharge rapide jusqu'à 22kW (Mode 3)"",
@@ -219,8 +633,8 @@ car_id,model_name,price,kilometers,registration_date,horse_power_kw,horse_power_
     ""Code interne"",
     ""Code interne""
   ]
-}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/01927132-31bf-75f7-af77-3773e567d1e5?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=41HD&paint=P0C3Z&fabric=FMAOI&modelRangeCode=G26&options=S08WD,S07A2,S05YA,S05DN,S06NX,S02BQ,S03AC,S0676,S0710,S05AC,S0715,S04H0,S08WN,S0430,S0431,S04T2,S0552,S04T3,S02VL,S06VB,S02VF,S03GX,S0302,S0548,S05DA,S07LG,S0420,S04A2,S0491,S0775,S0534,S0337,S0459,S08R3,S06AE,S06AF,S0493,S04V1,S04UR,S06PA,S05AU,S02PA,S08TR,S0248,S0403,S04HA,S0760,S0322,S06U3,S0488",2025-11-02,2025-11-02,2025-11-02,None,True,active,2025-11-02
-39484,BMW i4 xDrive40 Gran Coupé,56900.0,24235,2025-01-01,295,401,517,"{
+}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/01927132-31bf-75f7-af77-3773e567d1e5?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=41HD&paint=P0C3Z&fabric=FMAOI&modelRangeCode=G26&options=S08WD,S07A2,S05YA,S05DN,S06NX,S02BQ,S03AC,S0676,S0710,S05AC,S0715,S04H0,S08WN,S0430,S0431,S04T2,S0552,S04T3,S02VL,S06VB,S02VF,S03GX,S0302,S0548,S05DA,S07LG,S0420,S04A2,S0491,S0775,S0534,S0337,S0459,S08R3,S06AE,S06AF,S0493,S04V1,S04UR,S06PA,S05AU,S02PA,S08TR,S0248,S0403,S04HA,S0760,S0322,S06U3,S0488",2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-03,False,sold,2025-11-02 00:00:00
+39484,BMW i4 xDrive40 Gran Coupé,56900.0,24235,2025-01-01,295,401,517.0,"{
   ""Charging"": [
     ""Adaptateur pour prise domestique (type E+F)"",
     ""Câble de recharge rapide jusqu'à 22kW (Mode 3)"",
@@ -274,112 +688,8 @@ car_id,model_name,price,kilometers,registration_date,horse_power_kw,horse_power_
     ""Code interne"",
     ""Code interne""
   ]
-}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/01924866-71fb-7076-894c-f956fe80f25a?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=41HD&paint=P0C4P&fabric=FEPMI&modelRangeCode=G26&options=S08WD,S07A2,S05YA,S05DN,S06NX,S02BQ,S03AC,S0676,S0710,S05AC,S0715,S08WN,S0430,S0431,S04T2,S0552,S04T3,S02VL,S06VB,S02VF,S0302,S0548,S05DA,S07LG,S0420,S0491,S0775,S0534,S0337,S08R3,S06AE,S06AF,S0493,S04V1,S0494,S04UR,S06PA,S05AU,S02PA,S04LN,S08TR,S0403,S03FA,S0760,S0322,S06U3,S0488",2025-11-02,2025-11-02,2025-11-02,None,True,active,2025-11-02
-27433,BMW i4 eDrive35 Gran Coupé,54900.0,5500,2025-01-01,210,286,462,"{
-  ""Charging"": [
-    ""Câble de recharge rapide jusqu'à 22kW (Mode 3)""
-  ],
-  ""Equipements électriques"": [
-    ""Adaptive LED headlights"",
-    ""Climatisation à réglage électronique"",
-    ""Cruise Control"",
-    ""Driving Assistant Pack"",
-    ""High Beam Assist"",
-    ""M Lights Shadow Line"",
-    ""Parking Assistant Pack Plus"",
-    ""Système d'alarme""
-  ],
-  ""Equipements extérieurs"": [
-    ""Accès confort"",
-    ""Spoiler arrière M"",
-    ""Kit aérodynamique M"",
-    ""M Shadow Line hochglänzend"",
-    ""M Shadow Line hochglänzend avec éléments supplémentaires"",
-    ""Vitres teintées foncées à l'arrière""
-  ],
-  ""Equipements intérieurs"": [
-    ""Ceintures de sécurité M"",
-    ""Lumière intérieure d'ambiance"",
-    ""Ciel de pavillon M en Anthrazit"",
-    ""Pack rangement"",
-    ""Pack rétroviseurs"",
-    ""Rétroviseur intérieur anti-éblouissement automatique"",
-    ""Sièges chauffants à l'avant"",
-    ""Soutien lombaire à l'avant"",
-    ""Toit ouvrant à commande électrique"",
-    ""Volant M sport""
-  ],
-  ""Télécommunication embarquée"": [
-    ""BMW Live Cockpit Navigation Professional avec Head-Up Display"",
-    ""Espace de rangement pour Wireless Charging"",
-    ""Harman/kardon Surround Sound System"",
-    ""Intelligent Emergency Call - eCall"",
-    ""Personal eSIM""
-  ],
-  ""Transmission, suspension et direction"": [
-    ""Freins M Sport, rot"",
-    ""Volant M sport""
-  ],
-  ""Autres."": [
-    ""Code interne"",
-    ""Code interne"",
-    ""Code interne"",
-    ""Code interne"",
-    ""Code interne""
-  ]
-}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/0191ff1e-b3ad-7f85-9154-817a3faa61ed?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=11HD&paint=P0C4P&fabric=FKHKC&modelRangeCode=G26&options=S08WD,S07A2,S03MF,S05DN,S06NX,S07M9,S08WC,S0710,S0754,S05AC,S0715,S08WN,S0430,S0431,S04T2,S0552,S06VB,S033B,S0302,S0544,S03M2,S0548,S05DA,S07LG,S0420,S0775,S0534,S0337,S08R3,S06AE,S06AF,S0493,S0494,S04UR,S06PA,S05AS,S04GQ,S09QY,S02PA,S04LN,S0688,S0403,S03FA,S0760,S0322,S06U3,S0488",2025-11-02,2025-11-02,2025-11-02,None,True,active,2025-11-02
-42538,BMW i4 eDrive40 Gran Coupé,56900.0,5735,2025-01-01,250,340,567,"{
-  ""Charging"": [
-    ""Câble de recharge rapide jusqu'à 22kW (Mode 3)""
-  ],
-  ""Equipements électriques"": [
-    ""Adaptive LED headlights"",
-    ""Climatisation à réglage électronique"",
-    ""Cruise Control"",
-    ""High Beam Assist"",
-    ""M Lights Shadow Line"",
-    ""Parking Assistant Pack"",
-    ""Système d'alarme""
-  ],
-  ""Equipements extérieurs"": [
-    ""Accès confort"",
-    ""Spoiler arrière M"",
-    ""Kit aérodynamique M"",
-    ""M Shadow Line hochglänzend"",
-    ""M Shadow Line hochglänzend avec éléments supplémentaires"",
-    ""Vitres teintées foncées à l'arrière""
-  ],
-  ""Equipements intérieurs"": [
-    ""Ceintures de sécurité M"",
-    ""Lumière intérieure d'ambiance"",
-    ""Ciel de pavillon M en Anthrazit"",
-    ""Pack rangement"",
-    ""Pack rétroviseurs"",
-    ""Rétroviseur intérieur anti-éblouissement automatique"",
-    ""Sièges chauffants à l'avant"",
-    ""Soutien lombaire à l'avant"",
-    ""Toit ouvrant à commande électrique"",
-    ""Volant M sport""
-  ],
-  ""Télécommunication embarquée"": [
-    ""BMW Live Cockpit Navigation Plus"",
-    ""Espace de rangement pour Wireless Charging"",
-    ""Intelligent Emergency Call - eCall"",
-    ""Personal eSIM""
-  ],
-  ""Transmission, suspension et direction"": [
-    ""Freins M Sport, rot"",
-    ""Volant M sport""
-  ],
-  ""Autres."": [
-    ""Code interne"",
-    ""Code interne"",
-    ""Code interne"",
-    ""Code interne"",
-    ""Code interne""
-  ]
-}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/0190025a-3cf8-7ea6-bb76-f50ac9e66849?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=21HD&paint=P0X1E&fabric=FKHSW&modelRangeCode=G26&options=S08WD,S03MF,S05DM,S06NX,S06WC,S07M9,S08WC,S0710,S0754,S05AC,S0715,S08WN,S0430,S08SM,S0431,S04T2,S0552,S06VB,S033B,S0302,S0544,S03M2,S0548,S05DA,S07LG,S0420,S0775,S0534,S0337,S08R3,S06AE,S06AF,S0493,S0494,S04UR,S06PA,S04GQ,S09QY,S02PA,S04LN,S0403,S03FK,S0760,S06U2,S0322,S0488",2025-11-02,2025-11-02,2025-11-02,None,True,active,2025-11-02
-45201,BMW i4 eDrive40 Gran Coupé,56750.0,21998,2024-12-01,250,340,518,"{
+}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/01924866-71fb-7076-894c-f956fe80f25a?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=41HD&paint=P0C4P&fabric=FEPMI&modelRangeCode=G26&options=S08WD,S07A2,S05YA,S05DN,S06NX,S02BQ,S03AC,S0676,S0710,S05AC,S0715,S08WN,S0430,S0431,S04T2,S0552,S04T3,S02VL,S06VB,S02VF,S0302,S0548,S05DA,S07LG,S0420,S0491,S0775,S0534,S0337,S08R3,S06AE,S06AF,S0493,S04V1,S0494,S04UR,S06PA,S05AU,S02PA,S04LN,S08TR,S0403,S03FA,S0760,S0322,S06U3,S0488",2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-03,False,sold,2025-11-02 00:00:00
+45201,BMW i4 eDrive40 Gran Coupé,56750.0,21998,2024-12-01,250,340,518.0,"{
   ""Charging"": [
     ""Adaptateur pour prise domestique (type E+F)"",
     ""Câble de recharge rapide jusqu'à 22kW (Mode 3)"",
@@ -433,8 +743,8 @@ car_id,model_name,price,kilometers,registration_date,horse_power_kw,horse_power_
     ""Code interne"",
     ""Code interne""
   ]
-}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/01908a6c-f5bd-7114-8611-2ea29b6a60a0?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=21HD&paint=P0C5Y&fabric=FKHSW&modelRangeCode=G26&options=S08WD,S07A2,S03MF,S05YA,S05DN,S06NX,S07M9,S08WC,S0676,S0710,S0754,S05AC,S0715,S08WN,S0430,S0431,S04T2,S0552,S04T3,S06VB,S033B,S0302,S03M2,S0548,S05DA,S07LG,S0420,S03FX,S0775,S0534,S0337,S0459,S08R3,S06AE,S06AF,S0493,S04V1,S0494,S04UR,S06PA,S05AU,S04GQ,S02PA,S04LN,S08TR,S0403,S0760,S0322,S06U3,S0488",2025-11-02,2025-11-02,2025-11-02,None,True,active,2025-11-02
-93924,BMW i4 eDrive40 Gran Coupé,58390.0,10095,2025-01-01,250,340,554,"{
+}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/01908a6c-f5bd-7114-8611-2ea29b6a60a0?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=21HD&paint=P0C5Y&fabric=FKHSW&modelRangeCode=G26&options=S08WD,S07A2,S03MF,S05YA,S05DN,S06NX,S07M9,S08WC,S0676,S0710,S0754,S05AC,S0715,S08WN,S0430,S0431,S04T2,S0552,S04T3,S06VB,S033B,S0302,S03M2,S0548,S05DA,S07LG,S0420,S03FX,S0775,S0534,S0337,S0459,S08R3,S06AE,S06AF,S0493,S04V1,S0494,S04UR,S06PA,S05AU,S04GQ,S02PA,S04LN,S08TR,S0403,S0760,S0322,S06U3,S0488",2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-03,False,sold,2025-11-02 00:00:00
+93924,BMW i4 eDrive40 Gran Coupé,58390.0,10095,2025-01-01,250,340,554.0,"{
   ""Charging"": [
     ""Câble de recharge rapide jusqu'à 22kW (Mode 3)""
   ],
@@ -486,8 +796,8 @@ car_id,model_name,price,kilometers,registration_date,horse_power_kw,horse_power_
     ""Code interne"",
     ""Code interne""
   ]
-}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/01905f02-b6f6-7048-b969-7866a99e3a1e?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=21HD&paint=P0475&fabric=FKHKC&modelRangeCode=G26&options=S08WD,S07A2,S03MF,S05DN,S06NX,S07M9,S08WC,S0710,S0754,S05AC,S0715,S08WN,S0430,S0431,S04T2,S0552,S06VB,S033B,S0302,S05DF,S03M2,S0548,S05DA,S07LG,S0420,S0775,S0534,S0337,S08R3,S06AE,S06AF,S0493,S0494,S04UR,S06PA,S05AS,S04GQ,S02PA,S04LN,S0688,S0403,S03FK,S0760,S0322,S06U3,S0488",2025-11-02,2025-11-02,2025-11-02,None,True,active,2025-11-02
-39694,BMW i4 eDrive40 Gran Coupé,53900.0,19539,2024-10-01,250,340,563,"{
+}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/01905f02-b6f6-7048-b969-7866a99e3a1e?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=21HD&paint=P0475&fabric=FKHKC&modelRangeCode=G26&options=S08WD,S07A2,S03MF,S05DN,S06NX,S07M9,S08WC,S0710,S0754,S05AC,S0715,S08WN,S0430,S0431,S04T2,S0552,S06VB,S033B,S0302,S05DF,S03M2,S0548,S05DA,S07LG,S0420,S0775,S0534,S0337,S08R3,S06AE,S06AF,S0493,S0494,S04UR,S06PA,S05AS,S04GQ,S02PA,S04LN,S0688,S0403,S03FK,S0760,S0322,S06U3,S0488",2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-03,False,sold,2025-11-02 00:00:00
+39694,BMW i4 eDrive40 Gran Coupé,53900.0,19539,2024-10-01,250,340,563.0,"{
   ""ConnectedDrive FA"": [
     ""BMW IconicSounds Electric"",
     ""BMW Live Cockpit Navigation Professional avec Head-Up Display"",
@@ -541,8 +851,8 @@ car_id,model_name,price,kilometers,registration_date,horse_power_kw,horse_power_
     ""Rétroviseur intérieur anti-éblouissement automatique"",
     ""Système d'alarme""
   ]
-}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/0191c219-3f0f-7927-8560-b2f4464f3d69?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=21HD&paint=P0C36&fabric=FKHSW&modelRangeCode=G26&options=S08WD,S07A2,S04NW,S05YA,S05DN,S06NX,S02BQ,S08WC,S0775,S0676,S0710,S0534,S0337,S05AC,S08R3,S06AE,S0715,S06AF,S0493,S08WN,S04V1,S0494,S0430,S04UR,S0431,S04T2,S0552,S04T3,S06PA,S05AU,S06VB,S02PA,S0302,S04LN,S08TR,S0403,S03FK,S0548,S0760,S05DA,S07LG,S0420,S0322,S06U3,S0488",2025-11-02,2025-11-02,2025-11-02,None,True,active,2025-11-02
-44606,BMW i4 eDrive40 Gran Coupé,56900.0,8202,2024-08-01,250,340,517,"{
+}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/0191c219-3f0f-7927-8560-b2f4464f3d69?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=21HD&paint=P0C36&fabric=FKHSW&modelRangeCode=G26&options=S08WD,S07A2,S04NW,S05YA,S05DN,S06NX,S02BQ,S08WC,S0775,S0676,S0710,S0534,S0337,S05AC,S08R3,S06AE,S0715,S06AF,S0493,S08WN,S04V1,S0494,S0430,S04UR,S0431,S04T2,S0552,S04T3,S06PA,S05AU,S06VB,S02PA,S0302,S04LN,S08TR,S0403,S03FK,S0548,S0760,S05DA,S07LG,S0420,S0322,S06U3,S0488",2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-03,False,sold,2025-11-02 00:00:00
+44606,BMW i4 eDrive40 Gran Coupé,56900.0,8202,2024-08-01,250,340,517.0,"{
   ""ConnectedDrive FA"": [
     ""BMW IconicSounds Electric"",
     ""BMW Live Cockpit Navigation Professional avec Head-Up Display"",
@@ -607,8 +917,8 @@ car_id,model_name,price,kilometers,registration_date,horse_power_kw,horse_power_
   ""Autres."": [
     ""Code interne""
   ]
-}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/018e956b-fc6f-7af8-bad5-52a5bd11a952?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=21HD&paint=P0C5Y&fabric=FMANL&modelRangeCode=G26&options=S08WD,S07A2,S03MF,S05YA,S05DN,S06NX,S07M9,S0676,S0710,S0754,S05AC,S0715,S08WN,S0430,S0431,S04T2,S0552,S04T3,S06VB,S033B,S0302,S0544,S03M2,S0548,S05DA,S07LG,S0420,S03FX,S04MC,S0491,S0775,S0534,S0337,S0459,S08R3,S06AE,S06AF,S0493,S04V1,S0494,S04UR,S06PA,S05AS,S04GQ,S09QY,S02PA,S0403,S0760,S0322,S06U3,S0488",2025-11-02,2025-11-02,2025-11-02,None,True,active,2025-11-02
-27566,BMW i4 eDrive40 Gran Coupé,58900.0,17518,2024-08-01,250,340,553,"{
+}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/018e956b-fc6f-7af8-bad5-52a5bd11a952?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=21HD&paint=P0C5Y&fabric=FMANL&modelRangeCode=G26&options=S08WD,S07A2,S03MF,S05YA,S05DN,S06NX,S07M9,S0676,S0710,S0754,S05AC,S0715,S08WN,S0430,S0431,S04T2,S0552,S04T3,S06VB,S033B,S0302,S0544,S03M2,S0548,S05DA,S07LG,S0420,S03FX,S04MC,S0491,S0775,S0534,S0337,S0459,S08R3,S06AE,S06AF,S0493,S04V1,S0494,S04UR,S06PA,S05AS,S04GQ,S09QY,S02PA,S0403,S0760,S0322,S06U3,S0488",2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-03,False,sold,2025-11-02 00:00:00
+27566,BMW i4 eDrive40 Gran Coupé,58900.0,17518,2024-08-01,250,340,553.0,"{
   ""ConnectedDrive FA"": [
     ""BMW IconicSounds Electric"",
     ""BMW Live Cockpit Navigation Professional avec Head-Up Display"",
@@ -672,8 +982,8 @@ car_id,model_name,price,kilometers,registration_date,horse_power_kw,horse_power_
   ""Autres."": [
     ""Code interne""
   ]
-}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/018e9600-c9a6-7eee-b980-3a372a959b5d?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=21HD&paint=P0C36&fabric=FEPMI&modelRangeCode=G26&options=S08WD,S07A2,S03MF,S05YA,S05DN,S06NX,S07M9,S0676,S0710,S0754,S05AC,S0715,S08WN,S0430,S0431,S04T2,S0552,S04T3,S06VB,S033B,S0302,S0544,S03M2,S0548,S05DA,S07LG,S0420,S0491,S0775,S0534,S0337,S08R3,S06AE,S06AF,S0493,S04V1,S0494,S04UR,S06PA,S05AS,S04GQ,S09QY,S02PA,S04LN,S0403,S03FK,S0760,S0322,S06U3,S0488",2025-11-02,2025-11-02,2025-11-02,None,True,active,2025-11-02
-43611,BMW i4 eDrive40 Gran Coupé,54750.0,25489,2024-08-01,250,340,517,"{
+}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/018e9600-c9a6-7eee-b980-3a372a959b5d?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=21HD&paint=P0C36&fabric=FEPMI&modelRangeCode=G26&options=S08WD,S07A2,S03MF,S05YA,S05DN,S06NX,S07M9,S0676,S0710,S0754,S05AC,S0715,S08WN,S0430,S0431,S04T2,S0552,S04T3,S06VB,S033B,S0302,S0544,S03M2,S0548,S05DA,S07LG,S0420,S0491,S0775,S0534,S0337,S08R3,S06AE,S06AF,S0493,S04V1,S0494,S04UR,S06PA,S05AS,S04GQ,S09QY,S02PA,S04LN,S0403,S03FK,S0760,S0322,S06U3,S0488",2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-03,False,sold,2025-11-02 00:00:00
+43611,BMW i4 eDrive40 Gran Coupé,54750.0,25489,2024-08-01,250,340,517.0,"{
   ""ConnectedDrive FA"": [
     ""BMW IconicSounds Electric"",
     ""BMW Live Cockpit Navigation Professional avec Head-Up Display"",
@@ -738,8 +1048,8 @@ car_id,model_name,price,kilometers,registration_date,horse_power_kw,horse_power_
   ""Autres."": [
     ""Code interne""
   ]
-}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/018e9600-d868-7e02-90ac-261639db895c?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=21HD&paint=P0300&fabric=FKHKC&modelRangeCode=G26&options=S08WD,S07A2,S05YA,S05DN,S06NX,S02BQ,S03AC,S0710,S05AC,S0715,S08WN,S0430,S0431,S04T2,S0552,S04T3,S02VL,S06VB,S02VF,S0302,S0548,S05DA,S07LG,S0420,S03FX,S0775,S0534,S0337,S0459,S08R3,S06AE,S06AF,S0493,S04V1,S0494,S04UR,S06PA,S05AU,S02PA,S04LN,S08TR,S0688,S0248,S0403,S0760,S0322,S06U3,S0488",2025-11-02,2025-11-02,2025-11-02,None,True,active,2025-11-02
-27404,BMW i4 xDrive40 Gran Coupé,59900.0,10254,2024-08-01,295,401,523,"{
+}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/018e9600-d868-7e02-90ac-261639db895c?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=21HD&paint=P0300&fabric=FKHKC&modelRangeCode=G26&options=S08WD,S07A2,S05YA,S05DN,S06NX,S02BQ,S03AC,S0710,S05AC,S0715,S08WN,S0430,S0431,S04T2,S0552,S04T3,S02VL,S06VB,S02VF,S0302,S0548,S05DA,S07LG,S0420,S03FX,S0775,S0534,S0337,S0459,S08R3,S06AE,S06AF,S0493,S04V1,S0494,S04UR,S06PA,S05AU,S02PA,S04LN,S08TR,S0688,S0248,S0403,S0760,S0322,S06U3,S0488",2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-03,False,sold,2025-11-02 00:00:00
+27404,BMW i4 xDrive40 Gran Coupé,59900.0,10254,2024-08-01,295,401,523.0,"{
   ""Charging"": [
     ""Câble de recharge rapide jusqu'à 22kW (Mode 3)""
   ],
@@ -788,8 +1098,8 @@ car_id,model_name,price,kilometers,registration_date,horse_power_kw,horse_power_
     ""Code interne"",
     ""Code interne""
   ]
-}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/019059b1-bd37-7c22-8d90-dd4f218b8828?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=41HD&paint=P0C4P&fabric=FKHSW&modelRangeCode=G26&options=S08WD,S07A2,S05DN,S06NX,S02BQ,S0775,S0676,S0710,S0534,S0337,S08R3,S06AE,S0715,S06AF,S0493,S08WN,S0494,S0430,S04UR,S0431,S04T2,S06PA,S05AS,S02VL,S06VB,S02VF,S02PA,S0302,S04LN,S0248,S05DF,S0403,S03FK,S0548,S0760,S05DA,S07LG,S0420,S0322,S06U3,S0488",2025-11-02,2025-11-02,2025-11-02,None,True,active,2025-11-02
-20301,BMW i4 eDrive40 Gran Coupé,54995.0,22375,2024-10-01,250,340,553,"{
+}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/019059b1-bd37-7c22-8d90-dd4f218b8828?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=41HD&paint=P0C4P&fabric=FKHSW&modelRangeCode=G26&options=S08WD,S07A2,S05DN,S06NX,S02BQ,S0775,S0676,S0710,S0534,S0337,S08R3,S06AE,S0715,S06AF,S0493,S08WN,S0494,S0430,S04UR,S0431,S04T2,S06PA,S05AS,S02VL,S06VB,S02VF,S02PA,S0302,S04LN,S0248,S05DF,S0403,S03FK,S0548,S0760,S05DA,S07LG,S0420,S0322,S06U3,S0488",2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-03,False,sold,2025-11-02 00:00:00
+20301,BMW i4 eDrive40 Gran Coupé,54995.0,22375,2024-10-01,250,340,553.0,"{
   ""Charging"": [
     ""Câble de recharge rapide jusqu'à 22kW (Mode 3)""
   ],
@@ -848,8 +1158,8 @@ car_id,model_name,price,kilometers,registration_date,horse_power_kw,horse_power_
     ""Volant chauffant"",
     ""Volant M sport""
   ]
-}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/018e94f5-4f5c-790e-9a77-87c396b972e0?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=21HD&paint=P0475&fabric=FVATQ&modelRangeCode=G26&options=S08WD,S07A2,S03MF,S04NW,S05DN,S06NX,S07M9,S0710,S0754,S05AC,S0715,S08WN,S0430,S0431,S04T2,S0552,S02VL,S06VB,S033B,S02VF,S03GX,S0302,S03M2,S0548,S05DA,S07LG,S0420,S04A2,S0491,S0775,S0534,S0337,S0459,S08R3,S06AE,S06AF,S0493,S04V1,S0494,S04UR,S06PA,S05AU,S04H1,S04GQ,S02PA,S08TR,S0688,S0248,S0403,S0760,S0322,S06U3,S0488",2025-11-02,2025-11-02,2025-11-02,None,True,active,2025-11-02
-40022,BMW i4 xDrive40 Gran Coupé,53900.0,35183,2024-08-01,295,401,507,"{
+}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/018e94f5-4f5c-790e-9a77-87c396b972e0?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=21HD&paint=P0475&fabric=FVATQ&modelRangeCode=G26&options=S08WD,S07A2,S03MF,S04NW,S05DN,S06NX,S07M9,S0710,S0754,S05AC,S0715,S08WN,S0430,S0431,S04T2,S0552,S02VL,S06VB,S033B,S02VF,S03GX,S0302,S03M2,S0548,S05DA,S07LG,S0420,S04A2,S0491,S0775,S0534,S0337,S0459,S08R3,S06AE,S06AF,S0493,S04V1,S0494,S04UR,S06PA,S05AU,S04H1,S04GQ,S02PA,S08TR,S0688,S0248,S0403,S0760,S0322,S06U3,S0488",2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-03,False,sold,2025-11-02 00:00:00
+40022,BMW i4 xDrive40 Gran Coupé,53900.0,35183,2024-08-01,295,401,507.0,"{
   ""Charging"": [
     ""Câble de recharge rapide jusqu'à 22kW (Mode 3)""
   ],
@@ -904,8 +1214,8 @@ car_id,model_name,price,kilometers,registration_date,horse_power_kw,horse_power_
     ""Code interne"",
     ""Code interne""
   ]
-}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/018fa5f6-947f-71ba-81da-17d4dc327cd6?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=41HD&paint=P0C3Z&fabric=FVATQ&modelRangeCode=G26&options=S08WD,S07A2,S03MF,S05DN,S06NX,S07M9,S03AC,S0676,S0710,S0754,S05AC,S0715,S08WN,S0430,S0431,S04T2,S0552,S02VL,S06VB,S033B,S02VF,S0302,S03M2,S0548,S05DA,S07LG,S0420,S0491,S0775,S0534,S0337,S0459,S08R3,S06AE,S06AF,S0493,S0494,S04UR,S06PA,S05AU,S04GQ,S02PA,S04LN,S08TR,S0403,S03FK,S0760,S0322,S06U3,S0488",2025-11-02,2025-11-02,2025-11-02,None,True,active,2025-11-02
-27838,BMW i4 eDrive40 Gran Coupé,54700.0,29650,2024-04-01,250,340,544,"{
+}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/018fa5f6-947f-71ba-81da-17d4dc327cd6?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=41HD&paint=P0C3Z&fabric=FVATQ&modelRangeCode=G26&options=S08WD,S07A2,S03MF,S05DN,S06NX,S07M9,S03AC,S0676,S0710,S0754,S05AC,S0715,S08WN,S0430,S0431,S04T2,S0552,S02VL,S06VB,S033B,S02VF,S0302,S03M2,S0548,S05DA,S07LG,S0420,S0491,S0775,S0534,S0337,S0459,S08R3,S06AE,S06AF,S0493,S0494,S04UR,S06PA,S05AU,S04GQ,S02PA,S04LN,S08TR,S0403,S03FK,S0760,S0322,S06U3,S0488",2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-03,False,sold,2025-11-02 00:00:00
+27838,BMW i4 eDrive40 Gran Coupé,54700.0,29650,2024-04-01,250,340,544.0,"{
   ""Charging"": [
     ""Câble de recharge rapide jusqu'à 22kW (Mode 3)""
   ],
@@ -959,8 +1269,8 @@ car_id,model_name,price,kilometers,registration_date,horse_power_kw,horse_power_
     ""Code interne"",
     ""Code interne""
   ]
-}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/018e94dc-a63e-75a9-99ba-3d727aedd0f0?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=71AW&paint=P0A96&fabric=FMAH7&modelRangeCode=G26&options=S08WD,S0ZB1,S0ZEV,S03MF,S05DM,S06NX,S07M9,S03AC,S0710,S0754,S05AC,S0715,S08WN,S0430,S0431,S04T2,S04AW,S06VB,S033B,S0302,S0548,S05DA,S0420,S04MC,S0491,S0775,S0534,S0337,S0459,S08R3,S06AE,S06AF,S0493,S0494,S04UR,S05AU,S04GQ,S02PA,S08TR,S0688,S0248,S0ZT1,S0403,S03FK,S05AZ,S0760,S0322,S06U3,S0488",2025-11-02,2025-11-02,2025-11-02,None,True,active,2025-11-02
-28441,BMW i4 eDrive40 Gran Coupé,56700.0,22969,2024-07-01,250,340,544,"{
+}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/018e94dc-a63e-75a9-99ba-3d727aedd0f0?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=71AW&paint=P0A96&fabric=FMAH7&modelRangeCode=G26&options=S08WD,S0ZB1,S0ZEV,S03MF,S05DM,S06NX,S07M9,S03AC,S0710,S0754,S05AC,S0715,S08WN,S0430,S0431,S04T2,S04AW,S06VB,S033B,S0302,S0548,S05DA,S0420,S04MC,S0491,S0775,S0534,S0337,S0459,S08R3,S06AE,S06AF,S0493,S0494,S04UR,S05AU,S04GQ,S02PA,S08TR,S0688,S0248,S0ZT1,S0403,S03FK,S05AZ,S0760,S0322,S06U3,S0488",2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-03,False,sold,2025-11-02 00:00:00
+28441,BMW i4 eDrive40 Gran Coupé,56700.0,22969,2024-07-01,250,340,544.0,"{
   ""Charging"": [
     ""Câble de recharge rapide jusqu'à 22kW (Mode 3)""
   ],
@@ -1015,8 +1325,8 @@ car_id,model_name,price,kilometers,registration_date,horse_power_kw,horse_power_
     ""Code interne"",
     ""Code interne""
   ]
-}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/018e94b9-7a93-78c6-9a35-ed47a7f9b187?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=71AW&paint=P0A96&fabric=FMANL&modelRangeCode=G26&options=S08WD,S0ZB1,S0ZEV,S03MF,S05DN,S06NX,S07M9,S03AC,S0710,S0754,S0711,S05AC,S0715,S08WN,S0430,S0431,S04T2,S04AW,S06VB,S033B,S0302,S03M2,S0548,S05DA,S0420,S04MC,S0775,S0534,S0337,S0459,S08R3,S06AE,S06AF,S0493,S04V1,S0494,S04UR,S05AU,S04GQ,S02PA,S08TR,S0688,S0ZT1,S0403,S03FK,S05AZ,S0760,S0322,S06U3,S0488",2025-11-02,2025-11-02,2025-11-02,None,True,active,2025-11-02
-88830,BMW i4 eDrive40 Gran Coupé,54999.0,19325,2024-03-01,250,340,534,"{
+}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/018e94b9-7a93-78c6-9a35-ed47a7f9b187?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=71AW&paint=P0A96&fabric=FMANL&modelRangeCode=G26&options=S08WD,S0ZB1,S0ZEV,S03MF,S05DN,S06NX,S07M9,S03AC,S0710,S0754,S0711,S05AC,S0715,S08WN,S0430,S0431,S04T2,S04AW,S06VB,S033B,S0302,S03M2,S0548,S05DA,S0420,S04MC,S0775,S0534,S0337,S0459,S08R3,S06AE,S06AF,S0493,S04V1,S0494,S04UR,S05AU,S04GQ,S02PA,S08TR,S0688,S0ZT1,S0403,S03FK,S05AZ,S0760,S0322,S06U3,S0488",2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-03,False,sold,2025-11-02 00:00:00
+88830,BMW i4 eDrive40 Gran Coupé,54999.0,19325,2024-03-01,250,340,534.0,"{
   ""Charging"": [
     ""Câble de recharge rapide jusqu'à 22kW (Mode 3)"",
     ""Flexible Fast Charger (mode 2)""
@@ -1067,8 +1377,8 @@ car_id,model_name,price,kilometers,registration_date,horse_power_kw,horse_power_
     ""Code interne"",
     ""Code interne""
   ]
-}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/018e956d-853b-7342-badd-9e8d9e6655f6?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=71AW&paint=P0C31&fabric=FVAEW&modelRangeCode=G26&options=S03FX,S0491,S05DN,S06NX,S08WT,S0775,S0710,S0534,S0337,S05AC,S0459,S06AE,S0715,S06AF,S0493,S08WN,S04V1,S0494,S0430,S04UR,S0431,S04T2,S04T3,S06PA,S02VL,S05AU,S04AW,S06VB,S02VF,S02PA,S0302,S08TR,S0688,S0403,S0548,S05AZ,S0760,S05DA,S0420,S0322,S06U3,S0488",2025-11-02,2025-11-02,2025-11-02,None,True,active,2025-11-02
-1746,BMW i4 eDrive40 Gran Coupé,53900.0,19860,2024-08-01,250,340,553,"{
+}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/018e956d-853b-7342-badd-9e8d9e6655f6?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=71AW&paint=P0C31&fabric=FVAEW&modelRangeCode=G26&options=S03FX,S0491,S05DN,S06NX,S08WT,S0775,S0710,S0534,S0337,S05AC,S0459,S06AE,S0715,S06AF,S0493,S08WN,S04V1,S0494,S0430,S04UR,S0431,S04T2,S04T3,S06PA,S02VL,S05AU,S04AW,S06VB,S02VF,S02PA,S0302,S08TR,S0688,S0403,S0548,S05AZ,S0760,S05DA,S0420,S0322,S06U3,S0488",2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-03,False,sold,2025-11-02 00:00:00
+1746,BMW i4 eDrive40 Gran Coupé,53900.0,19860,2024-08-01,250,340,553.0,"{
   ""Charging"": [
     ""Câble de recharge rapide jusqu'à 22kW (Mode 3)""
   ],
@@ -1120,8 +1430,8 @@ car_id,model_name,price,kilometers,registration_date,horse_power_kw,horse_power_
     ""Code interne"",
     ""LED Headlights""
   ]
-}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/018e91f0-d524-70a8-89c5-852fec977271?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=71AW&paint=P0C3Z&fabric=FMANL&modelRangeCode=G26&options=S0ZB1,S0ZEV,S03MF,S05DN,S06NX,S07M9,S08WT,S0710,S0754,S0715,S08WN,S0430,S0431,S04T2,S04AW,S06VB,S033B,S0302,S03M2,S0548,S05DA,S0420,S0491,S0775,S0534,S0337,S0459,S06AE,S06AF,S0493,S0494,S04UR,S0ZLD,S05AU,S04GQ,S02PA,S04LN,S08TR,S0688,S0248,S0ZT1,S0403,S03FK,S0760,S0322,S06U3,S0488",2025-11-02,2025-11-02,2025-11-02,None,True,active,2025-11-02
-92901,BMW i4 eDrive35 Gran Coupé,48760.0,29630,2024-04-01,210,286,456,"{
+}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/018e91f0-d524-70a8-89c5-852fec977271?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=71AW&paint=P0C3Z&fabric=FMANL&modelRangeCode=G26&options=S0ZB1,S0ZEV,S03MF,S05DN,S06NX,S07M9,S08WT,S0710,S0754,S0715,S08WN,S0430,S0431,S04T2,S04AW,S06VB,S033B,S0302,S03M2,S0548,S05DA,S0420,S0491,S0775,S0534,S0337,S0459,S06AE,S06AF,S0493,S0494,S04UR,S0ZLD,S05AU,S04GQ,S02PA,S04LN,S08TR,S0688,S0248,S0ZT1,S0403,S03FK,S0760,S0322,S06U3,S0488",2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-03,False,sold,2025-11-02 00:00:00
+92901,BMW i4 eDrive35 Gran Coupé,48760.0,29630,2024-04-01,210,286,456.0,"{
   ""Charging"": [
     ""Câble de recharge rapide jusqu'à 22kW (Mode 3)""
   ],
@@ -1166,8 +1476,8 @@ car_id,model_name,price,kilometers,registration_date,horse_power_kw,horse_power_
     ""Code interne"",
     ""S0ZUN""
   ]
-}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/018e94de-4570-7d07-89f7-f5279c8276cf?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=41AW&paint=P0475&fabric=FMAH7&modelRangeCode=G26&options=S03MF,S0491,S0ZT7,S05DN,S07M9,S0775,S0676,S0710,S0754,S0534,S0337,S06AE,S0715,S06AF,S0493,S08WN,S0494,S0430,S0431,S04T2,S05AU,S0ZHX,S04GQ,S0ZS7,S06VB,S033B,S02PA,S0302,S04LN,S08TR,S0248,S0403,S03FK,S03M2,S0548,S0760,S05DA,S0420,S0ZUN,S0322,S06U3",2025-11-02,2025-11-02,2025-11-02,None,True,active,2025-11-02
-27864,BMW i4 eDrive40 Gran Coupé,49950.0,14813,2024-01-01,250,340,528,"{
+}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/018e94de-4570-7d07-89f7-f5279c8276cf?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=41AW&paint=P0475&fabric=FMAH7&modelRangeCode=G26&options=S03MF,S0491,S0ZT7,S05DN,S07M9,S0775,S0676,S0710,S0754,S0534,S0337,S06AE,S0715,S06AF,S0493,S08WN,S0494,S0430,S0431,S04T2,S05AU,S0ZHX,S04GQ,S0ZS7,S06VB,S033B,S02PA,S0302,S04LN,S08TR,S0248,S0403,S03FK,S03M2,S0548,S0760,S05DA,S0420,S0ZUN,S0322,S06U3",2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-03,False,sold,2025-11-02 00:00:00
+27864,BMW i4 eDrive40 Gran Coupé,49950.0,14813,2024-01-01,250,340,528.0,"{
   ""Charging"": [
     ""Câble de recharge rapide jusqu'à 22kW (Mode 3)""
   ],
@@ -1210,4 +1520,4 @@ car_id,model_name,price,kilometers,registration_date,horse_power_kw,horse_power_
     ""Code interne"",
     ""Code interne""
   ]
-}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/018e9336-94c6-7339-8322-38f58b792404?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=71AW&paint=P0475&fabric=FKHKC&modelRangeCode=G26&options=S03FX,S03MF,S05DM,S06NX,S07M9,S08WT,S0775,S0710,S0754,S0534,S0337,S06AE,S0715,S06AF,S0493,S08WN,S0494,S0430,S0431,S04T2,S05AU,S04AW,S04GQ,S06VB,S033B,S02PA,S0302,S04LN,S08TR,S0403,S03M2,S0548,S0760,S05DA,S0420,S06U3",2025-11-02,2025-11-02,2025-11-02,None,True,active,2025-11-02
+}","https://www.bmw.be/fr-be/sl/stocklocator_uc/details/018e9336-94c6-7339-8322-38f58b792404?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%252C%2522WHITE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C60000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2024%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522Default%2522%253A%255B%2522M%2520leather%2520steering%2520wheel%2522%252C%2522Sun%2520roof%2522%255D%252C%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D&modelCode=71AW&paint=P0475&fabric=FKHKC&modelRangeCode=G26&options=S03FX,S03MF,S05DM,S06NX,S07M9,S08WT,S0775,S0710,S0754,S0534,S0337,S06AE,S0715,S06AF,S0493,S08WN,S0494,S0430,S0431,S04T2,S05AU,S04AW,S04GQ,S06VB,S033B,S02PA,S0302,S04LN,S08TR,S0403,S03M2,S0548,S0760,S05DA,S0420,S06U3",2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-02 00:00:00,2025-11-03,False,sold,2025-11-02 00:00:00

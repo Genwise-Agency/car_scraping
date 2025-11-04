@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "extraction_date": "2025-11-02T18:01:26.084875",
-    "total_categories": 20,
-    "total_unique_equipment_items": 137,
+    "extraction_date": "2025-11-03T23:11:56.708229",
+    "total_categories": 22,
+    "total_unique_equipment_items": 139,
     "categories": [
       "Autres.",
       "Charging",
@@ -17,12 +17,14 @@
       "Komfort",
       "Laden",
       "Optik innen/außen",
+      "Packs & éditions",
       "Polsterungen",
       "Radio",
       "Räder",
       "Sicherheit",
       "Sportlichkeit",
       "Transmission, suspension et direction",
+      "Trim Level",
       "Télécommunication embarquée"
     ]
   },
@@ -160,6 +162,9 @@
       "Vitres teintées foncées à l'arrière",
       "Étriers de frein, laqués (blau)"
     ],
+    "Packs & éditions": [
+      "Business Pack"
+    ],
     "Polsterungen": [
       "Réglage en largeur du dossier pour conducteur",
       "Réglage électrique des sièges avant, avec fonction-mémoire pour siège conducteur",
@@ -194,6 +199,9 @@
       "Variable Sport Steering",
       "Volant M sport",
       "Étriers de frein, laqués (blau)"
+    ],
+    "Trim Level": [
+      "Business Pack"
     ],
     "Télécommunication embarquée": [
       "BMW Live Cockpit Navigation Plus",
