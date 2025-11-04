@@ -1,87 +1,27 @@
 {
   "metadata": {
-    "extraction_date": "2025-11-03T23:11:56.708229",
-    "total_categories": 22,
-    "total_unique_equipment_items": 139,
+    "extraction_date": "2025-11-04T22:52:15.028313",
+    "total_categories": 8,
+    "total_unique_equipment_items": 51,
     "categories": [
       "Autres.",
       "Charging",
-      "ConnectedDrive FA",
-      "ConnectedDrive S&A",
       "Equipements extérieurs",
       "Equipements intérieurs",
       "Equipements électriques",
-      "Fahrwerk",
       "Jantes",
-      "Klima",
-      "Komfort",
-      "Laden",
-      "Optik innen/außen",
-      "Packs & éditions",
-      "Polsterungen",
-      "Radio",
-      "Räder",
-      "Sicherheit",
-      "Sportlichkeit",
       "Transmission, suspension et direction",
-      "Trim Level",
       "Télécommunication embarquée"
     ]
   },
   "equipment_by_category": {
     "Autres.": [
-      "Accès confort",
-      "Adaptive LED headlights",
-      "BMW IconicSounds Electric",
-      "BMW Live Cockpit Navigation Professional avec Head-Up Display",
-      "Battery Electric Vehicle",
-      "Boulons antivol",
-      "Ceintures de sécurité M",
-      "Ciel de pavillon M en Anthrazit",
-      "Code interne",
-      "Driving Assistant Pack Professional",
-      "Eléments intérieur avec finition en cristal 'CraftedClarity'",
-      "Espace de rangement pour Wireless Charging",
-      "Exécution en bois noble Esche graublau offenporig",
-      "Freins M Sport, rot",
-      "Harman/kardon Surround Sound System",
-      "High Beam Assist",
-      "Jantes alu styling 996 M 19\" (bicolor)",
-      "Kit aérodynamique M",
-      "LED Headlights",
-      "M Lights Shadow Line",
-      "M Shadow Line hochglänzend avec éléments supplémentaires",
-      "Parking Assistant Pack Plus",
-      "Réglage en largeur du dossier pour conducteur",
-      "Réglage électrique des sièges avant, avec fonction-mémoire pour siège conducteur",
-      "S0ZUN",
-      "Soutien lombaire à l'avant",
-      "Spoiler arrière M",
-      "Suspension adaptative M",
-      "Tableau de bord Luxury",
-      "Toit ouvrant à commande électrique",
-      "Variable Sport Steering",
-      "Vitres teintées foncées à l'arrière",
-      "Volant M sport",
-      "Volant chauffant"
+      "Code interne"
     ],
     "Charging": [
       "Adaptateur pour prise domestique (type E+F)",
       "Câble de recharge rapide jusqu'à 22kW (Mode 3)",
       "Flexible Fast Charger (mode 2)"
-    ],
-    "ConnectedDrive FA": [
-      "BMW IconicSounds Electric",
-      "BMW Live Cockpit Navigation Professional avec Head-Up Display",
-      "Cruise Control",
-      "Driving Assistant Pack",
-      "Driving Assistant Pack Professional",
-      "High Beam Assist",
-      "Parking Assistant Pack Plus"
-    ],
-    "ConnectedDrive S&A": [
-      "BMW Teleservices",
-      "Intelligent Emergency Call - eCall"
     ],
     "Equipements extérieurs": [
       "Accès confort",
@@ -95,19 +35,15 @@
     "Equipements intérieurs": [
       "Ceintures de sécurité M",
       "Ciel de pavillon M en Anthrazit",
-      "Eléments intérieur avec finition en cristal 'CraftedClarity'",
       "Lumière intérieure d'ambiance",
       "Pack rangement",
       "Pack rétroviseurs",
       "Réglage en largeur du dossier pour conducteur",
       "Réglage électrique des sièges avant, avec fonction-mémoire pour siège conducteur",
       "Rétroviseur intérieur anti-éblouissement automatique",
-      "Sièges M sport à l'avant",
       "Sièges chauffants à l'avant",
-      "Sièges chauffants à l'avant et à l'arrière",
       "Soutien lombaire à l'avant",
       "Tableau de bord Luxury",
-      "Tableau de bord recouvert de Sensatec",
       "Toit ouvrant à commande électrique",
       "Volant M sport",
       "Volant chauffant"
@@ -116,9 +52,7 @@
       "Active Cruise Control avec fonction Stop&Go",
       "Adaptive LED headlights",
       "BMW IconicSounds Electric",
-      "BMW Laserlight",
       "Climatisation à réglage électronique",
-      "Climatiseur automatique avec 3 zones",
       "Cruise Control",
       "Driving Assistant Pack",
       "Driving Assistant Pack Professional",
@@ -128,69 +62,8 @@
       "Parking Assistant Pack Plus",
       "Système d'alarme"
     ],
-    "Fahrwerk": [
-      "Suspension adaptative M"
-    ],
     "Jantes": [
       "Kit de réparation de pneus Plus"
-    ],
-    "Klima": [
-      "Climatisation à réglage électronique",
-      "Volant chauffant"
-    ],
-    "Komfort": [
-      "Accès confort",
-      "Attelage de remorque (rabattable électriquement)",
-      "Lumière intérieure d'ambiance",
-      "Pack rangement",
-      "Toit ouvrant à commande électrique",
-      "Volant M sport"
-    ],
-    "Laden": [
-      "Adaptateur pour prise domestique (type E+F)",
-      "Câble de recharge rapide jusqu'à 22kW (Mode 3)",
-      "Flexible Fast Charger (mode 2)"
-    ],
-    "Optik innen/außen": [
-      "Ceintures de sécurité M",
-      "Ciel de pavillon M en Anthrazit",
-      "Kit aérodynamique M",
-      "M Lights Shadow Line",
-      "M Shadow Line hochglänzend",
-      "M Shadow Line hochglänzend avec éléments supplémentaires",
-      "Tableau de bord Luxury",
-      "Vitres teintées foncées à l'arrière",
-      "Étriers de frein, laqués (blau)"
-    ],
-    "Packs & éditions": [
-      "Business Pack"
-    ],
-    "Polsterungen": [
-      "Réglage en largeur du dossier pour conducteur",
-      "Réglage électrique des sièges avant, avec fonction-mémoire pour siège conducteur",
-      "Sièges chauffants à l'avant",
-      "Soutien lombaire à l'avant"
-    ],
-    "Radio": [
-      "Espace de rangement pour Wireless Charging",
-      "Harman/kardon Surround Sound System",
-      "Personal eSIM",
-      "Système haut-parleurs HiFi"
-    ],
-    "Räder": [
-      "Boulons antivol"
-    ],
-    "Sicherheit": [
-      "Adaptive LED headlights",
-      "Désactivation airbag passager",
-      "Pack rétroviseurs",
-      "Rétroviseur intérieur anti-éblouissement automatique",
-      "Système d'alarme"
-    ],
-    "Sportlichkeit": [
-      "Freins M Sport, rot",
-      "Spoiler arrière M",
-      "Variable Sport Steering"
     ],
     "Transmission, suspension et direction": [
       "Attelage de remorque (rabattable électriquement)",
@@ -199,9 +72,6 @@
       "Variable Sport Steering",
       "Volant M sport",
       "Étriers de frein, laqués (blau)"
-    ],
-    "Trim Level": [
-      "Business Pack"
     ],
     "Télécommunication embarquée": [
       "BMW Live Cockpit Navigation Plus",

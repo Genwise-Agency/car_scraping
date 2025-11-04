@@ -14,7 +14,7 @@ import pandas as pd
 # Add parent directory to path for imports
 sys.path.insert(0, os.path.dirname(__file__))
 
-from config import HISTORY_COLUMNS, OUTPUT_DIR, PREFERENCES_FILE, TRACKING_COLUMNS
+from config import OUTPUT_DIR, PREFERENCES_FILE, TRACKING_COLUMNS
 from data_processor import (
     export_equipment_list,
     get_latest_records,
@@ -25,6 +25,7 @@ from data_processor import (
     merge_historical_data,
     merge_scores_history,
 )
+from database import SupabaseClient
 from scorer import calculate_all_scores
 from scraper import scrape_bmw_inventory
 
@@ -217,13 +218,17 @@ def main(url: str, test_limit: int = None, sync_db: bool = False):
         logger.info("=" * 60)
 
         # ========================================================
-        # PUSH TO SUPABASE DATABASE (DISABLED - TO BE REIMPLEMENTED)
+        # PUSH TO SUPABASE DATABASE
         # ========================================================
         if sync_db:
-            logger.warning("\n" + "=" * 60)
-            logger.warning("DATABASE SYNC IS CURRENTLY DISABLED")
-            logger.warning("Database sync functionality will be reimplemented")
-            logger.warning("=" * 60)
+            try:
+                db_client = SupabaseClient()
+                db_client.sync_all(merged_history, merged_equipment, merged_scores)
+            except ValueError as e:
+                logger.error(f"✗ Database configuration error: {e}")
+                logger.error("      Please set SUPABASE_URL and SUPABASE_KEY in your .env file")
+            except Exception as e:
+                logger.error(f"✗ Error during database sync: {e}")
 
     except Exception as e:
         logger.error(f"✗ Error during export: {e}")
@@ -233,11 +238,11 @@ def main(url: str, test_limit: int = None, sync_db: bool = False):
 
 
 if __name__ == "__main__":
-    # Example: Basic run with full scrape (database sync disabled)
+    # Example: Basic run with full scrape (database sync enabled)
     main(
-        url="https://www.bmw.be/fr-be/sl/stocklocator_uc/results?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%252C%2522BLUE%2522%255D%252C%2522PRICE%2522%253A%255Bnull%252C58000%255D%252C%2522USED_CAR_MILEAGE%2522%253A%255B0%252C10000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2025%252C-1%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D",
+        url="https://www.bmw.be/fr-be/sl/stocklocator_uc/results?filters=%257B%2522MARKETING_MODEL_RANGE%2522%253A%255B%2522i4_G26E%2522%255D%252C%2522COLOR%2522%253A%255B%2522GRAY%2522%252C%2522BLACK%2522%255D%252C%2522USED_CAR_MILEAGE%2522%253A%255B0%252C20000%255D%252C%2522REGISTRATION_YEAR%2522%253A%255B2025%252C2025%255D%252C%2522EQUIPMENT_GROUPS%2522%253A%257B%2522favorites%2522%253A%255B%2522M%2520Sport%2520package%2522%255D%257D%257D",
         test_limit=None,
-        sync_db=False
+        sync_db=True
     )
 
     # Example: Test run with limited cars (no database sync)

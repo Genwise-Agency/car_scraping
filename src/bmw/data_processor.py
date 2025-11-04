@@ -71,6 +71,7 @@ def merge_historical_data(current_data, history_df, scrape_date):
         old_record = latest_df[latest_df['car_id'] == car_id]
 
         if old_record.empty:
+            # NEW CAR - just add it without SCD marking
             logger.info(f"[NEW] Car ID {car_id}: {row['model_name']}")
             new_row = row.to_dict()
             new_row.update({
@@ -87,6 +88,7 @@ def merge_historical_data(current_data, history_df, scrape_date):
             old_record = old_record.iloc[0]
 
             if compare_records(old_record, row, TRACKING_COLUMNS):
+                # DATA CHANGED - apply SCD Type 2: mark old as expired, add new
                 logger.info(f"[CHANGED] Car ID {car_id}: {row['model_name']}")
 
                 old_row = history_df[
@@ -109,7 +111,8 @@ def merge_historical_data(current_data, history_df, scrape_date):
                 })
                 new_records.append(new_row)
             else:
-                logger.info(f"[UPDATED] Car ID {car_id}: {row['model_name']}")
+                # NO CHANGE - just update timestamps, keep as is_latest=True
+                logger.info(f"[UNCHANGED] Car ID {car_id}: {row['model_name']}")
                 old_row = old_record.to_dict()
                 old_row['last_seen_date'] = today_str
                 old_row['scrape_date'] = today_str
@@ -131,7 +134,10 @@ def merge_historical_data(current_data, history_df, scrape_date):
             old_row['status'] = 'sold'
             new_records.append(old_row)
 
-    old_history = history_df[history_df['is_latest'] == False].copy() if not history_df.empty else pd.DataFrame(columns=HISTORY_COLUMNS)
+    old_history = history_df[
+        (history_df['is_latest'] == False) &
+        (pd.to_datetime(history_df['valid_to']) < pd.Timestamp(today))
+    ].copy() if not history_df.empty else pd.DataFrame(columns=HISTORY_COLUMNS)
     new_records_df = pd.DataFrame(new_records)
 
     if not old_history.empty:
@@ -140,7 +146,7 @@ def merge_historical_data(current_data, history_df, scrape_date):
         merged_history = new_records_df
 
     logger.info("=" * 60)
-    logger.info(f"Summary: {len(new_records)} records in current state")
+    logger.info(f"Summary: {len([r for r in new_records if r.get('is_latest')])} current cars")
     logger.info(f"Total historical records: {len(merged_history)}")
     logger.info("=" * 60)
 
@@ -164,7 +170,7 @@ def load_equipment_history(equipment_file):
 
 
 def extract_equipment_from_json(car_id, equipments_json, valid_from, valid_to, is_latest, scrape_date):
-    """Extract equipment items from JSON and create normalized records"""
+    """Extract equipment items from JSON and create normalized records (deduplicated)"""
     equipment_records = []
 
     if not equipments_json:
@@ -173,9 +179,19 @@ def extract_equipment_from_json(car_id, equipments_json, valid_from, valid_to, i
     try:
         equipment_data = json.loads(equipments_json) if isinstance(equipments_json, str) else equipments_json
 
+        seen = set()  # Track seen equipment to prevent duplicates
+
         for category, equipment_list in equipment_data.items():
             if equipment_list:
                 for equipment_name in equipment_list:
+                    # Create unique key to prevent duplicates within same car
+                    unique_key = (category, equipment_name)
+
+                    # Skip if already seen for this car
+                    if unique_key in seen:
+                        continue
+                    seen.add(unique_key)
+
                     equipment_records.append({
                         'car_id': car_id,
                         'category': category,
@@ -244,6 +260,13 @@ def merge_equipment_history(car_history_df, equipment_history_df, scrape_date):
     if new_equipment_df.empty:
         logger.info("      No equipment records to process")
         return equipment_history_df if not equipment_history_df.empty else pd.DataFrame(columns=EQUIPMENT_COLUMNS)
+
+    # Deduplicate new equipment records by (car_id, category, equipment_name, is_latest)
+    # Keep the last occurrence (most recent)
+    new_equipment_df = new_equipment_df.drop_duplicates(
+        subset=['car_id', 'category', 'equipment_name'],
+        keep='last'
+    )
 
     if not equipment_history_df.empty:
         merged_equipment = pd.concat([equipment_history_df, new_equipment_df], ignore_index=True)
@@ -340,6 +363,12 @@ def merge_scores_history(car_history_df, scores_history_df, scrape_date):
     if new_scores_df.empty:
         logger.info("      No scores records to process")
         return scores_history_df if not scores_history_df.empty else pd.DataFrame(columns=SCORES_COLUMNS)
+
+    # Deduplicate new scores records by car_id (keep last/most recent)
+    new_scores_df = new_scores_df.drop_duplicates(
+        subset=['car_id'],
+        keep='last'
+    )
 
     if not scores_history_df.empty:
         merged_scores = pd.concat([scores_history_df, new_scores_df], ignore_index=True)
