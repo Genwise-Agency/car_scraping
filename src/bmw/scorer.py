@@ -53,16 +53,9 @@ def calculate_age_metrics(df):
 
     df['age_years'] = df['age_months'] / 12.0
 
-    df['annual_mileage'] = df.apply(
-        lambda row: row['kilometers'] / row['age_years']
-        if pd.notna(row['kilometers']) and pd.notna(row['age_years']) and row['age_years'] > 0
-        else None,
-        axis=1
-    )
-
-    df['newness_score'] = df['registration_date'].apply(
-        lambda x: max(0, 100 - (current_date.year - x.year) * 10)
-        if pd.notna(x) else None
+    # Extract car year from registration date
+    df['car_year'] = df['registration_date'].apply(
+        lambda x: x.year if pd.notna(x) else None
     )
 
     return df
@@ -71,13 +64,6 @@ def calculate_age_metrics(df):
 def calculate_value_efficiency_metrics(df):
     """Calculate value efficiency metrics and scores"""
     df = df.copy()
-
-    df['price_per_km'] = df.apply(
-        lambda row: row['price'] / row['kilometers']
-        if pd.notna(row['price']) and pd.notna(row['kilometers']) and row['kilometers'] > 0
-        else None,
-        axis=1
-    )
 
     df['price_per_kw'] = df.apply(
         lambda row: row['price'] / row['horse_power_kw']
@@ -92,20 +78,6 @@ def calculate_value_efficiency_metrics(df):
         else None,
         axis=1
     )
-
-    valid_price_per_km = df['price_per_km'].dropna()
-    if len(valid_price_per_km) > 0:
-        min_val = valid_price_per_km.min()
-        max_val = valid_price_per_km.max()
-        if max_val > min_val:
-            df['value_score_price_per_km'] = df['price_per_km'].apply(
-                lambda x: 100 * (1 - (x - min_val) / (max_val - min_val))
-                if pd.notna(x) else None
-            )
-        else:
-            df['value_score_price_per_km'] = 50 if len(valid_price_per_km) > 0 else None
-    else:
-        df['value_score_price_per_km'] = None
 
     valid_price_per_kw = df['price_per_kw'].dropna()
     if len(valid_price_per_kw) > 0:
@@ -137,11 +109,9 @@ def calculate_value_efficiency_metrics(df):
 
     df['value_efficiency_score'] = df.apply(
         lambda row: pd.Series([
-            row['value_score_price_per_km'],
             row['value_score_price_per_kw'],
             row['value_score_price_per_range']
-        ]).mean() if any(pd.notna([row['value_score_price_per_km'],
-                                   row['value_score_price_per_kw'],
+        ]).mean() if any(pd.notna([row['value_score_price_per_kw'],
                                    row['value_score_price_per_range']])) else None,
         axis=1
     )
@@ -150,49 +120,60 @@ def calculate_value_efficiency_metrics(df):
 
 
 def calculate_age_usage_scores(df):
-    """Calculate age and usage scores"""
+    """Calculate age and usage scores - independent year score and total mileage score"""
     df = df.copy()
+    current_year = datetime.now().year
 
-    valid_age = df['age_months'].dropna()
-    if len(valid_age) > 0:
-        min_age = valid_age.min()
-        max_age = valid_age.max()
-        if max_age > min_age:
-            df['age_score'] = df['age_months'].apply(
-                lambda x: 100 * (1 - (x - min_age) / (max_age - min_age))
-                if pd.notna(x) else None
-            )
+    # Year-based score: current year = maximum (100), older years get progressively lower scores
+    def year_score(car_year):
+        if pd.isna(car_year):
+            return None
+        year_diff = current_year - car_year
+        if year_diff == 0:
+            return 100  # Current year = maximum score
+        elif year_diff == 1:
+            return 90   # Year - 1
+        elif year_diff == 2:
+            return 80   # Year - 2
+        elif year_diff == 3:
+            return 70   # Year - 3
+        elif year_diff == 4:
+            return 60   # Year - 4
+        elif year_diff == 5:
+            return 50   # Year - 5
         else:
-            df['age_score'] = 100 if len(valid_age) > 0 else None
-    else:
-        df['age_score'] = None
+            # For older cars, decrease by 5 points per additional year, minimum 0
+            return max(0, 50 - (year_diff - 5) * 5)
 
-    valid_annual = df['annual_mileage'].dropna()
-    if len(valid_annual) > 0:
-        def mileage_score(annual_km):
-            if pd.isna(annual_km):
+    df['year_score'] = df['car_year'].apply(year_score)
+
+    # Total mileage score: lower total kilometers = better score (independent of car age)
+    valid_km = df['kilometers'].dropna()
+    if len(valid_km) > 0:
+        min_km = valid_km.min()
+        max_km = valid_km.max()
+
+        def mileage_score(total_km):
+            if pd.isna(total_km):
                 return None
-            if annual_km <= 10000:
-                return 80 + (10000 - annual_km) / 10000 * 20
-            elif annual_km <= 15000:
-                return 60 + (15000 - annual_km) / 5000 * 20
-            elif annual_km <= 20000:
-                # More severe: 15k-20k now scores 10-30 instead of 40-60
-                return 10 + (20000 - annual_km) / 5000 * 20
+            if max_km > min_km:
+                # Invert: lower km = higher score
+                # Normalize to 0-100 scale where min_km = 100 and max_km = 0
+                return 100 * (1 - (total_km - min_km) / (max_km - min_km))
             else:
-                # More severe: >20k decreases faster and caps lower
-                return max(0, 10 - (annual_km - 20000) / 5000 * 10)
+                # All cars have same mileage
+                return 100 if len(valid_km) > 0 else None
 
-        df['usage_score'] = df['annual_mileage'].apply(mileage_score)
+        df['mileage_score'] = df['kilometers'].apply(mileage_score)
     else:
-        df['usage_score'] = None
+        df['mileage_score'] = None
 
+    # Combine year_score and mileage_score (50% each)
     df['age_usage_score'] = df.apply(
         lambda row: pd.Series([
-            row['age_score'] * 0.4 if pd.notna(row['age_score']) else None,
-            row['usage_score'] * 0.4 if pd.notna(row['usage_score']) else None,
-            row['newness_score'] * 0.2 if pd.notna(row['newness_score']) else None
-        ]).sum() if any(pd.notna([row['age_score'], row['usage_score'], row['newness_score']])) else None,
+            row['year_score'] * 0.5 if pd.notna(row['year_score']) else None,
+            row['mileage_score'] * 0.5 if pd.notna(row['mileage_score']) else None
+        ]).sum() if any(pd.notna([row['year_score'], row['mileage_score']])) else None,
         axis=1
     )
 
