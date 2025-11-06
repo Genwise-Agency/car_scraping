@@ -44,6 +44,14 @@ def extract_all_equipment_items(equipments_json):
 def calculate_age_metrics(df):
     """Calculate age and usage metrics"""
     df = df.copy()
+
+    # Handle empty DataFrame
+    if df.empty or 'registration_date' not in df.columns:
+        df['age_months'] = None
+        df['age_years'] = None
+        df['car_year'] = None
+        return df
+
     current_date = datetime.now()
 
     df['age_months'] = df['registration_date'].apply(

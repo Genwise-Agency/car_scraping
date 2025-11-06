@@ -3,7 +3,7 @@ import logging
 
 from playwright.sync_api import sync_playwright
 
-from .config import BMW_URL, BROWSER_TIMEOUT, HEADLESS_MODE
+from .config import BROWSER_TIMEOUT, HEADLESS_MODE
 from .parser import (
     parse_battery_range,
     parse_car_id,
@@ -196,21 +196,28 @@ def scrape_bmw_inventory(url, max_links=None):
 
         logger.info(f"[2/4] Navigating to URL...")
         logger.info(f"      {url[:80]}...")
-        page.goto(url)
+        page.goto(url, wait_until='networkidle', timeout=60000)
 
         # Wait for and click the accept cookies button
         logger.info("[3/4] Waiting for cookies popup...")
-        accept_button = page.get_by_role("button", name="Tout accepter")
-        accept_button.wait_for(state='visible', timeout=BROWSER_TIMEOUT)
-        logger.info("      ✓ Cookies popup found, accepting...")
-        accept_button.click()
+        try:
+            accept_button = page.get_by_role("button", name="Tout accepter")
+            accept_button.wait_for(state='visible', timeout=BROWSER_TIMEOUT)
+            logger.info("      ✓ Cookies popup found, accepting...")
+            accept_button.click()
+            # Wait for page to load after accepting cookies
+            page.wait_for_timeout(2000)
+            logger.info("      ✓ Cookies accepted, page loaded")
+        except Exception as e:
+            logger.warning(f"      ⚠ Cookies popup not found or already accepted: {e}")
+            # Wait a bit for page to stabilize
+            page.wait_for_timeout(3000)
 
-        # Wait for page to load after accepting cookies
-        page.wait_for_timeout(2000)
-        logger.info("      ✓ Cookies accepted, page loaded")
+        # Wait for page content to load
+        logger.info("[4/4] Loading all car listings...")
+        page.wait_for_timeout(3000)  # Initial wait for page to render
 
         # Scroll down and click "Montrer plus" button until it's no longer visible
-        logger.info("[4/4] Loading all car listings...")
         show_more_button = page.locator('[data-test="stolo-plp-show-more-button"]')
         click_count = 0
 
@@ -226,17 +233,29 @@ def scrape_bmw_inventory(url, max_links=None):
                 show_more_button.click()
                 page.wait_for_timeout(3000)
                 logger.info(f"      ✓ Content loaded (click #{click_count} completed)")
-            except:
+            except Exception:
                 logger.info(f"      ✓ No more 'Montrer plus' buttons found. Total clicks: {click_count}")
                 break
 
+        # Wait a bit more for any lazy-loaded content
+        page.wait_for_timeout(2000)
+
         # Extract all model card links
         logger.info("[Extracting links] Finding all car detail links...")
-        model_card_links = page.locator('a.model-card-link')
-        links = []
 
+        # Try multiple selectors in case the page structure is different
+        model_card_links = page.locator('a.model-card-link')
         count = model_card_links.count()
+
+        # If no links found, try alternative selector
+        if count == 0:
+            logger.info("      Trying alternative selector...")
+            model_card_links = page.locator('a[href*="/sl/stocklocator_uc/details"]')
+            count = model_card_links.count()
+
         logger.info(f"      Found {count} model card elements")
+
+        links = []
 
         for i in range(count):
             href = model_card_links.nth(i).get_attribute('href')

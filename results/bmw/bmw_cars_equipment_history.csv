@@ -2950,6 +2950,479 @@ car_id,category,equipment_name,valid_from,valid_to,is_latest,scrape_date
 93924,"Transmission, suspension et direction","Freins M Sport, rot",NaT,nan,True,NaT
 93924,"Transmission, suspension et direction",Volant M sport,NaT,nan,True,NaT
 93924,Autres.,Code interne,NaT,nan,True,NaT
+39582,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),NaT,nan,True,NaT
+39582,Equipements électriques,Active Cruise Control avec fonction Stop&Go,NaT,nan,True,NaT
+39582,Equipements électriques,Adaptive LED headlights,NaT,nan,True,NaT
+39582,Equipements électriques,Climatisation à réglage électronique,NaT,nan,True,NaT
+39582,Equipements électriques,Driving Assistant Pack,NaT,nan,True,NaT
+39582,Equipements électriques,High Beam Assist,NaT,nan,True,NaT
+39582,Equipements électriques,M Lights Shadow Line,NaT,nan,True,NaT
+39582,Equipements électriques,Parking Assistant Pack,NaT,nan,True,NaT
+39582,Equipements électriques,Système d'alarme,NaT,nan,True,NaT
+39582,Equipements extérieurs,Accès confort,NaT,nan,True,NaT
+39582,Equipements extérieurs,Spoiler arrière M,NaT,nan,True,NaT
+39582,Equipements extérieurs,Kit aérodynamique M,NaT,nan,True,NaT
+39582,Equipements extérieurs,M Shadow Line hochglänzend,NaT,nan,True,NaT
+39582,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,NaT,nan,True,NaT
+39582,Equipements extérieurs,Vitres teintées foncées à l'arrière,NaT,nan,True,NaT
+39582,Equipements intérieurs,Ceintures de sécurité M,NaT,nan,True,NaT
+39582,Equipements intérieurs,Lumière intérieure d'ambiance,NaT,nan,True,NaT
+39582,Equipements intérieurs,Ciel de pavillon M en Anthrazit,NaT,nan,True,NaT
+39582,Equipements intérieurs,Pack rangement,NaT,nan,True,NaT
+39582,Equipements intérieurs,Pack rétroviseurs,NaT,nan,True,NaT
+39582,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,NaT,nan,True,NaT
+39582,Equipements intérieurs,Sièges chauffants à l'avant,NaT,nan,True,NaT
+39582,Equipements intérieurs,Soutien lombaire à l'avant,NaT,nan,True,NaT
+39582,Equipements intérieurs,Tableau de bord Luxury,NaT,nan,True,NaT
+39582,Equipements intérieurs,Toit ouvrant à commande électrique,NaT,nan,True,NaT
+39582,Equipements intérieurs,Volant chauffant,NaT,nan,True,NaT
+39582,Equipements intérieurs,Volant M sport,NaT,nan,True,NaT
+39582,Jantes,Kit de réparation de pneus Plus,NaT,nan,True,NaT
+39582,Télécommunication embarquée,BMW Live Cockpit Navigation Plus,NaT,nan,True,NaT
+39582,Télécommunication embarquée,Espace de rangement pour Wireless Charging,NaT,nan,True,NaT
+39582,Télécommunication embarquée,Harman/kardon Surround Sound System,NaT,nan,True,NaT
+39582,Télécommunication embarquée,Intelligent Emergency Call - eCall,NaT,nan,True,NaT
+39582,Télécommunication embarquée,Personal eSIM,NaT,nan,True,NaT
+39582,"Transmission, suspension et direction",Attelage de remorque (rabattable électriquement),NaT,nan,True,NaT
+39582,"Transmission, suspension et direction","Freins M Sport, rot",NaT,nan,True,NaT
+39582,"Transmission, suspension et direction",Suspension adaptative M,NaT,nan,True,NaT
+39582,"Transmission, suspension et direction",Variable Sport Steering,NaT,nan,True,NaT
+39582,"Transmission, suspension et direction",Volant M sport,NaT,nan,True,NaT
+39582,Autres.,Code interne,NaT,nan,True,NaT
+14080,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),NaT,nan,True,NaT
+14080,Equipements électriques,Adaptive LED headlights,NaT,nan,True,NaT
+14080,Equipements électriques,Climatisation à réglage électronique,NaT,nan,True,NaT
+14080,Equipements électriques,Cruise Control,NaT,nan,True,NaT
+14080,Equipements électriques,Driving Assistant Pack,NaT,nan,True,NaT
+14080,Equipements électriques,High Beam Assist,NaT,nan,True,NaT
+14080,Equipements électriques,M Lights Shadow Line,NaT,nan,True,NaT
+14080,Equipements électriques,Parking Assistant Pack Plus,NaT,nan,True,NaT
+14080,Equipements électriques,Système d'alarme,NaT,nan,True,NaT
+14080,Equipements extérieurs,Accès confort,NaT,nan,True,NaT
+14080,Equipements extérieurs,Spoiler arrière M,NaT,nan,True,NaT
+14080,Equipements extérieurs,Kit aérodynamique M,NaT,nan,True,NaT
+14080,Equipements extérieurs,M Shadow Line hochglänzend,NaT,nan,True,NaT
+14080,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,NaT,nan,True,NaT
+14080,Equipements extérieurs,Vitres teintées foncées à l'arrière,NaT,nan,True,NaT
+14080,Equipements intérieurs,Ceintures de sécurité M,NaT,nan,True,NaT
+14080,Equipements intérieurs,Lumière intérieure d'ambiance,NaT,nan,True,NaT
+14080,Equipements intérieurs,Ciel de pavillon M en Anthrazit,NaT,nan,True,NaT
+14080,Equipements intérieurs,Pack rangement,NaT,nan,True,NaT
+14080,Equipements intérieurs,Pack rétroviseurs,NaT,nan,True,NaT
+14080,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,NaT,nan,True,NaT
+14080,Equipements intérieurs,Sièges chauffants à l'avant,NaT,nan,True,NaT
+14080,Equipements intérieurs,Soutien lombaire à l'avant,NaT,nan,True,NaT
+14080,Equipements intérieurs,Volant M sport,NaT,nan,True,NaT
+14080,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,NaT,nan,True,NaT
+14080,Télécommunication embarquée,Espace de rangement pour Wireless Charging,NaT,nan,True,NaT
+14080,Télécommunication embarquée,Intelligent Emergency Call - eCall,NaT,nan,True,NaT
+14080,Télécommunication embarquée,Personal eSIM,NaT,nan,True,NaT
+14080,Télécommunication embarquée,Système haut-parleurs HiFi,NaT,nan,True,NaT
+14080,"Transmission, suspension et direction",Attelage de remorque (rabattable électriquement),NaT,nan,True,NaT
+14080,"Transmission, suspension et direction","Freins M Sport, rot",NaT,nan,True,NaT
+14080,"Transmission, suspension et direction",Volant M sport,NaT,nan,True,NaT
+14080,Autres.,Code interne,NaT,nan,True,NaT
+14074,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),NaT,nan,True,NaT
+14074,Equipements électriques,Climatisation à réglage électronique,NaT,nan,True,NaT
+14074,Equipements électriques,Driving Assistant Pack Professional,NaT,nan,True,NaT
+14074,Equipements électriques,Parking Assistant Pack Plus,NaT,nan,True,NaT
+14074,Equipements électriques,Système d'alarme,NaT,nan,True,NaT
+14074,Equipements extérieurs,"Étriers de frein, laqués (blau)",NaT,nan,True,NaT
+14074,Equipements extérieurs,Accès confort,NaT,nan,True,NaT
+14074,Equipements extérieurs,Kit aérodynamique M,NaT,nan,True,NaT
+14074,Equipements extérieurs,M Shadow Line hochglänzend,NaT,nan,True,NaT
+14074,Equipements extérieurs,Vitres teintées foncées à l'arrière,NaT,nan,True,NaT
+14074,Equipements intérieurs,Lumière intérieure d'ambiance,NaT,nan,True,NaT
+14074,Equipements intérieurs,Ciel de pavillon M en Anthrazit,NaT,nan,True,NaT
+14074,Equipements intérieurs,Pack rangement,NaT,nan,True,NaT
+14074,Equipements intérieurs,Pack rétroviseurs,NaT,nan,True,NaT
+14074,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,NaT,nan,True,NaT
+14074,Equipements intérieurs,Sièges chauffants à l'avant,NaT,nan,True,NaT
+14074,Equipements intérieurs,Soutien lombaire à l'avant,NaT,nan,True,NaT
+14074,Equipements intérieurs,Toit ouvrant à commande électrique,NaT,nan,True,NaT
+14074,Equipements intérieurs,Volant chauffant,NaT,nan,True,NaT
+14074,Equipements intérieurs,Volant M sport,NaT,nan,True,NaT
+14074,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,NaT,nan,True,NaT
+14074,Télécommunication embarquée,Espace de rangement pour Wireless Charging,NaT,nan,True,NaT
+14074,Télécommunication embarquée,Intelligent Emergency Call - eCall,NaT,nan,True,NaT
+14074,Télécommunication embarquée,Personal eSIM,NaT,nan,True,NaT
+14074,Télécommunication embarquée,Système haut-parleurs HiFi,NaT,nan,True,NaT
+14074,"Transmission, suspension et direction","Étriers de frein, laqués (blau)",NaT,nan,True,NaT
+14074,"Transmission, suspension et direction",Attelage de remorque (rabattable électriquement),NaT,nan,True,NaT
+14074,"Transmission, suspension et direction",Volant M sport,NaT,nan,True,NaT
+14074,Autres.,Code interne,NaT,nan,True,NaT
+14070,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),NaT,nan,True,NaT
+14070,Equipements électriques,Adaptive LED headlights,NaT,nan,True,NaT
+14070,Equipements électriques,Climatisation à réglage électronique,NaT,nan,True,NaT
+14070,Equipements électriques,Driving Assistant Pack Professional,NaT,nan,True,NaT
+14070,Equipements électriques,High Beam Assist,NaT,nan,True,NaT
+14070,Equipements électriques,M Lights Shadow Line,NaT,nan,True,NaT
+14070,Equipements électriques,Parking Assistant Pack Plus,NaT,nan,True,NaT
+14070,Equipements électriques,Système d'alarme,NaT,nan,True,NaT
+14070,Equipements extérieurs,Spoiler arrière M,NaT,nan,True,NaT
+14070,Equipements extérieurs,Kit aérodynamique M,NaT,nan,True,NaT
+14070,Equipements extérieurs,M Shadow Line hochglänzend,NaT,nan,True,NaT
+14070,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,NaT,nan,True,NaT
+14070,Equipements extérieurs,Vitres teintées foncées à l'arrière,NaT,nan,True,NaT
+14070,Equipements intérieurs,Ceintures de sécurité M,NaT,nan,True,NaT
+14070,Equipements intérieurs,Lumière intérieure d'ambiance,NaT,nan,True,NaT
+14070,Equipements intérieurs,Ciel de pavillon M en Anthrazit,NaT,nan,True,NaT
+14070,Equipements intérieurs,Pack rangement,NaT,nan,True,NaT
+14070,Equipements intérieurs,Pack rétroviseurs,NaT,nan,True,NaT
+14070,Equipements intérieurs,"Réglage électrique des sièges avant, avec fonction-mémoire pour siège conducteur",NaT,nan,True,NaT
+14070,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,NaT,nan,True,NaT
+14070,Equipements intérieurs,Sièges chauffants à l'avant,NaT,nan,True,NaT
+14070,Equipements intérieurs,Volant chauffant,NaT,nan,True,NaT
+14070,Equipements intérieurs,Volant M sport,NaT,nan,True,NaT
+14070,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,NaT,nan,True,NaT
+14070,Télécommunication embarquée,Harman/kardon Surround Sound System,NaT,nan,True,NaT
+14070,Télécommunication embarquée,Intelligent Emergency Call - eCall,NaT,nan,True,NaT
+14070,Télécommunication embarquée,Personal eSIM,NaT,nan,True,NaT
+14070,"Transmission, suspension et direction",Attelage de remorque (rabattable électriquement),NaT,nan,True,NaT
+14070,"Transmission, suspension et direction","Freins M Sport, rot",NaT,nan,True,NaT
+14070,"Transmission, suspension et direction",Suspension adaptative M,NaT,nan,True,NaT
+14070,"Transmission, suspension et direction",Variable Sport Steering,NaT,nan,True,NaT
+14070,"Transmission, suspension et direction",Volant M sport,NaT,nan,True,NaT
+14070,Autres.,Code interne,NaT,nan,True,NaT
+1295,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),NaT,nan,True,NaT
+1295,Equipements électriques,Active Cruise Control avec fonction Stop&Go,NaT,nan,True,NaT
+1295,Equipements électriques,Adaptive LED headlights,NaT,nan,True,NaT
+1295,Equipements électriques,Climatisation à réglage électronique,NaT,nan,True,NaT
+1295,Equipements électriques,High Beam Assist,NaT,nan,True,NaT
+1295,Equipements électriques,M Lights Shadow Line,NaT,nan,True,NaT
+1295,Equipements électriques,Parking Assistant Pack,NaT,nan,True,NaT
+1295,Equipements électriques,Système d'alarme,NaT,nan,True,NaT
+1295,Equipements extérieurs,Accès confort,NaT,nan,True,NaT
+1295,Equipements extérieurs,Spoiler arrière M,NaT,nan,True,NaT
+1295,Equipements extérieurs,Kit aérodynamique M,NaT,nan,True,NaT
+1295,Equipements extérieurs,M Shadow Line hochglänzend,NaT,nan,True,NaT
+1295,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,NaT,nan,True,NaT
+1295,Equipements extérieurs,Vitres teintées foncées à l'arrière,NaT,nan,True,NaT
+1295,Equipements intérieurs,Ceintures de sécurité M,NaT,nan,True,NaT
+1295,Equipements intérieurs,Lumière intérieure d'ambiance,NaT,nan,True,NaT
+1295,Equipements intérieurs,Ciel de pavillon M en Anthrazit,NaT,nan,True,NaT
+1295,Equipements intérieurs,Pack rangement,NaT,nan,True,NaT
+1295,Equipements intérieurs,Pack rétroviseurs,NaT,nan,True,NaT
+1295,Equipements intérieurs,"Réglage électrique des sièges avant, avec fonction-mémoire pour siège conducteur",NaT,nan,True,NaT
+1295,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,NaT,nan,True,NaT
+1295,Equipements intérieurs,Sièges chauffants à l'avant,NaT,nan,True,NaT
+1295,Equipements intérieurs,Soutien lombaire à l'avant,NaT,nan,True,NaT
+1295,Equipements intérieurs,Volant M sport,NaT,nan,True,NaT
+1295,Télécommunication embarquée,BMW Live Cockpit Navigation Plus,NaT,nan,True,NaT
+1295,Télécommunication embarquée,Espace de rangement pour Wireless Charging,NaT,nan,True,NaT
+1295,Télécommunication embarquée,Intelligent Emergency Call - eCall,NaT,nan,True,NaT
+1295,Télécommunication embarquée,Personal eSIM,NaT,nan,True,NaT
+1295,"Transmission, suspension et direction","Freins M Sport, rot",NaT,nan,True,NaT
+1295,"Transmission, suspension et direction",Volant M sport,NaT,nan,True,NaT
+1295,Autres.,Code interne,NaT,nan,True,NaT
+38011,Charging,Adaptateur pour prise domestique (type E+F),NaT,nan,True,NaT
+38011,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),NaT,nan,True,NaT
+38011,Charging,Flexible Fast Charger (mode 2),NaT,nan,True,NaT
+38011,Equipements électriques,Adaptive LED headlights,NaT,nan,True,NaT
+38011,Equipements électriques,BMW IconicSounds Electric,NaT,nan,True,NaT
+38011,Equipements électriques,Climatisation à réglage électronique,NaT,nan,True,NaT
+38011,Equipements électriques,Cruise Control,NaT,nan,True,NaT
+38011,Equipements électriques,Driving Assistant Pack,NaT,nan,True,NaT
+38011,Equipements électriques,High Beam Assist,NaT,nan,True,NaT
+38011,Equipements électriques,M Lights Shadow Line,NaT,nan,True,NaT
+38011,Equipements électriques,Parking Assistant Pack Plus,NaT,nan,True,NaT
+38011,Equipements électriques,Système d'alarme,NaT,nan,True,NaT
+38011,Equipements extérieurs,Accès confort,NaT,nan,True,NaT
+38011,Equipements extérieurs,Spoiler arrière M,NaT,nan,True,NaT
+38011,Equipements extérieurs,Kit aérodynamique M,NaT,nan,True,NaT
+38011,Equipements extérieurs,M Shadow Line hochglänzend,NaT,nan,True,NaT
+38011,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,NaT,nan,True,NaT
+38011,Equipements extérieurs,Vitres teintées foncées à l'arrière,NaT,nan,True,NaT
+38011,Equipements intérieurs,Ceintures de sécurité M,NaT,nan,True,NaT
+38011,Equipements intérieurs,Lumière intérieure d'ambiance,NaT,nan,True,NaT
+38011,Equipements intérieurs,Ciel de pavillon M en Anthrazit,NaT,nan,True,NaT
+38011,Equipements intérieurs,Pack rangement,NaT,nan,True,NaT
+38011,Equipements intérieurs,Pack rétroviseurs,NaT,nan,True,NaT
+38011,Equipements intérieurs,Réglage en largeur du dossier pour conducteur,NaT,nan,True,NaT
+38011,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,NaT,nan,True,NaT
+38011,Equipements intérieurs,Sièges chauffants à l'avant,NaT,nan,True,NaT
+38011,Equipements intérieurs,Soutien lombaire à l'avant,NaT,nan,True,NaT
+38011,Equipements intérieurs,Volant M sport,NaT,nan,True,NaT
+38011,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,NaT,nan,True,NaT
+38011,Télécommunication embarquée,Espace de rangement pour Wireless Charging,NaT,nan,True,NaT
+38011,Télécommunication embarquée,Intelligent Emergency Call - eCall,NaT,nan,True,NaT
+38011,Télécommunication embarquée,Personal eSIM,NaT,nan,True,NaT
+38011,Télécommunication embarquée,Système haut-parleurs HiFi,NaT,nan,True,NaT
+38011,"Transmission, suspension et direction","Freins M Sport, rot",NaT,nan,True,NaT
+38011,"Transmission, suspension et direction",Volant M sport,NaT,nan,True,NaT
+38011,Autres.,Code interne,NaT,nan,True,NaT
+9296,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),NaT,nan,True,NaT
+9296,Equipements électriques,Active Cruise Control avec fonction Stop&Go,NaT,nan,True,NaT
+9296,Equipements électriques,Adaptive LED headlights,NaT,nan,True,NaT
+9296,Equipements électriques,Climatisation à réglage électronique,NaT,nan,True,NaT
+9296,Equipements électriques,Driving Assistant Pack,NaT,nan,True,NaT
+9296,Equipements électriques,High Beam Assist,NaT,nan,True,NaT
+9296,Equipements électriques,M Lights Shadow Line,NaT,nan,True,NaT
+9296,Equipements électriques,Parking Assistant Pack Plus,NaT,nan,True,NaT
+9296,Equipements électriques,Système d'alarme,NaT,nan,True,NaT
+9296,Equipements extérieurs,Accès confort,NaT,nan,True,NaT
+9296,Equipements extérieurs,Spoiler arrière M,NaT,nan,True,NaT
+9296,Equipements extérieurs,Kit aérodynamique M,NaT,nan,True,NaT
+9296,Equipements extérieurs,M Shadow Line hochglänzend,NaT,nan,True,NaT
+9296,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,NaT,nan,True,NaT
+9296,Equipements extérieurs,Vitres teintées foncées à l'arrière,NaT,nan,True,NaT
+9296,Equipements intérieurs,Ceintures de sécurité M,NaT,nan,True,NaT
+9296,Equipements intérieurs,Lumière intérieure d'ambiance,NaT,nan,True,NaT
+9296,Equipements intérieurs,Ciel de pavillon M en Anthrazit,NaT,nan,True,NaT
+9296,Equipements intérieurs,Pack rangement,NaT,nan,True,NaT
+9296,Equipements intérieurs,Pack rétroviseurs,NaT,nan,True,NaT
+9296,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,NaT,nan,True,NaT
+9296,Equipements intérieurs,Sièges chauffants à l'avant,NaT,nan,True,NaT
+9296,Equipements intérieurs,Soutien lombaire à l'avant,NaT,nan,True,NaT
+9296,Equipements intérieurs,Volant M sport,NaT,nan,True,NaT
+9296,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,NaT,nan,True,NaT
+9296,Télécommunication embarquée,Espace de rangement pour Wireless Charging,NaT,nan,True,NaT
+9296,Télécommunication embarquée,Harman/kardon Surround Sound System,NaT,nan,True,NaT
+9296,Télécommunication embarquée,Intelligent Emergency Call - eCall,NaT,nan,True,NaT
+9296,Télécommunication embarquée,Personal eSIM,NaT,nan,True,NaT
+9296,"Transmission, suspension et direction",Attelage de remorque (rabattable électriquement),NaT,nan,True,NaT
+9296,"Transmission, suspension et direction","Freins M Sport, rot",NaT,nan,True,NaT
+9296,"Transmission, suspension et direction",Volant M sport,NaT,nan,True,NaT
+9296,Autres.,Code interne,NaT,nan,True,NaT
+95065,Charging,Adaptateur pour prise domestique (type E+F),NaT,nan,True,NaT
+95065,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),NaT,nan,True,NaT
+95065,Charging,Flexible Fast Charger (mode 2),NaT,nan,True,NaT
+95065,Equipements électriques,Adaptive LED headlights,NaT,nan,True,NaT
+95065,Equipements électriques,BMW IconicSounds Electric,NaT,nan,True,NaT
+95065,Equipements électriques,Climatisation à réglage électronique,NaT,nan,True,NaT
+95065,Equipements électriques,Cruise Control,NaT,nan,True,NaT
+95065,Equipements électriques,High Beam Assist,NaT,nan,True,NaT
+95065,Equipements électriques,M Lights Shadow Line,NaT,nan,True,NaT
+95065,Equipements électriques,Parking Assistant Pack,NaT,nan,True,NaT
+95065,Equipements électriques,Système d'alarme,NaT,nan,True,NaT
+95065,Equipements extérieurs,Spoiler arrière M,NaT,nan,True,NaT
+95065,Equipements extérieurs,Kit aérodynamique M,NaT,nan,True,NaT
+95065,Equipements extérieurs,M Shadow Line hochglänzend,NaT,nan,True,NaT
+95065,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,NaT,nan,True,NaT
+95065,Equipements extérieurs,Vitres teintées foncées à l'arrière,NaT,nan,True,NaT
+95065,Equipements intérieurs,Ceintures de sécurité M,NaT,nan,True,NaT
+95065,Equipements intérieurs,Lumière intérieure d'ambiance,NaT,nan,True,NaT
+95065,Equipements intérieurs,Ciel de pavillon M en Anthrazit,NaT,nan,True,NaT
+95065,Equipements intérieurs,Pack rangement,NaT,nan,True,NaT
+95065,Equipements intérieurs,Pack rétroviseurs,NaT,nan,True,NaT
+95065,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,NaT,nan,True,NaT
+95065,Equipements intérieurs,Sièges chauffants à l'avant,NaT,nan,True,NaT
+95065,Equipements intérieurs,Toit ouvrant à commande électrique,NaT,nan,True,NaT
+95065,Equipements intérieurs,Volant chauffant,NaT,nan,True,NaT
+95065,Equipements intérieurs,Volant M sport,NaT,nan,True,NaT
+95065,Télécommunication embarquée,BMW Live Cockpit Navigation Plus,NaT,nan,True,NaT
+95065,Télécommunication embarquée,Harman/kardon Surround Sound System,NaT,nan,True,NaT
+95065,Télécommunication embarquée,Intelligent Emergency Call - eCall,NaT,nan,True,NaT
+95065,Télécommunication embarquée,Personal eSIM,NaT,nan,True,NaT
+95065,"Transmission, suspension et direction",Attelage de remorque (rabattable électriquement),NaT,nan,True,NaT
+95065,"Transmission, suspension et direction","Freins M Sport, rot",NaT,nan,True,NaT
+95065,"Transmission, suspension et direction",Volant M sport,NaT,nan,True,NaT
+95065,Autres.,Code interne,NaT,nan,True,NaT
+95878,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),NaT,nan,True,NaT
+95878,Equipements électriques,Adaptive LED headlights,NaT,nan,True,NaT
+95878,Equipements électriques,BMW IconicSounds Electric,NaT,nan,True,NaT
+95878,Equipements électriques,Climatisation à réglage électronique,NaT,nan,True,NaT
+95878,Equipements électriques,Cruise Control,NaT,nan,True,NaT
+95878,Equipements électriques,Driving Assistant Pack,NaT,nan,True,NaT
+95878,Equipements électriques,High Beam Assist,NaT,nan,True,NaT
+95878,Equipements électriques,M Lights Shadow Line,NaT,nan,True,NaT
+95878,Equipements électriques,Parking Assistant Pack Plus,NaT,nan,True,NaT
+95878,Equipements électriques,Système d'alarme,NaT,nan,True,NaT
+95878,Equipements extérieurs,Accès confort,NaT,nan,True,NaT
+95878,Equipements extérieurs,Spoiler arrière M,NaT,nan,True,NaT
+95878,Equipements extérieurs,Kit aérodynamique M,NaT,nan,True,NaT
+95878,Equipements extérieurs,M Shadow Line hochglänzend,NaT,nan,True,NaT
+95878,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,NaT,nan,True,NaT
+95878,Equipements extérieurs,Vitres teintées foncées à l'arrière,NaT,nan,True,NaT
+95878,Equipements intérieurs,Ceintures de sécurité M,NaT,nan,True,NaT
+95878,Equipements intérieurs,Lumière intérieure d'ambiance,NaT,nan,True,NaT
+95878,Equipements intérieurs,Ciel de pavillon M en Anthrazit,NaT,nan,True,NaT
+95878,Equipements intérieurs,Pack rangement,NaT,nan,True,NaT
+95878,Equipements intérieurs,Pack rétroviseurs,NaT,nan,True,NaT
+95878,Equipements intérieurs,Réglage en largeur du dossier pour conducteur,NaT,nan,True,NaT
+95878,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,NaT,nan,True,NaT
+95878,Equipements intérieurs,Sièges chauffants à l'avant,NaT,nan,True,NaT
+95878,Equipements intérieurs,Soutien lombaire à l'avant,NaT,nan,True,NaT
+95878,Equipements intérieurs,Toit ouvrant à commande électrique,NaT,nan,True,NaT
+95878,Equipements intérieurs,Volant M sport,NaT,nan,True,NaT
+95878,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,NaT,nan,True,NaT
+95878,Télécommunication embarquée,Espace de rangement pour Wireless Charging,NaT,nan,True,NaT
+95878,Télécommunication embarquée,Intelligent Emergency Call - eCall,NaT,nan,True,NaT
+95878,Télécommunication embarquée,Personal eSIM,NaT,nan,True,NaT
+95878,"Transmission, suspension et direction","Freins M Sport, rot",NaT,nan,True,NaT
+95878,"Transmission, suspension et direction",Volant M sport,NaT,nan,True,NaT
+95878,Autres.,Code interne,NaT,nan,True,NaT
+27433,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),NaT,nan,True,NaT
+27433,Equipements électriques,Adaptive LED headlights,NaT,nan,True,NaT
+27433,Equipements électriques,Climatisation à réglage électronique,NaT,nan,True,NaT
+27433,Equipements électriques,Cruise Control,NaT,nan,True,NaT
+27433,Equipements électriques,Driving Assistant Pack,NaT,nan,True,NaT
+27433,Equipements électriques,High Beam Assist,NaT,nan,True,NaT
+27433,Equipements électriques,M Lights Shadow Line,NaT,nan,True,NaT
+27433,Equipements électriques,Parking Assistant Pack Plus,NaT,nan,True,NaT
+27433,Equipements électriques,Système d'alarme,NaT,nan,True,NaT
+27433,Equipements extérieurs,Accès confort,NaT,nan,True,NaT
+27433,Equipements extérieurs,Spoiler arrière M,NaT,nan,True,NaT
+27433,Equipements extérieurs,Kit aérodynamique M,NaT,nan,True,NaT
+27433,Equipements extérieurs,M Shadow Line hochglänzend,NaT,nan,True,NaT
+27433,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,NaT,nan,True,NaT
+27433,Equipements extérieurs,Vitres teintées foncées à l'arrière,NaT,nan,True,NaT
+27433,Equipements intérieurs,Ceintures de sécurité M,NaT,nan,True,NaT
+27433,Equipements intérieurs,Lumière intérieure d'ambiance,NaT,nan,True,NaT
+27433,Equipements intérieurs,Ciel de pavillon M en Anthrazit,NaT,nan,True,NaT
+27433,Equipements intérieurs,Pack rangement,NaT,nan,True,NaT
+27433,Equipements intérieurs,Pack rétroviseurs,NaT,nan,True,NaT
+27433,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,NaT,nan,True,NaT
+27433,Equipements intérieurs,Sièges chauffants à l'avant,NaT,nan,True,NaT
+27433,Equipements intérieurs,Soutien lombaire à l'avant,NaT,nan,True,NaT
+27433,Equipements intérieurs,Toit ouvrant à commande électrique,NaT,nan,True,NaT
+27433,Equipements intérieurs,Volant M sport,NaT,nan,True,NaT
+27433,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,NaT,nan,True,NaT
+27433,Télécommunication embarquée,Espace de rangement pour Wireless Charging,NaT,nan,True,NaT
+27433,Télécommunication embarquée,Harman/kardon Surround Sound System,NaT,nan,True,NaT
+27433,Télécommunication embarquée,Intelligent Emergency Call - eCall,NaT,nan,True,NaT
+27433,Télécommunication embarquée,Personal eSIM,NaT,nan,True,NaT
+27433,"Transmission, suspension et direction","Freins M Sport, rot",NaT,nan,True,NaT
+27433,"Transmission, suspension et direction",Volant M sport,NaT,nan,True,NaT
+27433,Autres.,Code interne,NaT,nan,True,NaT
+5928,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),NaT,nan,True,NaT
+5928,Equipements électriques,Active Cruise Control avec fonction Stop&Go,NaT,nan,True,NaT
+5928,Equipements électriques,Adaptive LED headlights,NaT,nan,True,NaT
+5928,Equipements électriques,Climatisation à réglage électronique,NaT,nan,True,NaT
+5928,Equipements électriques,Driving Assistant Pack,NaT,nan,True,NaT
+5928,Equipements électriques,High Beam Assist,NaT,nan,True,NaT
+5928,Equipements électriques,M Lights Shadow Line,NaT,nan,True,NaT
+5928,Equipements électriques,Parking Assistant Pack Plus,NaT,nan,True,NaT
+5928,Equipements électriques,Système d'alarme,NaT,nan,True,NaT
+5928,Equipements extérieurs,Spoiler arrière M,NaT,nan,True,NaT
+5928,Equipements extérieurs,Kit aérodynamique M,NaT,nan,True,NaT
+5928,Equipements extérieurs,M Shadow Line hochglänzend,NaT,nan,True,NaT
+5928,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,NaT,nan,True,NaT
+5928,Equipements extérieurs,Vitres teintées foncées à l'arrière,NaT,nan,True,NaT
+5928,Equipements intérieurs,Ceintures de sécurité M,NaT,nan,True,NaT
+5928,Equipements intérieurs,Lumière intérieure d'ambiance,NaT,nan,True,NaT
+5928,Equipements intérieurs,Ciel de pavillon M en Anthrazit,NaT,nan,True,NaT
+5928,Equipements intérieurs,Pack rangement,NaT,nan,True,NaT
+5928,Equipements intérieurs,Pack rétroviseurs,NaT,nan,True,NaT
+5928,Equipements intérieurs,"Réglage électrique des sièges avant, avec fonction-mémoire pour siège conducteur",NaT,nan,True,NaT
+5928,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,NaT,nan,True,NaT
+5928,Equipements intérieurs,Sièges chauffants à l'avant,NaT,nan,True,NaT
+5928,Equipements intérieurs,Toit ouvrant à commande électrique,NaT,nan,True,NaT
+5928,Equipements intérieurs,Volant chauffant,NaT,nan,True,NaT
+5928,Equipements intérieurs,Volant M sport,NaT,nan,True,NaT
+5928,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,NaT,nan,True,NaT
+5928,Télécommunication embarquée,Intelligent Emergency Call - eCall,NaT,nan,True,NaT
+5928,Télécommunication embarquée,Personal eSIM,NaT,nan,True,NaT
+5928,Télécommunication embarquée,Système haut-parleurs HiFi,NaT,nan,True,NaT
+5928,"Transmission, suspension et direction",Attelage de remorque (rabattable électriquement),NaT,nan,True,NaT
+5928,"Transmission, suspension et direction","Freins M Sport, rot",NaT,nan,True,NaT
+5928,"Transmission, suspension et direction",Volant M sport,NaT,nan,True,NaT
+5928,Autres.,Code interne,NaT,nan,True,NaT
+95560,Charging,Adaptateur pour prise domestique (type E+F),NaT,nan,True,NaT
+95560,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),NaT,nan,True,NaT
+95560,Charging,Flexible Fast Charger (mode 2),NaT,nan,True,NaT
+95560,Equipements électriques,Active Cruise Control avec fonction Stop&Go,NaT,nan,True,NaT
+95560,Equipements électriques,Adaptive LED headlights,NaT,nan,True,NaT
+95560,Equipements électriques,BMW IconicSounds Electric,NaT,nan,True,NaT
+95560,Equipements électriques,Climatisation à réglage électronique,NaT,nan,True,NaT
+95560,Equipements électriques,Driving Assistant Pack,NaT,nan,True,NaT
+95560,Equipements électriques,High Beam Assist,NaT,nan,True,NaT
+95560,Equipements électriques,M Lights Shadow Line,NaT,nan,True,NaT
+95560,Equipements électriques,Parking Assistant Pack Plus,NaT,nan,True,NaT
+95560,Equipements électriques,Système d'alarme,NaT,nan,True,NaT
+95560,Equipements extérieurs,Accès confort,NaT,nan,True,NaT
+95560,Equipements extérieurs,Spoiler arrière M,NaT,nan,True,NaT
+95560,Equipements extérieurs,Kit aérodynamique M,NaT,nan,True,NaT
+95560,Equipements extérieurs,M Shadow Line hochglänzend,NaT,nan,True,NaT
+95560,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,NaT,nan,True,NaT
+95560,Equipements extérieurs,Vitres teintées foncées à l'arrière,NaT,nan,True,NaT
+95560,Equipements intérieurs,Ceintures de sécurité M,NaT,nan,True,NaT
+95560,Equipements intérieurs,Lumière intérieure d'ambiance,NaT,nan,True,NaT
+95560,Equipements intérieurs,Ciel de pavillon M en Anthrazit,NaT,nan,True,NaT
+95560,Equipements intérieurs,Pack rangement,NaT,nan,True,NaT
+95560,Equipements intérieurs,Pack rétroviseurs,NaT,nan,True,NaT
+95560,Equipements intérieurs,Réglage en largeur du dossier pour conducteur,NaT,nan,True,NaT
+95560,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,NaT,nan,True,NaT
+95560,Equipements intérieurs,Sièges chauffants à l'avant,NaT,nan,True,NaT
+95560,Equipements intérieurs,Soutien lombaire à l'avant,NaT,nan,True,NaT
+95560,Equipements intérieurs,Volant chauffant,NaT,nan,True,NaT
+95560,Equipements intérieurs,Volant M sport,NaT,nan,True,NaT
+95560,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,NaT,nan,True,NaT
+95560,Télécommunication embarquée,Espace de rangement pour Wireless Charging,NaT,nan,True,NaT
+95560,Télécommunication embarquée,Harman/kardon Surround Sound System,NaT,nan,True,NaT
+95560,Télécommunication embarquée,Intelligent Emergency Call - eCall,NaT,nan,True,NaT
+95560,Télécommunication embarquée,Personal eSIM,NaT,nan,True,NaT
+95560,"Transmission, suspension et direction","Freins M Sport, rot",NaT,nan,True,NaT
+95560,"Transmission, suspension et direction",Volant M sport,NaT,nan,True,NaT
+95560,Autres.,Code interne,NaT,nan,True,NaT
+37176,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),NaT,nan,True,NaT
+37176,Equipements électriques,Adaptive LED headlights,NaT,nan,True,NaT
+37176,Equipements électriques,BMW IconicSounds Electric,NaT,nan,True,NaT
+37176,Equipements électriques,Climatisation à réglage électronique,NaT,nan,True,NaT
+37176,Equipements électriques,Cruise Control,NaT,nan,True,NaT
+37176,Equipements électriques,Driving Assistant Pack,NaT,nan,True,NaT
+37176,Equipements électriques,High Beam Assist,NaT,nan,True,NaT
+37176,Equipements électriques,M Lights Shadow Line,NaT,nan,True,NaT
+37176,Equipements électriques,Parking Assistant Pack Plus,NaT,nan,True,NaT
+37176,Equipements électriques,Système d'alarme,NaT,nan,True,NaT
+37176,Equipements extérieurs,Accès confort,NaT,nan,True,NaT
+37176,Equipements extérieurs,Spoiler arrière M,NaT,nan,True,NaT
+37176,Equipements extérieurs,Kit aérodynamique M,NaT,nan,True,NaT
+37176,Equipements extérieurs,M Shadow Line hochglänzend,NaT,nan,True,NaT
+37176,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,NaT,nan,True,NaT
+37176,Equipements extérieurs,Vitres teintées foncées à l'arrière,NaT,nan,True,NaT
+37176,Equipements intérieurs,Ceintures de sécurité M,NaT,nan,True,NaT
+37176,Equipements intérieurs,Eléments intérieur avec finition en cristal 'CraftedClarity',NaT,nan,True,NaT
+37176,Equipements intérieurs,Lumière intérieure d'ambiance,NaT,nan,True,NaT
+37176,Equipements intérieurs,Ciel de pavillon M en Anthrazit,NaT,nan,True,NaT
+37176,Equipements intérieurs,Pack rangement,NaT,nan,True,NaT
+37176,Equipements intérieurs,Pack rétroviseurs,NaT,nan,True,NaT
+37176,Equipements intérieurs,"Réglage électrique des sièges avant, avec fonction-mémoire pour siège conducteur",NaT,nan,True,NaT
+37176,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,NaT,nan,True,NaT
+37176,Equipements intérieurs,Sièges chauffants à l'avant,NaT,nan,True,NaT
+37176,Equipements intérieurs,Soutien lombaire à l'avant,NaT,nan,True,NaT
+37176,Equipements intérieurs,Volant M sport,NaT,nan,True,NaT
+37176,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,NaT,nan,True,NaT
+37176,Télécommunication embarquée,Espace de rangement pour Wireless Charging,NaT,nan,True,NaT
+37176,Télécommunication embarquée,Harman/kardon Surround Sound System,NaT,nan,True,NaT
+37176,Télécommunication embarquée,Intelligent Emergency Call - eCall,NaT,nan,True,NaT
+37176,Télécommunication embarquée,Personal eSIM,NaT,nan,True,NaT
+37176,"Transmission, suspension et direction","Freins M Sport, rot",NaT,nan,True,NaT
+37176,"Transmission, suspension et direction",Volant M sport,NaT,nan,True,NaT
+37176,Autres.,Code interne,NaT,nan,True,NaT
+93924,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),NaT,nan,True,NaT
+93924,Equipements électriques,Active Cruise Control avec fonction Stop&Go,NaT,nan,True,NaT
+93924,Equipements électriques,Adaptive LED headlights,NaT,nan,True,NaT
+93924,Equipements électriques,Climatisation à réglage électronique,NaT,nan,True,NaT
+93924,Equipements électriques,Driving Assistant Pack,NaT,nan,True,NaT
+93924,Equipements électriques,High Beam Assist,NaT,nan,True,NaT
+93924,Equipements électriques,M Lights Shadow Line,NaT,nan,True,NaT
+93924,Equipements électriques,Parking Assistant Pack Plus,NaT,nan,True,NaT
+93924,Equipements électriques,Système d'alarme,NaT,nan,True,NaT
+93924,Equipements extérieurs,Accès confort,NaT,nan,True,NaT
+93924,Equipements extérieurs,Spoiler arrière M,NaT,nan,True,NaT
+93924,Equipements extérieurs,Kit aérodynamique M,NaT,nan,True,NaT
+93924,Equipements extérieurs,M Shadow Line hochglänzend,NaT,nan,True,NaT
+93924,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,NaT,nan,True,NaT
+93924,Equipements extérieurs,Vitres teintées foncées à l'arrière,NaT,nan,True,NaT
+93924,Equipements intérieurs,Ceintures de sécurité M,NaT,nan,True,NaT
+93924,Equipements intérieurs,Lumière intérieure d'ambiance,NaT,nan,True,NaT
+93924,Equipements intérieurs,Ciel de pavillon M en Anthrazit,NaT,nan,True,NaT
+93924,Equipements intérieurs,Pack rangement,NaT,nan,True,NaT
+93924,Equipements intérieurs,Pack rétroviseurs,NaT,nan,True,NaT
+93924,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,NaT,nan,True,NaT
+93924,Equipements intérieurs,Sièges chauffants à l'avant,NaT,nan,True,NaT
+93924,Equipements intérieurs,Soutien lombaire à l'avant,NaT,nan,True,NaT
+93924,Equipements intérieurs,Toit ouvrant à commande électrique,NaT,nan,True,NaT
+93924,Equipements intérieurs,Volant M sport,NaT,nan,True,NaT
+93924,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,NaT,nan,True,NaT
+93924,Télécommunication embarquée,Espace de rangement pour Wireless Charging,NaT,nan,True,NaT
+93924,Télécommunication embarquée,Harman/kardon Surround Sound System,NaT,nan,True,NaT
+93924,Télécommunication embarquée,Intelligent Emergency Call - eCall,NaT,nan,True,NaT
+93924,Télécommunication embarquée,Personal eSIM,NaT,nan,True,NaT
+93924,"Transmission, suspension et direction","Freins M Sport, rot",NaT,nan,True,NaT
+93924,"Transmission, suspension et direction",Volant M sport,NaT,nan,True,NaT
+93924,Autres.,Code interne,NaT,nan,True,NaT
 39582,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-06,None,True,2025-11-06
 39582,Equipements électriques,Active Cruise Control avec fonction Stop&Go,2025-11-06,None,True,2025-11-06
 39582,Equipements électriques,Adaptive LED headlights,2025-11-06,None,True,2025-11-06
@@ -3115,109 +3588,109 @@ car_id,category,equipment_name,valid_from,valid_to,is_latest,scrape_date
 1295,"Transmission, suspension et direction","Freins M Sport, rot",2025-11-06,None,True,2025-11-06
 1295,"Transmission, suspension et direction",Volant M sport,2025-11-06,None,True,2025-11-06
 1295,Autres.,Code interne,2025-11-06,None,True,2025-11-06
-38011,Charging,Adaptateur pour prise domestique (type E+F),2025-11-06,None,True,2025-11-06
-38011,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-06,None,True,2025-11-06
-38011,Charging,Flexible Fast Charger (mode 2),2025-11-06,None,True,2025-11-06
-38011,Equipements électriques,Adaptive LED headlights,2025-11-06,None,True,2025-11-06
-38011,Equipements électriques,BMW IconicSounds Electric,2025-11-06,None,True,2025-11-06
-38011,Equipements électriques,Climatisation à réglage électronique,2025-11-06,None,True,2025-11-06
-38011,Equipements électriques,Cruise Control,2025-11-06,None,True,2025-11-06
-38011,Equipements électriques,Driving Assistant Pack,2025-11-06,None,True,2025-11-06
-38011,Equipements électriques,High Beam Assist,2025-11-06,None,True,2025-11-06
-38011,Equipements électriques,M Lights Shadow Line,2025-11-06,None,True,2025-11-06
-38011,Equipements électriques,Parking Assistant Pack Plus,2025-11-06,None,True,2025-11-06
-38011,Equipements électriques,Système d'alarme,2025-11-06,None,True,2025-11-06
-38011,Equipements extérieurs,Accès confort,2025-11-06,None,True,2025-11-06
-38011,Equipements extérieurs,Spoiler arrière M,2025-11-06,None,True,2025-11-06
-38011,Equipements extérieurs,Kit aérodynamique M,2025-11-06,None,True,2025-11-06
-38011,Equipements extérieurs,M Shadow Line hochglänzend,2025-11-06,None,True,2025-11-06
-38011,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,2025-11-06,None,True,2025-11-06
-38011,Equipements extérieurs,Vitres teintées foncées à l'arrière,2025-11-06,None,True,2025-11-06
-38011,Equipements intérieurs,Ceintures de sécurité M,2025-11-06,None,True,2025-11-06
-38011,Equipements intérieurs,Lumière intérieure d'ambiance,2025-11-06,None,True,2025-11-06
-38011,Equipements intérieurs,Ciel de pavillon M en Anthrazit,2025-11-06,None,True,2025-11-06
-38011,Equipements intérieurs,Pack rangement,2025-11-06,None,True,2025-11-06
-38011,Equipements intérieurs,Pack rétroviseurs,2025-11-06,None,True,2025-11-06
-38011,Equipements intérieurs,Réglage en largeur du dossier pour conducteur,2025-11-06,None,True,2025-11-06
-38011,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,2025-11-06,None,True,2025-11-06
-38011,Equipements intérieurs,Sièges chauffants à l'avant,2025-11-06,None,True,2025-11-06
-38011,Equipements intérieurs,Soutien lombaire à l'avant,2025-11-06,None,True,2025-11-06
-38011,Equipements intérieurs,Volant M sport,2025-11-06,None,True,2025-11-06
-38011,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,2025-11-06,None,True,2025-11-06
-38011,Télécommunication embarquée,Espace de rangement pour Wireless Charging,2025-11-06,None,True,2025-11-06
-38011,Télécommunication embarquée,Intelligent Emergency Call - eCall,2025-11-06,None,True,2025-11-06
-38011,Télécommunication embarquée,Personal eSIM,2025-11-06,None,True,2025-11-06
-38011,Télécommunication embarquée,Système haut-parleurs HiFi,2025-11-06,None,True,2025-11-06
-38011,"Transmission, suspension et direction","Freins M Sport, rot",2025-11-06,None,True,2025-11-06
-38011,"Transmission, suspension et direction",Volant M sport,2025-11-06,None,True,2025-11-06
-38011,Autres.,Code interne,2025-11-06,None,True,2025-11-06
-9296,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-06,None,True,2025-11-06
-9296,Equipements électriques,Active Cruise Control avec fonction Stop&Go,2025-11-06,None,True,2025-11-06
-9296,Equipements électriques,Adaptive LED headlights,2025-11-06,None,True,2025-11-06
-9296,Equipements électriques,Climatisation à réglage électronique,2025-11-06,None,True,2025-11-06
-9296,Equipements électriques,Driving Assistant Pack,2025-11-06,None,True,2025-11-06
-9296,Equipements électriques,High Beam Assist,2025-11-06,None,True,2025-11-06
-9296,Equipements électriques,M Lights Shadow Line,2025-11-06,None,True,2025-11-06
-9296,Equipements électriques,Parking Assistant Pack Plus,2025-11-06,None,True,2025-11-06
-9296,Equipements électriques,Système d'alarme,2025-11-06,None,True,2025-11-06
-9296,Equipements extérieurs,Accès confort,2025-11-06,None,True,2025-11-06
-9296,Equipements extérieurs,Spoiler arrière M,2025-11-06,None,True,2025-11-06
-9296,Equipements extérieurs,Kit aérodynamique M,2025-11-06,None,True,2025-11-06
-9296,Equipements extérieurs,M Shadow Line hochglänzend,2025-11-06,None,True,2025-11-06
-9296,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,2025-11-06,None,True,2025-11-06
-9296,Equipements extérieurs,Vitres teintées foncées à l'arrière,2025-11-06,None,True,2025-11-06
-9296,Equipements intérieurs,Ceintures de sécurité M,2025-11-06,None,True,2025-11-06
-9296,Equipements intérieurs,Lumière intérieure d'ambiance,2025-11-06,None,True,2025-11-06
-9296,Equipements intérieurs,Ciel de pavillon M en Anthrazit,2025-11-06,None,True,2025-11-06
-9296,Equipements intérieurs,Pack rangement,2025-11-06,None,True,2025-11-06
-9296,Equipements intérieurs,Pack rétroviseurs,2025-11-06,None,True,2025-11-06
-9296,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,2025-11-06,None,True,2025-11-06
-9296,Equipements intérieurs,Sièges chauffants à l'avant,2025-11-06,None,True,2025-11-06
-9296,Equipements intérieurs,Soutien lombaire à l'avant,2025-11-06,None,True,2025-11-06
-9296,Equipements intérieurs,Volant M sport,2025-11-06,None,True,2025-11-06
-9296,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,2025-11-06,None,True,2025-11-06
-9296,Télécommunication embarquée,Espace de rangement pour Wireless Charging,2025-11-06,None,True,2025-11-06
-9296,Télécommunication embarquée,Harman/kardon Surround Sound System,2025-11-06,None,True,2025-11-06
-9296,Télécommunication embarquée,Intelligent Emergency Call - eCall,2025-11-06,None,True,2025-11-06
-9296,Télécommunication embarquée,Personal eSIM,2025-11-06,None,True,2025-11-06
-9296,"Transmission, suspension et direction",Attelage de remorque (rabattable électriquement),2025-11-06,None,True,2025-11-06
-9296,"Transmission, suspension et direction","Freins M Sport, rot",2025-11-06,None,True,2025-11-06
-9296,"Transmission, suspension et direction",Volant M sport,2025-11-06,None,True,2025-11-06
-9296,Autres.,Code interne,2025-11-06,None,True,2025-11-06
-95065,Charging,Adaptateur pour prise domestique (type E+F),2025-11-06,None,True,2025-11-06
-95065,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-06,None,True,2025-11-06
-95065,Charging,Flexible Fast Charger (mode 2),2025-11-06,None,True,2025-11-06
-95065,Equipements électriques,Adaptive LED headlights,2025-11-06,None,True,2025-11-06
-95065,Equipements électriques,BMW IconicSounds Electric,2025-11-06,None,True,2025-11-06
-95065,Equipements électriques,Climatisation à réglage électronique,2025-11-06,None,True,2025-11-06
-95065,Equipements électriques,Cruise Control,2025-11-06,None,True,2025-11-06
-95065,Equipements électriques,High Beam Assist,2025-11-06,None,True,2025-11-06
-95065,Equipements électriques,M Lights Shadow Line,2025-11-06,None,True,2025-11-06
-95065,Equipements électriques,Parking Assistant Pack,2025-11-06,None,True,2025-11-06
-95065,Equipements électriques,Système d'alarme,2025-11-06,None,True,2025-11-06
-95065,Equipements extérieurs,Spoiler arrière M,2025-11-06,None,True,2025-11-06
-95065,Equipements extérieurs,Kit aérodynamique M,2025-11-06,None,True,2025-11-06
-95065,Equipements extérieurs,M Shadow Line hochglänzend,2025-11-06,None,True,2025-11-06
-95065,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,2025-11-06,None,True,2025-11-06
-95065,Equipements extérieurs,Vitres teintées foncées à l'arrière,2025-11-06,None,True,2025-11-06
-95065,Equipements intérieurs,Ceintures de sécurité M,2025-11-06,None,True,2025-11-06
-95065,Equipements intérieurs,Lumière intérieure d'ambiance,2025-11-06,None,True,2025-11-06
-95065,Equipements intérieurs,Ciel de pavillon M en Anthrazit,2025-11-06,None,True,2025-11-06
-95065,Equipements intérieurs,Pack rangement,2025-11-06,None,True,2025-11-06
-95065,Equipements intérieurs,Pack rétroviseurs,2025-11-06,None,True,2025-11-06
-95065,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,2025-11-06,None,True,2025-11-06
-95065,Equipements intérieurs,Sièges chauffants à l'avant,2025-11-06,None,True,2025-11-06
-95065,Equipements intérieurs,Toit ouvrant à commande électrique,2025-11-06,None,True,2025-11-06
-95065,Equipements intérieurs,Volant chauffant,2025-11-06,None,True,2025-11-06
-95065,Equipements intérieurs,Volant M sport,2025-11-06,None,True,2025-11-06
-95065,Télécommunication embarquée,BMW Live Cockpit Navigation Plus,2025-11-06,None,True,2025-11-06
-95065,Télécommunication embarquée,Harman/kardon Surround Sound System,2025-11-06,None,True,2025-11-06
-95065,Télécommunication embarquée,Intelligent Emergency Call - eCall,2025-11-06,None,True,2025-11-06
-95065,Télécommunication embarquée,Personal eSIM,2025-11-06,None,True,2025-11-06
-95065,"Transmission, suspension et direction",Attelage de remorque (rabattable électriquement),2025-11-06,None,True,2025-11-06
-95065,"Transmission, suspension et direction","Freins M Sport, rot",2025-11-06,None,True,2025-11-06
-95065,"Transmission, suspension et direction",Volant M sport,2025-11-06,None,True,2025-11-06
-95065,Autres.,Code interne,2025-11-06,None,True,2025-11-06
+38011,Charging,Adaptateur pour prise domestique (type E+F),2025-11-06T00:00:00,None,True,2025-11-06
+38011,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-06T00:00:00,None,True,2025-11-06
+38011,Charging,Flexible Fast Charger (mode 2),2025-11-06T00:00:00,None,True,2025-11-06
+38011,Equipements électriques,Adaptive LED headlights,2025-11-06T00:00:00,None,True,2025-11-06
+38011,Equipements électriques,BMW IconicSounds Electric,2025-11-06T00:00:00,None,True,2025-11-06
+38011,Equipements électriques,Climatisation à réglage électronique,2025-11-06T00:00:00,None,True,2025-11-06
+38011,Equipements électriques,Cruise Control,2025-11-06T00:00:00,None,True,2025-11-06
+38011,Equipements électriques,Driving Assistant Pack,2025-11-06T00:00:00,None,True,2025-11-06
+38011,Equipements électriques,High Beam Assist,2025-11-06T00:00:00,None,True,2025-11-06
+38011,Equipements électriques,M Lights Shadow Line,2025-11-06T00:00:00,None,True,2025-11-06
+38011,Equipements électriques,Parking Assistant Pack Plus,2025-11-06T00:00:00,None,True,2025-11-06
+38011,Equipements électriques,Système d'alarme,2025-11-06T00:00:00,None,True,2025-11-06
+38011,Equipements extérieurs,Accès confort,2025-11-06T00:00:00,None,True,2025-11-06
+38011,Equipements extérieurs,Spoiler arrière M,2025-11-06T00:00:00,None,True,2025-11-06
+38011,Equipements extérieurs,Kit aérodynamique M,2025-11-06T00:00:00,None,True,2025-11-06
+38011,Equipements extérieurs,M Shadow Line hochglänzend,2025-11-06T00:00:00,None,True,2025-11-06
+38011,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,2025-11-06T00:00:00,None,True,2025-11-06
+38011,Equipements extérieurs,Vitres teintées foncées à l'arrière,2025-11-06T00:00:00,None,True,2025-11-06
+38011,Equipements intérieurs,Ceintures de sécurité M,2025-11-06T00:00:00,None,True,2025-11-06
+38011,Equipements intérieurs,Lumière intérieure d'ambiance,2025-11-06T00:00:00,None,True,2025-11-06
+38011,Equipements intérieurs,Ciel de pavillon M en Anthrazit,2025-11-06T00:00:00,None,True,2025-11-06
+38011,Equipements intérieurs,Pack rangement,2025-11-06T00:00:00,None,True,2025-11-06
+38011,Equipements intérieurs,Pack rétroviseurs,2025-11-06T00:00:00,None,True,2025-11-06
+38011,Equipements intérieurs,Réglage en largeur du dossier pour conducteur,2025-11-06T00:00:00,None,True,2025-11-06
+38011,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,2025-11-06T00:00:00,None,True,2025-11-06
+38011,Equipements intérieurs,Sièges chauffants à l'avant,2025-11-06T00:00:00,None,True,2025-11-06
+38011,Equipements intérieurs,Soutien lombaire à l'avant,2025-11-06T00:00:00,None,True,2025-11-06
+38011,Equipements intérieurs,Volant M sport,2025-11-06T00:00:00,None,True,2025-11-06
+38011,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,2025-11-06T00:00:00,None,True,2025-11-06
+38011,Télécommunication embarquée,Espace de rangement pour Wireless Charging,2025-11-06T00:00:00,None,True,2025-11-06
+38011,Télécommunication embarquée,Intelligent Emergency Call - eCall,2025-11-06T00:00:00,None,True,2025-11-06
+38011,Télécommunication embarquée,Personal eSIM,2025-11-06T00:00:00,None,True,2025-11-06
+38011,Télécommunication embarquée,Système haut-parleurs HiFi,2025-11-06T00:00:00,None,True,2025-11-06
+38011,"Transmission, suspension et direction","Freins M Sport, rot",2025-11-06T00:00:00,None,True,2025-11-06
+38011,"Transmission, suspension et direction",Volant M sport,2025-11-06T00:00:00,None,True,2025-11-06
+38011,Autres.,Code interne,2025-11-06T00:00:00,None,True,2025-11-06
+9296,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-06T00:00:00,None,True,2025-11-06
+9296,Equipements électriques,Active Cruise Control avec fonction Stop&Go,2025-11-06T00:00:00,None,True,2025-11-06
+9296,Equipements électriques,Adaptive LED headlights,2025-11-06T00:00:00,None,True,2025-11-06
+9296,Equipements électriques,Climatisation à réglage électronique,2025-11-06T00:00:00,None,True,2025-11-06
+9296,Equipements électriques,Driving Assistant Pack,2025-11-06T00:00:00,None,True,2025-11-06
+9296,Equipements électriques,High Beam Assist,2025-11-06T00:00:00,None,True,2025-11-06
+9296,Equipements électriques,M Lights Shadow Line,2025-11-06T00:00:00,None,True,2025-11-06
+9296,Equipements électriques,Parking Assistant Pack Plus,2025-11-06T00:00:00,None,True,2025-11-06
+9296,Equipements électriques,Système d'alarme,2025-11-06T00:00:00,None,True,2025-11-06
+9296,Equipements extérieurs,Accès confort,2025-11-06T00:00:00,None,True,2025-11-06
+9296,Equipements extérieurs,Spoiler arrière M,2025-11-06T00:00:00,None,True,2025-11-06
+9296,Equipements extérieurs,Kit aérodynamique M,2025-11-06T00:00:00,None,True,2025-11-06
+9296,Equipements extérieurs,M Shadow Line hochglänzend,2025-11-06T00:00:00,None,True,2025-11-06
+9296,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,2025-11-06T00:00:00,None,True,2025-11-06
+9296,Equipements extérieurs,Vitres teintées foncées à l'arrière,2025-11-06T00:00:00,None,True,2025-11-06
+9296,Equipements intérieurs,Ceintures de sécurité M,2025-11-06T00:00:00,None,True,2025-11-06
+9296,Equipements intérieurs,Lumière intérieure d'ambiance,2025-11-06T00:00:00,None,True,2025-11-06
+9296,Equipements intérieurs,Ciel de pavillon M en Anthrazit,2025-11-06T00:00:00,None,True,2025-11-06
+9296,Equipements intérieurs,Pack rangement,2025-11-06T00:00:00,None,True,2025-11-06
+9296,Equipements intérieurs,Pack rétroviseurs,2025-11-06T00:00:00,None,True,2025-11-06
+9296,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,2025-11-06T00:00:00,None,True,2025-11-06
+9296,Equipements intérieurs,Sièges chauffants à l'avant,2025-11-06T00:00:00,None,True,2025-11-06
+9296,Equipements intérieurs,Soutien lombaire à l'avant,2025-11-06T00:00:00,None,True,2025-11-06
+9296,Equipements intérieurs,Volant M sport,2025-11-06T00:00:00,None,True,2025-11-06
+9296,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,2025-11-06T00:00:00,None,True,2025-11-06
+9296,Télécommunication embarquée,Espace de rangement pour Wireless Charging,2025-11-06T00:00:00,None,True,2025-11-06
+9296,Télécommunication embarquée,Harman/kardon Surround Sound System,2025-11-06T00:00:00,None,True,2025-11-06
+9296,Télécommunication embarquée,Intelligent Emergency Call - eCall,2025-11-06T00:00:00,None,True,2025-11-06
+9296,Télécommunication embarquée,Personal eSIM,2025-11-06T00:00:00,None,True,2025-11-06
+9296,"Transmission, suspension et direction",Attelage de remorque (rabattable électriquement),2025-11-06T00:00:00,None,True,2025-11-06
+9296,"Transmission, suspension et direction","Freins M Sport, rot",2025-11-06T00:00:00,None,True,2025-11-06
+9296,"Transmission, suspension et direction",Volant M sport,2025-11-06T00:00:00,None,True,2025-11-06
+9296,Autres.,Code interne,2025-11-06T00:00:00,None,True,2025-11-06
+95065,Charging,Adaptateur pour prise domestique (type E+F),2025-11-06T00:00:00,None,True,2025-11-06
+95065,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-06T00:00:00,None,True,2025-11-06
+95065,Charging,Flexible Fast Charger (mode 2),2025-11-06T00:00:00,None,True,2025-11-06
+95065,Equipements électriques,Adaptive LED headlights,2025-11-06T00:00:00,None,True,2025-11-06
+95065,Equipements électriques,BMW IconicSounds Electric,2025-11-06T00:00:00,None,True,2025-11-06
+95065,Equipements électriques,Climatisation à réglage électronique,2025-11-06T00:00:00,None,True,2025-11-06
+95065,Equipements électriques,Cruise Control,2025-11-06T00:00:00,None,True,2025-11-06
+95065,Equipements électriques,High Beam Assist,2025-11-06T00:00:00,None,True,2025-11-06
+95065,Equipements électriques,M Lights Shadow Line,2025-11-06T00:00:00,None,True,2025-11-06
+95065,Equipements électriques,Parking Assistant Pack,2025-11-06T00:00:00,None,True,2025-11-06
+95065,Equipements électriques,Système d'alarme,2025-11-06T00:00:00,None,True,2025-11-06
+95065,Equipements extérieurs,Spoiler arrière M,2025-11-06T00:00:00,None,True,2025-11-06
+95065,Equipements extérieurs,Kit aérodynamique M,2025-11-06T00:00:00,None,True,2025-11-06
+95065,Equipements extérieurs,M Shadow Line hochglänzend,2025-11-06T00:00:00,None,True,2025-11-06
+95065,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,2025-11-06T00:00:00,None,True,2025-11-06
+95065,Equipements extérieurs,Vitres teintées foncées à l'arrière,2025-11-06T00:00:00,None,True,2025-11-06
+95065,Equipements intérieurs,Ceintures de sécurité M,2025-11-06T00:00:00,None,True,2025-11-06
+95065,Equipements intérieurs,Lumière intérieure d'ambiance,2025-11-06T00:00:00,None,True,2025-11-06
+95065,Equipements intérieurs,Ciel de pavillon M en Anthrazit,2025-11-06T00:00:00,None,True,2025-11-06
+95065,Equipements intérieurs,Pack rangement,2025-11-06T00:00:00,None,True,2025-11-06
+95065,Equipements intérieurs,Pack rétroviseurs,2025-11-06T00:00:00,None,True,2025-11-06
+95065,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,2025-11-06T00:00:00,None,True,2025-11-06
+95065,Equipements intérieurs,Sièges chauffants à l'avant,2025-11-06T00:00:00,None,True,2025-11-06
+95065,Equipements intérieurs,Toit ouvrant à commande électrique,2025-11-06T00:00:00,None,True,2025-11-06
+95065,Equipements intérieurs,Volant chauffant,2025-11-06T00:00:00,None,True,2025-11-06
+95065,Equipements intérieurs,Volant M sport,2025-11-06T00:00:00,None,True,2025-11-06
+95065,Télécommunication embarquée,BMW Live Cockpit Navigation Plus,2025-11-06T00:00:00,None,True,2025-11-06
+95065,Télécommunication embarquée,Harman/kardon Surround Sound System,2025-11-06T00:00:00,None,True,2025-11-06
+95065,Télécommunication embarquée,Intelligent Emergency Call - eCall,2025-11-06T00:00:00,None,True,2025-11-06
+95065,Télécommunication embarquée,Personal eSIM,2025-11-06T00:00:00,None,True,2025-11-06
+95065,"Transmission, suspension et direction",Attelage de remorque (rabattable électriquement),2025-11-06T00:00:00,None,True,2025-11-06
+95065,"Transmission, suspension et direction","Freins M Sport, rot",2025-11-06T00:00:00,None,True,2025-11-06
+95065,"Transmission, suspension et direction",Volant M sport,2025-11-06T00:00:00,None,True,2025-11-06
+95065,Autres.,Code interne,2025-11-06T00:00:00,None,True,2025-11-06
 95878,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-06,None,True,2025-11-06
 95878,Equipements électriques,Adaptive LED headlights,2025-11-06,None,True,2025-11-06
 95878,Equipements électriques,BMW IconicSounds Electric,2025-11-06,None,True,2025-11-06
@@ -3355,71 +3828,71 @@ car_id,category,equipment_name,valid_from,valid_to,is_latest,scrape_date
 95560,"Transmission, suspension et direction","Freins M Sport, rot",2025-11-06,None,True,2025-11-06
 95560,"Transmission, suspension et direction",Volant M sport,2025-11-06,None,True,2025-11-06
 95560,Autres.,Code interne,2025-11-06,None,True,2025-11-06
-37176,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-06,None,True,2025-11-06
-37176,Equipements électriques,Adaptive LED headlights,2025-11-06,None,True,2025-11-06
-37176,Equipements électriques,BMW IconicSounds Electric,2025-11-06,None,True,2025-11-06
-37176,Equipements électriques,Climatisation à réglage électronique,2025-11-06,None,True,2025-11-06
-37176,Equipements électriques,Cruise Control,2025-11-06,None,True,2025-11-06
-37176,Equipements électriques,Driving Assistant Pack,2025-11-06,None,True,2025-11-06
-37176,Equipements électriques,High Beam Assist,2025-11-06,None,True,2025-11-06
-37176,Equipements électriques,M Lights Shadow Line,2025-11-06,None,True,2025-11-06
-37176,Equipements électriques,Parking Assistant Pack Plus,2025-11-06,None,True,2025-11-06
-37176,Equipements électriques,Système d'alarme,2025-11-06,None,True,2025-11-06
-37176,Equipements extérieurs,Accès confort,2025-11-06,None,True,2025-11-06
-37176,Equipements extérieurs,Spoiler arrière M,2025-11-06,None,True,2025-11-06
-37176,Equipements extérieurs,Kit aérodynamique M,2025-11-06,None,True,2025-11-06
-37176,Equipements extérieurs,M Shadow Line hochglänzend,2025-11-06,None,True,2025-11-06
-37176,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,2025-11-06,None,True,2025-11-06
-37176,Equipements extérieurs,Vitres teintées foncées à l'arrière,2025-11-06,None,True,2025-11-06
-37176,Equipements intérieurs,Ceintures de sécurité M,2025-11-06,None,True,2025-11-06
-37176,Equipements intérieurs,Eléments intérieur avec finition en cristal 'CraftedClarity',2025-11-06,None,True,2025-11-06
-37176,Equipements intérieurs,Lumière intérieure d'ambiance,2025-11-06,None,True,2025-11-06
-37176,Equipements intérieurs,Ciel de pavillon M en Anthrazit,2025-11-06,None,True,2025-11-06
-37176,Equipements intérieurs,Pack rangement,2025-11-06,None,True,2025-11-06
-37176,Equipements intérieurs,Pack rétroviseurs,2025-11-06,None,True,2025-11-06
-37176,Equipements intérieurs,"Réglage électrique des sièges avant, avec fonction-mémoire pour siège conducteur",2025-11-06,None,True,2025-11-06
-37176,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,2025-11-06,None,True,2025-11-06
-37176,Equipements intérieurs,Sièges chauffants à l'avant,2025-11-06,None,True,2025-11-06
-37176,Equipements intérieurs,Soutien lombaire à l'avant,2025-11-06,None,True,2025-11-06
-37176,Equipements intérieurs,Volant M sport,2025-11-06,None,True,2025-11-06
-37176,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,2025-11-06,None,True,2025-11-06
-37176,Télécommunication embarquée,Espace de rangement pour Wireless Charging,2025-11-06,None,True,2025-11-06
-37176,Télécommunication embarquée,Harman/kardon Surround Sound System,2025-11-06,None,True,2025-11-06
-37176,Télécommunication embarquée,Intelligent Emergency Call - eCall,2025-11-06,None,True,2025-11-06
-37176,Télécommunication embarquée,Personal eSIM,2025-11-06,None,True,2025-11-06
-37176,"Transmission, suspension et direction","Freins M Sport, rot",2025-11-06,None,True,2025-11-06
-37176,"Transmission, suspension et direction",Volant M sport,2025-11-06,None,True,2025-11-06
-37176,Autres.,Code interne,2025-11-06,None,True,2025-11-06
-93924,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-06,None,True,2025-11-06
-93924,Equipements électriques,Active Cruise Control avec fonction Stop&Go,2025-11-06,None,True,2025-11-06
-93924,Equipements électriques,Adaptive LED headlights,2025-11-06,None,True,2025-11-06
-93924,Equipements électriques,Climatisation à réglage électronique,2025-11-06,None,True,2025-11-06
-93924,Equipements électriques,Driving Assistant Pack,2025-11-06,None,True,2025-11-06
-93924,Equipements électriques,High Beam Assist,2025-11-06,None,True,2025-11-06
-93924,Equipements électriques,M Lights Shadow Line,2025-11-06,None,True,2025-11-06
-93924,Equipements électriques,Parking Assistant Pack Plus,2025-11-06,None,True,2025-11-06
-93924,Equipements électriques,Système d'alarme,2025-11-06,None,True,2025-11-06
-93924,Equipements extérieurs,Accès confort,2025-11-06,None,True,2025-11-06
-93924,Equipements extérieurs,Spoiler arrière M,2025-11-06,None,True,2025-11-06
-93924,Equipements extérieurs,Kit aérodynamique M,2025-11-06,None,True,2025-11-06
-93924,Equipements extérieurs,M Shadow Line hochglänzend,2025-11-06,None,True,2025-11-06
-93924,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,2025-11-06,None,True,2025-11-06
-93924,Equipements extérieurs,Vitres teintées foncées à l'arrière,2025-11-06,None,True,2025-11-06
-93924,Equipements intérieurs,Ceintures de sécurité M,2025-11-06,None,True,2025-11-06
-93924,Equipements intérieurs,Lumière intérieure d'ambiance,2025-11-06,None,True,2025-11-06
-93924,Equipements intérieurs,Ciel de pavillon M en Anthrazit,2025-11-06,None,True,2025-11-06
-93924,Equipements intérieurs,Pack rangement,2025-11-06,None,True,2025-11-06
-93924,Equipements intérieurs,Pack rétroviseurs,2025-11-06,None,True,2025-11-06
-93924,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,2025-11-06,None,True,2025-11-06
-93924,Equipements intérieurs,Sièges chauffants à l'avant,2025-11-06,None,True,2025-11-06
-93924,Equipements intérieurs,Soutien lombaire à l'avant,2025-11-06,None,True,2025-11-06
-93924,Equipements intérieurs,Toit ouvrant à commande électrique,2025-11-06,None,True,2025-11-06
-93924,Equipements intérieurs,Volant M sport,2025-11-06,None,True,2025-11-06
-93924,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,2025-11-06,None,True,2025-11-06
-93924,Télécommunication embarquée,Espace de rangement pour Wireless Charging,2025-11-06,None,True,2025-11-06
-93924,Télécommunication embarquée,Harman/kardon Surround Sound System,2025-11-06,None,True,2025-11-06
-93924,Télécommunication embarquée,Intelligent Emergency Call - eCall,2025-11-06,None,True,2025-11-06
-93924,Télécommunication embarquée,Personal eSIM,2025-11-06,None,True,2025-11-06
-93924,"Transmission, suspension et direction","Freins M Sport, rot",2025-11-06,None,True,2025-11-06
-93924,"Transmission, suspension et direction",Volant M sport,2025-11-06,None,True,2025-11-06
-93924,Autres.,Code interne,2025-11-06,None,True,2025-11-06
+37176,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-06T00:00:00,None,True,2025-11-06
+37176,Equipements électriques,Adaptive LED headlights,2025-11-06T00:00:00,None,True,2025-11-06
+37176,Equipements électriques,BMW IconicSounds Electric,2025-11-06T00:00:00,None,True,2025-11-06
+37176,Equipements électriques,Climatisation à réglage électronique,2025-11-06T00:00:00,None,True,2025-11-06
+37176,Equipements électriques,Cruise Control,2025-11-06T00:00:00,None,True,2025-11-06
+37176,Equipements électriques,Driving Assistant Pack,2025-11-06T00:00:00,None,True,2025-11-06
+37176,Equipements électriques,High Beam Assist,2025-11-06T00:00:00,None,True,2025-11-06
+37176,Equipements électriques,M Lights Shadow Line,2025-11-06T00:00:00,None,True,2025-11-06
+37176,Equipements électriques,Parking Assistant Pack Plus,2025-11-06T00:00:00,None,True,2025-11-06
+37176,Equipements électriques,Système d'alarme,2025-11-06T00:00:00,None,True,2025-11-06
+37176,Equipements extérieurs,Accès confort,2025-11-06T00:00:00,None,True,2025-11-06
+37176,Equipements extérieurs,Spoiler arrière M,2025-11-06T00:00:00,None,True,2025-11-06
+37176,Equipements extérieurs,Kit aérodynamique M,2025-11-06T00:00:00,None,True,2025-11-06
+37176,Equipements extérieurs,M Shadow Line hochglänzend,2025-11-06T00:00:00,None,True,2025-11-06
+37176,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,2025-11-06T00:00:00,None,True,2025-11-06
+37176,Equipements extérieurs,Vitres teintées foncées à l'arrière,2025-11-06T00:00:00,None,True,2025-11-06
+37176,Equipements intérieurs,Ceintures de sécurité M,2025-11-06T00:00:00,None,True,2025-11-06
+37176,Equipements intérieurs,Eléments intérieur avec finition en cristal 'CraftedClarity',2025-11-06T00:00:00,None,True,2025-11-06
+37176,Equipements intérieurs,Lumière intérieure d'ambiance,2025-11-06T00:00:00,None,True,2025-11-06
+37176,Equipements intérieurs,Ciel de pavillon M en Anthrazit,2025-11-06T00:00:00,None,True,2025-11-06
+37176,Equipements intérieurs,Pack rangement,2025-11-06T00:00:00,None,True,2025-11-06
+37176,Equipements intérieurs,Pack rétroviseurs,2025-11-06T00:00:00,None,True,2025-11-06
+37176,Equipements intérieurs,"Réglage électrique des sièges avant, avec fonction-mémoire pour siège conducteur",2025-11-06T00:00:00,None,True,2025-11-06
+37176,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,2025-11-06T00:00:00,None,True,2025-11-06
+37176,Equipements intérieurs,Sièges chauffants à l'avant,2025-11-06T00:00:00,None,True,2025-11-06
+37176,Equipements intérieurs,Soutien lombaire à l'avant,2025-11-06T00:00:00,None,True,2025-11-06
+37176,Equipements intérieurs,Volant M sport,2025-11-06T00:00:00,None,True,2025-11-06
+37176,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,2025-11-06T00:00:00,None,True,2025-11-06
+37176,Télécommunication embarquée,Espace de rangement pour Wireless Charging,2025-11-06T00:00:00,None,True,2025-11-06
+37176,Télécommunication embarquée,Harman/kardon Surround Sound System,2025-11-06T00:00:00,None,True,2025-11-06
+37176,Télécommunication embarquée,Intelligent Emergency Call - eCall,2025-11-06T00:00:00,None,True,2025-11-06
+37176,Télécommunication embarquée,Personal eSIM,2025-11-06T00:00:00,None,True,2025-11-06
+37176,"Transmission, suspension et direction","Freins M Sport, rot",2025-11-06T00:00:00,None,True,2025-11-06
+37176,"Transmission, suspension et direction",Volant M sport,2025-11-06T00:00:00,None,True,2025-11-06
+37176,Autres.,Code interne,2025-11-06T00:00:00,None,True,2025-11-06
+93924,Charging,Câble de recharge rapide jusqu'à 22kW (Mode 3),2025-11-06T00:00:00,None,True,2025-11-06
+93924,Equipements électriques,Active Cruise Control avec fonction Stop&Go,2025-11-06T00:00:00,None,True,2025-11-06
+93924,Equipements électriques,Adaptive LED headlights,2025-11-06T00:00:00,None,True,2025-11-06
+93924,Equipements électriques,Climatisation à réglage électronique,2025-11-06T00:00:00,None,True,2025-11-06
+93924,Equipements électriques,Driving Assistant Pack,2025-11-06T00:00:00,None,True,2025-11-06
+93924,Equipements électriques,High Beam Assist,2025-11-06T00:00:00,None,True,2025-11-06
+93924,Equipements électriques,M Lights Shadow Line,2025-11-06T00:00:00,None,True,2025-11-06
+93924,Equipements électriques,Parking Assistant Pack Plus,2025-11-06T00:00:00,None,True,2025-11-06
+93924,Equipements électriques,Système d'alarme,2025-11-06T00:00:00,None,True,2025-11-06
+93924,Equipements extérieurs,Accès confort,2025-11-06T00:00:00,None,True,2025-11-06
+93924,Equipements extérieurs,Spoiler arrière M,2025-11-06T00:00:00,None,True,2025-11-06
+93924,Equipements extérieurs,Kit aérodynamique M,2025-11-06T00:00:00,None,True,2025-11-06
+93924,Equipements extérieurs,M Shadow Line hochglänzend,2025-11-06T00:00:00,None,True,2025-11-06
+93924,Equipements extérieurs,M Shadow Line hochglänzend avec éléments supplémentaires,2025-11-06T00:00:00,None,True,2025-11-06
+93924,Equipements extérieurs,Vitres teintées foncées à l'arrière,2025-11-06T00:00:00,None,True,2025-11-06
+93924,Equipements intérieurs,Ceintures de sécurité M,2025-11-06T00:00:00,None,True,2025-11-06
+93924,Equipements intérieurs,Lumière intérieure d'ambiance,2025-11-06T00:00:00,None,True,2025-11-06
+93924,Equipements intérieurs,Ciel de pavillon M en Anthrazit,2025-11-06T00:00:00,None,True,2025-11-06
+93924,Equipements intérieurs,Pack rangement,2025-11-06T00:00:00,None,True,2025-11-06
+93924,Equipements intérieurs,Pack rétroviseurs,2025-11-06T00:00:00,None,True,2025-11-06
+93924,Equipements intérieurs,Rétroviseur intérieur anti-éblouissement automatique,2025-11-06T00:00:00,None,True,2025-11-06
+93924,Equipements intérieurs,Sièges chauffants à l'avant,2025-11-06T00:00:00,None,True,2025-11-06
+93924,Equipements intérieurs,Soutien lombaire à l'avant,2025-11-06T00:00:00,None,True,2025-11-06
+93924,Equipements intérieurs,Toit ouvrant à commande électrique,2025-11-06T00:00:00,None,True,2025-11-06
+93924,Equipements intérieurs,Volant M sport,2025-11-06T00:00:00,None,True,2025-11-06
+93924,Télécommunication embarquée,BMW Live Cockpit Navigation Professional avec Head-Up Display,2025-11-06T00:00:00,None,True,2025-11-06
+93924,Télécommunication embarquée,Espace de rangement pour Wireless Charging,2025-11-06T00:00:00,None,True,2025-11-06
+93924,Télécommunication embarquée,Harman/kardon Surround Sound System,2025-11-06T00:00:00,None,True,2025-11-06
+93924,Télécommunication embarquée,Intelligent Emergency Call - eCall,2025-11-06T00:00:00,None,True,2025-11-06
+93924,Télécommunication embarquée,Personal eSIM,2025-11-06T00:00:00,None,True,2025-11-06
+93924,"Transmission, suspension et direction","Freins M Sport, rot",2025-11-06T00:00:00,None,True,2025-11-06
+93924,"Transmission, suspension et direction",Volant M sport,2025-11-06T00:00:00,None,True,2025-11-06
+93924,Autres.,Code interne,2025-11-06T00:00:00,None,True,2025-11-06

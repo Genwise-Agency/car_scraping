@@ -6,7 +6,6 @@ Scrapes BMW inventory, processes data with scoring metrics, and syncs to Supabas
 
 import logging
 import os
-import sys
 from datetime import datetime
 
 import pandas as pd
@@ -75,6 +74,12 @@ def main(url: str = None, test_limit: int = None, sync_db: bool = False):
     logger.info("\n[STEP 2/6] Processing and scoring data...")
     try:
         df = pd.DataFrame(all_cars_data)
+
+        # Handle empty DataFrame (no cars found)
+        if df.empty:
+            logger.warning("⚠ No cars found during scraping. Skipping data processing.")
+            logger.info("✓ Pipeline completed (no data to process)")
+            return
 
         # Reorder columns
         column_order = [

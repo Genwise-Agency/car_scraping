@@ -50,7 +50,7 @@ jobs:
                   import sys
                   sys.path.insert(0, 'src')
                   from bmw.main import main
-                  main(sync_db=True)
+                  main(url=None, sync_db=True)
                   "
 
             - name: Upload results as artifacts
