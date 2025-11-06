@@ -205,23 +205,52 @@ def scrape_bmw_inventory(url, max_links=None):
             accept_button.wait_for(state='visible', timeout=BROWSER_TIMEOUT)
             logger.info("      ✓ Cookies popup found, accepting...")
             accept_button.click()
-            # Wait for page to load after accepting cookies
+            # Wait for page to reload/update after accepting cookies
             page.wait_for_timeout(2000)
+            # Wait for network to be idle again after cookie acceptance
+            try:
+                page.wait_for_load_state('networkidle', timeout=10000)
+            except Exception:
+                pass  # Continue if networkidle times out
+            page.wait_for_timeout(3000)
             logger.info("      ✓ Cookies accepted, page loaded")
         except Exception as e:
             logger.warning(f"      ⚠ Cookies popup not found or already accepted: {e}")
             # Wait a bit for page to stabilize
-            page.wait_for_timeout(3000)
+            page.wait_for_timeout(5000)
+            # Ensure page is fully loaded
+            try:
+                page.wait_for_load_state('networkidle', timeout=10000)
+            except Exception:
+                pass
 
-        # Wait for page content to load
+        # Wait for page content to load - wait for actual car listing container
         logger.info("[4/4] Loading all car listings...")
-        page.wait_for_timeout(3000)  # Initial wait for page to render
+
+        # Wait for the results container or any car listing to appear
+        try:
+            # Try waiting for the results container
+            results_container = page.locator('[class*="results"]').or_(page.locator('[class*="listing"]')).or_(page.locator('[class*="model-card"]'))
+            results_container.first.wait_for(state='attached', timeout=15000)
+            logger.info("      ✓ Results container detected")
+        except Exception:
+            logger.warning("      ⚠ Results container not found, continuing anyway...")
+
+        # Additional wait for JavaScript to render content
+        page.wait_for_timeout(5000)
+
+        # Scroll to trigger lazy loading
+        page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+        page.wait_for_timeout(3000)
+        page.evaluate("window.scrollTo(0, 0)")
+        page.wait_for_timeout(2000)
 
         # Scroll down and click "Montrer plus" button until it's no longer visible
         show_more_button = page.locator('[data-test="stolo-plp-show-more-button"]')
         click_count = 0
+        max_clicks = 50  # Safety limit
 
-        while True:
+        while click_count < max_clicks:
             page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
             page.wait_for_timeout(2000)
 
@@ -231,43 +260,89 @@ def scrape_bmw_inventory(url, max_links=None):
                 click_count += 1
                 logger.info(f"      → Clicking 'Montrer plus' button (click #{click_count})...")
                 show_more_button.click()
-                page.wait_for_timeout(3000)
+                page.wait_for_timeout(4000)  # Increased wait time
                 logger.info(f"      ✓ Content loaded (click #{click_count} completed)")
             except Exception:
                 logger.info(f"      ✓ No more 'Montrer plus' buttons found. Total clicks: {click_count}")
                 break
 
         # Wait a bit more for any lazy-loaded content
+        page.wait_for_timeout(3000)
+
+        # Final scroll to ensure all content is loaded
+        page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
         page.wait_for_timeout(2000)
 
         # Extract all model card links
         logger.info("[Extracting links] Finding all car detail links...")
 
         # Try multiple selectors in case the page structure is different
-        model_card_links = page.locator('a.model-card-link')
-        count = model_card_links.count()
+        selectors_to_try = [
+            'a.model-card-link',
+            'a[href*="/sl/stocklocator_uc/details"]',
+            'a[href*="stocklocator_uc/details"]',
+            '[class*="model-card"] a',
+            '[class*="vehicle-card"] a',
+            'a[href*="/details"]'
+        ]
 
-        # If no links found, try alternative selector
-        if count == 0:
-            logger.info("      Trying alternative selector...")
-            model_card_links = page.locator('a[href*="/sl/stocklocator_uc/details"]')
+        model_card_links = None
+        count = 0
+
+        for selector in selectors_to_try:
+            logger.info(f"      Trying selector: {selector}")
+            model_card_links = page.locator(selector)
             count = model_card_links.count()
+            if count > 0:
+                logger.info(f"      ✓ Found {count} elements with selector: {selector}")
+                break
+            logger.info(f"      ✗ No elements found with selector: {selector}")
+
+        if count == 0:
+            # Debug: log page content to understand what's available
+            logger.warning("      ⚠ No car listings found. Debugging page content...")
+            try:
+                page_title = page.title()
+                page_url = page.url
+                logger.info(f"      Page title: {page_title}")
+                logger.info(f"      Page URL: {page_url}")
+
+                # Try to find any links on the page
+                all_links = page.locator('a[href]')
+                all_links_count = all_links.count()
+                logger.info(f"      Total links on page: {all_links_count}")
+
+                # Check for common BMW page elements
+                body_text = page.locator('body').inner_text()
+                if 'Aucun résultat' in body_text or 'No results' in body_text:
+                    logger.warning("      ⚠ Page indicates 'No results' - filters may be too restrictive")
+                elif 'résultats' in body_text.lower() or 'results' in body_text.lower():
+                    logger.info("      ✓ Page contains 'results' text")
+            except Exception as e:
+                logger.warning(f"      ⚠ Could not debug page content: {e}")
 
         logger.info(f"      Found {count} model card elements")
 
         links = []
 
-        for i in range(count):
-            href = model_card_links.nth(i).get_attribute('href')
-            if href:
-                if href.startswith('/'):
-                    full_url = f"https://www.bmw.be{href}"
-                else:
-                    full_url = href
-                links.append(full_url)
+        if model_card_links is None or count == 0:
+            logger.warning("      ⚠ No model card links found - cannot extract car listings")
+        else:
+            for i in range(count):
+                try:
+                    href = model_card_links.nth(i).get_attribute('href')
+                    if href:
+                        if href.startswith('/'):
+                            full_url = f"https://www.bmw.be{href}"
+                        else:
+                            full_url = href
+                        links.append(full_url)
 
-            if (i + 1) % 10 == 0:
-                logger.info(f"      Processed {i + 1}/{count} links...")
+                    if (i + 1) % 10 == 0:
+                        logger.info(f"      Processed {i + 1}/{count} links...")
+                except Exception as e:
+                    logger.warning(f"      ⚠ Error extracting link {i+1}: {e}")
+                    continue
 
         logger.info("=" * 60)
         logger.info(f"SUMMARY: Found {len(links)} car detail links")
