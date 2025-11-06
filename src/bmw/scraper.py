@@ -239,6 +239,20 @@ def scrape_bmw_inventory(url, max_links=None):
         # Additional wait for JavaScript to render content
         page.wait_for_timeout(5000)
 
+        # Try to wait for any car listing links to appear using JavaScript
+        try:
+            # Wait for at least one link with "details" in href to appear
+            page.wait_for_function(
+                "document.querySelectorAll('a[href*=\"details\"]').length > 0",
+                timeout=10000
+            )
+            logger.info("      ✓ Car detail links detected via JavaScript")
+        except Exception:
+            logger.warning("      ⚠ No car detail links detected via JavaScript, continuing...")
+
+        # Additional wait after JavaScript detection
+        page.wait_for_timeout(3000)
+
         # Scroll to trigger lazy loading
         page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
         page.wait_for_timeout(3000)
@@ -281,9 +295,16 @@ def scrape_bmw_inventory(url, max_links=None):
             'a.model-card-link',
             'a[href*="/sl/stocklocator_uc/details"]',
             'a[href*="stocklocator_uc/details"]',
+            'a[href*="/details"]',
             '[class*="model-card"] a',
             '[class*="vehicle-card"] a',
-            'a[href*="/details"]'
+            '[class*="vehicle"] a[href*="details"]',
+            '[class*="car"] a[href*="details"]',
+            '[class*="listing"] a[href*="details"]',
+            '[class*="result"] a[href*="details"]',
+            'a[href*="stocklocator"][href*="details"]',
+            'a[href*="/fr-be/sl/stocklocator_uc/details"]',
+            'a[href*="bmw.be"][href*="details"]'
         ]
 
         model_card_links = None
@@ -312,12 +333,39 @@ def scrape_bmw_inventory(url, max_links=None):
                 all_links_count = all_links.count()
                 logger.info(f"      Total links on page: {all_links_count}")
 
+                # Sample some links to see their structure
+                if all_links_count > 0:
+                    logger.info("      Sampling first 10 links to understand structure:")
+                    for i in range(min(10, all_links_count)):
+                        try:
+                            link = all_links.nth(i)
+                            href = link.get_attribute('href')
+                            text = link.inner_text()[:50] if link.inner_text() else ""
+                            logger.info(f"        Link {i+1}: href='{href[:80] if href else 'None'}', text='{text}'")
+                        except Exception:
+                            pass
+
                 # Check for common BMW page elements
                 body_text = page.locator('body').inner_text()
                 if 'Aucun résultat' in body_text or 'No results' in body_text:
                     logger.warning("      ⚠ Page indicates 'No results' - filters may be too restrictive")
                 elif 'résultats' in body_text.lower() or 'results' in body_text.lower():
                     logger.info("      ✓ Page contains 'results' text")
+
+                # Try to find links that contain "details" or "stocklocator" in href
+                detail_links = page.locator('a[href*="details"]')
+                detail_count = detail_links.count()
+                logger.info(f"      Links containing 'details' in href: {detail_count}")
+
+                stocklocator_links = page.locator('a[href*="stocklocator"]')
+                stocklocator_count = stocklocator_links.count()
+                logger.info(f"      Links containing 'stocklocator' in href: {stocklocator_count}")
+
+                # Try to find any div or section that might contain car listings
+                car_containers = page.locator('[class*="vehicle"], [class*="car"], [class*="listing"], [class*="result"], [id*="result"]')
+                container_count = car_containers.count()
+                logger.info(f"      Potential car containers found: {container_count}")
+
             except Exception as e:
                 logger.warning(f"      ⚠ Could not debug page content: {e}")
 
@@ -325,9 +373,47 @@ def scrape_bmw_inventory(url, max_links=None):
 
         links = []
 
+        # If still no links found, try JavaScript evaluation as last resort
+        links_found_via_js = False
         if model_card_links is None or count == 0:
-            logger.warning("      ⚠ No model card links found - cannot extract car listings")
-        else:
+            logger.warning("      ⚠ No model card links found with selectors, trying JavaScript evaluation...")
+            try:
+                # Use JavaScript to find all links containing "details" and "stocklocator"
+                js_links = page.evaluate("""
+                    () => {
+                        const links = Array.from(document.querySelectorAll('a[href]'));
+                        return links
+                            .filter(link => {
+                                const href = link.getAttribute('href') || '';
+                                return href.includes('details') && href.includes('stocklocator');
+                            })
+                            .map(link => link.getAttribute('href'));
+                    }
+                """)
+
+                if js_links and len(js_links) > 0:
+                    logger.info(f"      ✓ Found {len(js_links)} links via JavaScript evaluation")
+                    # Convert relative URLs to absolute
+                    for href in js_links:
+                        if href:
+                            if href.startswith('/'):
+                                full_url = f"https://www.bmw.be{href}"
+                            elif href.startswith('http'):
+                                full_url = href
+                            else:
+                                full_url = f"https://www.bmw.be/{href}"
+                            links.append(full_url)
+                    count = len(links)
+                    links_found_via_js = True
+                    logger.info(f"      ✓ Extracted {count} car detail links via JavaScript")
+                else:
+                    logger.warning("      ⚠ No model card links found - cannot extract car listings")
+            except Exception as e:
+                logger.warning(f"      ⚠ JavaScript evaluation failed: {e}")
+                logger.warning("      ⚠ No model card links found - cannot extract car listings")
+
+        # Extract links using selectors if we didn't find them via JavaScript
+        if not links_found_via_js and count > 0 and model_card_links is not None:
             for i in range(count):
                 try:
                     href = model_card_links.nth(i).get_attribute('href')
