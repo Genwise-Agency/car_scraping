@@ -35,15 +35,21 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-def main(url: str, test_limit: int = None, sync_db: bool = False):
+def main(url: str = None, test_limit: int = None, sync_db: bool = False):
     """
     Main pipeline orchestrator
 
     Args:
-        url: BMW inventory URL to scrape
+        url: BMW inventory URL to scrape (uses default from config if not provided)
         test_limit: Limit number of cars to process (for testing)
-        sync_db: Whether to sync data to Supabase (currently disabled)
+        sync_db: Whether to sync data to Supabase
     """
+    # Use default URL from config if not provided
+    if url is None:
+        from .config import BMW_URL
+        url = BMW_URL
+        logger.info("Using default BMW URL from config")
+
     logger.info("=" * 60)
     logger.info("BMW CAR SCRAPING AND PROCESSING PIPELINE")
     logger.info("=" * 60)

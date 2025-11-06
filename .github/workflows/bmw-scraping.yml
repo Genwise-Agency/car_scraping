@@ -42,7 +42,6 @@ jobs:
               env:
                   SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
                   SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
-                  BMW_URL: ${{ secrets.BMW_URL }}
                   SYNC_DB: "true"
                   TEST_LIMIT: "0"
               run: |
@@ -51,11 +50,7 @@ jobs:
                   import sys
                   sys.path.insert(0, 'src')
                   from bmw.main import main
-                  main(
-                      url='${{ secrets.BMW_URL }}',
-                      test_limit=None,
-                      sync_db=True
-                  )
+                  main(sync_db=True)
                   "
 
             - name: Upload results as artifacts
