@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "extraction_date": "2025-11-05T07:52:21.060731",
+    "extraction_date": "2025-11-06T21:23:56.786470",
     "total_categories": 8,
-    "total_unique_equipment_items": 51,
+    "total_unique_equipment_items": 52,
     "categories": [
       "Autres.",
       "Charging",
@@ -35,6 +35,7 @@
     "Equipements intérieurs": [
       "Ceintures de sécurité M",
       "Ciel de pavillon M en Anthrazit",
+      "Eléments intérieur avec finition en cristal 'CraftedClarity'",
       "Lumière intérieure d'ambiance",
       "Pack rangement",
       "Pack rétroviseurs",
