@@ -374,6 +374,8 @@ class SupabaseClient:
 
             records_to_insert = []
             records_to_update = []
+            today = datetime.now().date().isoformat()
+            now_iso = datetime.now().isoformat()
 
             # First, get all existing car_ids from bmw_cars to filter
             existing_cars_result = self.client.table('bmw_cars').select('car_id').execute()

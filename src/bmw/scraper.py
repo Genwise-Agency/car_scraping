@@ -191,8 +191,31 @@ def scrape_bmw_inventory(url, max_links=None):
 
     with sync_playwright() as p:
         logger.info("[1/4] Launching browser...")
-        browser = p.chromium.launch(headless=HEADLESS_MODE)
-        page = browser.new_page()
+        # Launch browser with arguments to avoid detection
+        browser = p.chromium.launch(
+            headless=HEADLESS_MODE,
+            args=[
+                '--disable-blink-features=AutomationControlled',
+                '--disable-dev-shm-usage',
+                '--no-sandbox',
+                '--disable-setuid-sandbox',
+                '--disable-web-security',
+                '--disable-features=IsolateOrigins,site-per-process'
+            ]
+        )
+        # Create context with realistic viewport and user agent
+        context = browser.new_context(
+            viewport={'width': 1920, 'height': 1080},
+            user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+        )
+        page = context.new_page()
+
+        # Remove webdriver property to avoid detection
+        page.add_init_script("""
+            Object.defineProperty(navigator, 'webdriver', {
+                get: () => undefined
+            });
+        """)
 
         logger.info(f"[2/4] Navigating to URL...")
         logger.info(f"      {url[:80]}...")
@@ -244,14 +267,30 @@ def scrape_bmw_inventory(url, max_links=None):
             # Wait for at least one link with "details" in href to appear
             page.wait_for_function(
                 "document.querySelectorAll('a[href*=\"details\"]').length > 0",
-                timeout=10000
+                timeout=15000
             )
             logger.info("      ✓ Car detail links detected via JavaScript")
         except Exception:
-            logger.warning("      ⚠ No car detail links detected via JavaScript, continuing...")
+            logger.warning("      ⚠ No car detail links detected via JavaScript, trying alternative wait...")
+            # Try waiting for page content that indicates results are loaded
+            try:
+                page.wait_for_function(
+                    """
+                    () => {
+                        const bodyText = document.body.innerText || '';
+                        return bodyText.includes('résultats') ||
+                               bodyText.includes('results') ||
+                               document.querySelectorAll('[class*="result"], [class*="listing"], [class*="vehicle"]').length > 0;
+                    }
+                    """,
+                    timeout=10000
+                )
+                logger.info("      ✓ Page content indicates results are loaded")
+            except Exception:
+                logger.warning("      ⚠ Page content check failed, continuing anyway...")
 
         # Additional wait after JavaScript detection
-        page.wait_for_timeout(3000)
+        page.wait_for_timeout(5000)
 
         # Scroll to trigger lazy loading
         page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
@@ -335,15 +374,30 @@ def scrape_bmw_inventory(url, max_links=None):
 
                 # Sample some links to see their structure
                 if all_links_count > 0:
-                    logger.info("      Sampling first 10 links to understand structure:")
-                    for i in range(min(10, all_links_count)):
+                    logger.info("      Sampling first 20 links to understand structure:")
+                    for i in range(min(20, all_links_count)):
                         try:
                             link = all_links.nth(i)
                             href = link.get_attribute('href')
                             text = link.inner_text()[:50] if link.inner_text() else ""
-                            logger.info(f"        Link {i+1}: href='{href[:80] if href else 'None'}', text='{text}'")
+                            logger.info(f"        Link {i+1}: href='{href[:100] if href else 'None'}', text='{text}'")
                         except Exception:
                             pass
+
+                    # Also check what the page HTML structure looks like
+                    try:
+                        page_html = page.content()
+                        # Check for common patterns
+                        if 'model-card' in page_html.lower():
+                            logger.info("      ✓ Found 'model-card' in page HTML")
+                        if 'vehicle' in page_html.lower():
+                            logger.info("      ✓ Found 'vehicle' in page HTML")
+                        if 'stocklocator' in page_html.lower():
+                            logger.info("      ✓ Found 'stocklocator' in page HTML")
+                        if 'details' in page_html.lower():
+                            logger.info("      ✓ Found 'details' in page HTML")
+                    except Exception as e:
+                        logger.warning(f"      ⚠ Could not analyze page HTML: {e}")
 
                 # Check for common BMW page elements
                 body_text = page.locator('body').inner_text()
@@ -378,16 +432,41 @@ def scrape_bmw_inventory(url, max_links=None):
         if model_card_links is None or count == 0:
             logger.warning("      ⚠ No model card links found with selectors, trying JavaScript evaluation...")
             try:
-                # Use JavaScript to find all links containing "details" and "stocklocator"
+                # Use JavaScript to find all links - try multiple strategies
                 js_links = page.evaluate("""
                     () => {
-                        const links = Array.from(document.querySelectorAll('a[href]'));
-                        return links
-                            .filter(link => {
-                                const href = link.getAttribute('href') || '';
-                                return href.includes('details') && href.includes('stocklocator');
-                            })
-                            .map(link => link.getAttribute('href'));
+                        // Strategy 1: Find links with both "details" and "stocklocator"
+                        let links = Array.from(document.querySelectorAll('a[href]'))
+                            .map(link => link.getAttribute('href'))
+                            .filter(href => href && href.includes('details') && href.includes('stocklocator'));
+
+                        // Strategy 2: If no results, try just "details" in stocklocator path
+                        if (links.length === 0) {
+                            links = Array.from(document.querySelectorAll('a[href]'))
+                                .map(link => link.getAttribute('href'))
+                                .filter(href => {
+                                    if (!href) return false;
+                                    return (href.includes('/sl/stocklocator_uc/details') ||
+                                            href.includes('stocklocator') && href.includes('details'));
+                                });
+                        }
+
+                        // Strategy 3: Find any link in elements with car-related classes
+                        if (links.length === 0) {
+                            const carContainers = document.querySelectorAll('[class*="vehicle"], [class*="car"], [class*="model"], [class*="listing"]');
+                            carContainers.forEach(container => {
+                                const containerLinks = container.querySelectorAll('a[href]');
+                                containerLinks.forEach(link => {
+                                    const href = link.getAttribute('href');
+                                    if (href && href.includes('details')) {
+                                        links.push(href);
+                                    }
+                                });
+                            });
+                        }
+
+                        // Remove duplicates
+                        return [...new Set(links)];
                     }
                 """)
 
@@ -461,6 +540,8 @@ def scrape_bmw_inventory(url, max_links=None):
 
         logger.info(f"      ✓ Successfully processed {len(all_cars_data)} cars")
 
+        context.close()
         browser.close()
 
     return all_cars_data
+
