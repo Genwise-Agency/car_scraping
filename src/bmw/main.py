@@ -10,6 +10,8 @@ from datetime import datetime
 
 import pandas as pd
 
+from src.utils.notify import Pushover
+
 from .config import OUTPUT_DIR, PREFERENCES_FILE, TRACKING_COLUMNS
 from .data_processor import (
     export_equipment_list,
@@ -43,6 +45,21 @@ def main(url: str = None, test_limit: int = None, sync_db: bool = False):
         test_limit: Limit number of cars to process (for testing)
         sync_db: Whether to sync data to Supabase
     """
+    # Initialize notification service
+    notifier = Pushover()
+
+    # Initialize statistics tracking
+    stats = {
+        "success": False,
+        "cars_scraped": 0,
+        "active_cars": 0,
+        "sold_cars": 0,
+        "total_unique_cars": 0,
+        "db_synced": False,
+        "sync_db": sync_db,
+        "error": None
+    }
+
     # Use default URL from config if not provided
     if url is None:
         from .config import BMW_URL
@@ -63,9 +80,14 @@ def main(url: str = None, test_limit: int = None, sync_db: bool = False):
     logger.info("\n[STEP 1/6] Scraping BMW inventory...")
     try:
         all_cars_data = scrape_bmw_inventory(url, max_links=test_limit)
+        stats["cars_scraped"] = len(all_cars_data)
         logger.info(f"✓ Scraped {len(all_cars_data)} cars")
     except Exception as e:
-        logger.error(f"✗ Error during scraping: {e}")
+        error_msg = f"Error during scraping: {e}"
+        logger.error(f"✗ {error_msg}")
+        stats["error"] = error_msg
+        stats["success"] = False
+        notifier.notify_scraping_complete(stats)
         return
 
     # ============================================================
@@ -79,6 +101,9 @@ def main(url: str = None, test_limit: int = None, sync_db: bool = False):
         if df.empty:
             logger.warning("⚠ No cars found during scraping. Skipping data processing.")
             logger.info("✓ Pipeline completed (no data to process)")
+            stats["success"] = True
+            stats["error"] = "No cars found during scraping"
+            notifier.notify_scraping_complete(stats)
             return
 
         # Reorder columns
@@ -97,7 +122,11 @@ def main(url: str = None, test_limit: int = None, sync_db: bool = False):
         df = calculate_all_scores(df, preferences_file=PREFERENCES_FILE)
         logger.info(f"✓ Processed {len(df)} cars with scoring metrics")
     except Exception as e:
-        logger.error(f"✗ Error during data processing: {e}")
+        error_msg = f"Error during data processing: {e}"
+        logger.error(f"✗ {error_msg}")
+        stats["error"] = error_msg
+        stats["success"] = False
+        notifier.notify_scraping_complete(stats)
         return
 
     # ============================================================
@@ -127,7 +156,11 @@ def main(url: str = None, test_limit: int = None, sync_db: bool = False):
         df_history_export.to_csv(history_file, index=False)
         logger.info(f"✓ Saved {len(merged_history)} historical records to {history_file}")
     except Exception as e:
-        logger.error(f"✗ Error during historical data merge: {e}")
+        error_msg = f"Error during historical data merge: {e}"
+        logger.error(f"✗ {error_msg}")
+        stats["error"] = error_msg
+        stats["success"] = False
+        notifier.notify_scraping_complete(stats)
         return
 
     # ============================================================
@@ -150,7 +183,11 @@ def main(url: str = None, test_limit: int = None, sync_db: bool = False):
         # Export equipment list
         export_equipment_list(merged_equipment, OUTPUT_DIR)
     except Exception as e:
-        logger.error(f"✗ Error during equipment processing: {e}")
+        error_msg = f"Error during equipment processing: {e}"
+        logger.error(f"✗ {error_msg}")
+        stats["error"] = error_msg
+        stats["success"] = False
+        notifier.notify_scraping_complete(stats)
         return
 
     # ============================================================
@@ -180,7 +217,11 @@ def main(url: str = None, test_limit: int = None, sync_db: bool = False):
         df_scores_export.to_csv(scores_file, index=False)
         logger.info(f"✓ Saved {len(merged_scores)} scores records to {scores_file}")
     except Exception as e:
-        logger.error(f"✗ Error during scores processing: {e}")
+        error_msg = f"Error during scores processing: {e}"
+        logger.error(f"✗ {error_msg}")
+        stats["error"] = error_msg
+        stats["success"] = False
+        notifier.notify_scraping_complete(stats)
         return
 
     # ============================================================
@@ -220,9 +261,16 @@ def main(url: str = None, test_limit: int = None, sync_db: bool = False):
         logger.info("=" * 60)
         active_cars = len(df_export[df_export['status'] == 'active'])
         sold_cars = len(df_export[df_export['status'] == 'sold'])
+        total_unique_cars = len(merged_history['car_id'].unique())
+
+        # Update statistics
+        stats["active_cars"] = active_cars
+        stats["sold_cars"] = sold_cars
+        stats["total_unique_cars"] = total_unique_cars
+
         logger.info(f"Active cars: {active_cars}")
         logger.info(f"Sold/Removed cars: {sold_cars}")
-        logger.info(f"Total unique cars seen: {len(merged_history['car_id'].unique())}")
+        logger.info(f"Total unique cars seen: {total_unique_cars}")
         logger.info("=" * 60)
 
         # ========================================================
@@ -232,17 +280,32 @@ def main(url: str = None, test_limit: int = None, sync_db: bool = False):
             try:
                 db_client = SupabaseClient()
                 db_client.sync_all(merged_history, merged_equipment, merged_scores)
+                stats["db_synced"] = True
+                logger.info("✓ Database sync completed successfully")
             except ValueError as e:
-                logger.error(f"✗ Database configuration error: {e}")
+                error_msg = f"Database configuration error: {e}"
+                logger.error(f"✗ {error_msg}")
                 logger.error("      Please set SUPABASE_URL and SUPABASE_KEY in your .env file")
+                stats["error"] = error_msg
             except Exception as e:
-                logger.error(f"✗ Error during database sync: {e}")
+                error_msg = f"Error during database sync: {e}"
+                logger.error(f"✗ {error_msg}")
+                stats["error"] = error_msg
 
     except Exception as e:
-        logger.error(f"✗ Error during export: {e}")
+        error_msg = f"Error during export: {e}"
+        logger.error(f"✗ {error_msg}")
+        stats["error"] = error_msg
+        stats["success"] = False
+        notifier.notify_scraping_complete(stats)
         return
 
+    # Mark as successful if we got here
+    stats["success"] = True
     logger.info("\n✓ Pipeline completed successfully!")
+
+    # Send notification
+    notifier.notify_scraping_complete(stats)
 
 
 if __name__ == "__main__":

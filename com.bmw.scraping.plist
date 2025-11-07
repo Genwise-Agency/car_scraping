@@ -9,21 +9,10 @@
         <string>/bin/bash</string>
         <string>/Users/ardonisshalaj/Documents/car_scraping/run_bmw_scraping.sh</string>
     </array>
-    <key>StartCalendarInterval</key>
-    <array>
-        <dict>
-            <key>Hour</key>
-            <integer>10</integer>
-            <key>Minute</key>
-            <integer>0</integer>
-        </dict>
-        <dict>
-            <key>Hour</key>
-            <integer>14</integer>
-            <key>Minute</key>
-            <integer>0</integer>
-        </dict>
-    </array>
+    <key>StartInterval</key>
+    <integer>600</integer>
+    <key>RunAtLoad</key>
+    <true/>
     <key>StandardOutPath</key>
     <string>/Users/ardonisshalaj/Documents/car_scraping/launchd.log</string>
     <key>StandardErrorPath</key>
@@ -32,4 +21,3 @@
     <string>/Users/ardonisshalaj/Documents/car_scraping</string>
 </dict>
 </plist>
-
