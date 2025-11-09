@@ -6,8 +6,8 @@
     <string>com.bmw.scraping</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/bin/bash</string>
-        <string>/Users/ardonisshalaj/Documents/car_scraping/run_bmw_scraping.sh</string>
+        <string>/usr/bin/python3</string>
+        <string>/Users/ardonisshalaj/Documents/car_scraping/run_bmw_scraping_launchd.py</string>
     </array>
     <key>StartInterval</key>
     <integer>600</integer>
@@ -19,5 +19,14 @@
     <string>/Users/ardonisshalaj/Documents/car_scraping/launchd_error.log</string>
     <key>WorkingDirectory</key>
     <string>/Users/ardonisshalaj/Documents/car_scraping</string>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/ardonisshalaj/Documents/car_scraping/venv/bin</string>
+    </dict>
+    <key>KeepAlive</key>
+    <false/>
+    <key>ProcessType</key>
+    <string>Background</string>
 </dict>
 </plist>
